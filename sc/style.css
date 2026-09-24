@@ -633,3 +633,18 @@ details[open] .tg{transform:rotate(90deg)}
 /* v2.4 search→募集要項 直リンク */
 .jobcard,.grad-table .box{scroll-margin-top:96px}
 .jobcard:target,.grad-table .box:target{box-shadow:0 0 0 3px rgba(30,79,132,.35)}
+
+/* ===== 2026-09-25 改定依頼書の反映 ===== */
+.ab-sign img,.message .sign img{width:112px;height:112px;border-radius:18px;object-fit:cover;object-position:70% 30%}
+.flow-label{font-size:13px;font-weight:700;color:var(--primary);letter-spacing:.08em;margin:24px 0 10px}
+.flow-label:first-of-type{margin-top:0}
+.iv-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;overflow:visible;margin-right:0;padding:0}
+.iv{flex:auto;width:auto}
+.iv .ph{aspect-ratio:4/3;background:#fff}
+.iv .ph img{object-position:center 25%}
+.iv .bd{padding:18px 20px 22px}
+.iv .bd p{font-size:14px;line-height:1.7}
+.three > div{display:flex;flex-direction:column}
+.three p{flex:1}
+@media (min-width:769px){.ab-body p,.sw-lead,.three p,.iv .bd p,.env p{text-align:justify}}
+@media (max-width:768px){.iv-cards{grid-template-columns:1fr 1fr;gap:12px}.iv{flex:auto;width:auto}.iv .bd{padding:12px 12px 14px}.iv .bd p{font-size:12.5px}.iv .who{font-size:11px}.three > div{display:grid}}
