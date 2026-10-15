@@ -228,7 +228,7 @@ const ROUTES = [
     parent: null,
     label: "English",
     title: "Kabutoya Ryokan\uFF5CA Thatched Inn in Tokyo",
-    desc: "A thatched kabuto-zukuri inn in Kazuma, Hinohara, Tokyo. Charcoal grilling by the sunken hearth, wild boar hotpot, and mountain vegetables. Two hours from Shinjuku.",
+    desc: "A thatched kabuto-zukuri inn in Kazuma, Hinohara, Tokyo. Charcoal grilling by the sunken hearth, wild boar hotpot, and mountain vegetables. 2.5 hours from Shinjuku.",
     kw: "Tokyo thatched ryokan"
   },
   {
