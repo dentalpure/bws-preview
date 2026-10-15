@@ -25,10 +25,8 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- 提案用の見本であることの明示（2026-09-22 追加）。公式サイトと誤解されないため／写真の扱いを明記するため -->
-<p class="demo-note">兜家旅館様向けの<b>提案用の見本</b>です（公式サイトではありません）<span class="d">写真は現行サイトのものを仮に配置しています。本番の掲載前に、権利と内容を確認します。</span><span class="b">Bridge Works Studio</span></p>
+<p class="demo-note">兜家旅館様向けの<b>提案用の見本</b>です（公式サイトではありません。公式サイトは <a href="https://www.kabutoya.net/" target="_blank" rel="noopener">kabutoya.net</a>）<span class="d">写真は現行サイトのものを仮に配置しています。本番の掲載前に、権利と内容を確認します。</span><span class="b">Bridge Works Studio</span></p>
 <a class="skip" href="#/">本文へスキップ</a>
-<!-- 殻は chrome.js が組み立てる（15ページぶんコピペしないため） -->
 <aside class="side" id="side"></aside>
 <header class="header" id="header"></header>
 <div class="drawer" id="drawer" data-open="false" aria-hidden="true"></div>
@@ -38,15 +36,9 @@
 <footer class="footer" id="footer"></footer>
 <a class="book-fix" id="bookFix" href="#/reserve/" data-hidden="false"></a>
 
-<!-- ============ 各ページの本文 ============
-     手本 loof-inn.com の区画文法：巨大な欧文見出し＋罫線＋日本語ラベル／縦書きラベル／
-     角丸なしの写真／「View more」。文章と写真は planB から移植。 -->
 
-<!-- ============ トップ ============ -->
 <template id="tpl-home">
   <section class="hero">
-    <!-- 本番サイトではここに Vimeo #531519014（「ホームページ背景映像 Ver.5」）を埋め込む。
-         共有リンク（Artifact）は外部ホストへの通信を遮断するため、デモは写真2枚のCSSで「動き」を作る。 -->
     <div class="hero-photos">
       <img class="hero-photo hero-photo--a" src="images/hero-aerial.jpg" alt="紅葉の山に囲まれた兜家旅館の茅葺き屋根を上から見たところ" width="1920" height="1080" fetchpriority="high">
       <img class="hero-photo hero-photo--b" src="images/unkai.jpg" alt="" width="1200" height="800" loading="eager">
@@ -58,11 +50,10 @@
     <p class="hero-scroll">SCROLL</p>
   </section>
 
-  <!-- 空室検索（飾り。本番は予約エンジンをここに連携する） -->
   <section class="search" aria-label="空室検索">
     <div class="search-in">
       <p class="search-label">空室を検索</p>
-      <div class="search-field"><b>チェックイン</b><span>2026 / 10 / 10</span></div>
+      <div class="search-field"><b>チェックイン</b><span>日付を選ぶ</span></div>
       <div class="search-field"><b>泊数</b><span>1泊</span></div>
       <div class="search-field"><b>人数</b><span>2名</span></div>
       <a class="btn" href="#/plans/">検索</a>
@@ -70,7 +61,6 @@
     </div>
   </section>
 
-  <!-- TOPICS -->
   <section class="topics">
     <div class="container">
       <div class="topics-head">
@@ -80,7 +70,7 @@
       <div class="topics-track">
         <a class="topic" href="#/seasons/09/">
           <img class="ph" src="images/g-ko.jpg" alt="深い緑の山々のあいだを流れる、青緑の湖面" width="1200" height="800" loading="lazy">
-          <p class="topic-meta"><span class="tag">今月の兜家</span><time>2026.09.01</time></p>
+          <p class="topic-meta"><span class="tag">四季の兜家</span></p>
           <h3>九月の兜家。紅葉の少し手前、朝夕に霧が出はじめる頃。</h3>
         </a>
         <a class="topic" href="#/plans/">
@@ -97,10 +87,6 @@
     </div>
   </section>
 
-  <!-- Movie（2026-09-26 山田追加）。宿の公式YouTube『映像日記』（@kabutoya_ryokan・数日おきに更新）を、
-       トップの TOPICS の下に。画面に入ったら音なしで自動再生（chrome.js の initMovie）。
-       サムネイルは YouTube から直接読む（写真を新たに持ち込まない）。共有リンク（Artifact）は外部ホストを遮断するので、
-       そこでは濃茶の枠にタイトルだけが出る。動画IDは RSS（feeds/videos.xml?channel_id=UCHB3SOiD5IpsxczUxuv9NEA）で取得したもの。 -->
   <section class="section movie"><div class="container">
     <div class="movie-head">
       <h2 class="ttl-en">Movie</h2>
@@ -127,7 +113,6 @@
     </div>
   </div></section>
 
-  <!-- About（loof「Time Of LOOF」の型：縦置き欧文＋縦書き本文＋写真） -->
   <section class="section"><div class="container">
     <div class="about">
       <div class="about-left">
@@ -139,7 +124,7 @@
           <p>南北朝時代の落人伝説を秘めた、数馬の里。</p>
           <p>鎧の兜のような「兜造り」の母屋は、この地に伝わって四百年になります。</p>
           <p>釘をほとんど使わない木組みと、厚い茅葺きの屋根。</p>
-          <p>囲炉裏端の炭火と、山の幸。新宿から二時間、ここも東京都です。</p>
+          <p>囲炉裏端の炭火と、山の幸。新宿から二時間半、ここも東京都です。</p>
         </div>
       </div>
       <a class="about-visual" href="#/about/">
@@ -149,11 +134,6 @@
     </div>
   </div></section>
 
-  <!-- 特集ブロック（2026-09-14。旧 Experience 6枚を置き換え）
-       型：大きな写真＋右に重ねた白いカード（和文見出し・欧文・罫線・文章・ボタン）＋下の濃茶の帯に小さな写真4枚。
-       トップに残すのは「お食事」と「お部屋」の2つだけ。囲炉裏・温泉・女将・四季・周辺はサブページに任せ、
-       小さな写真とナビ・フッターから辿れるようにしてある。2つ目は左右を反転してリズムを作る。
-       文章は既存の /meals/ /rooms/ から。 -->
   <section class="section xb-sec">
     <article class="xb">
       <div class="xb-top">
@@ -189,12 +169,11 @@
         <li><a href="#/rooms/"><img class="ph" src="images/room-dx1.jpg" alt="朱塗りの囲炉裏座卓を据えた赤壁の客室" width="605" height="900" loading="lazy"></a></li>
         <li><a href="#/rooms/"><img class="ph" src="images/room-c.jpg" alt="障子の先に山の緑が広がる和室" width="1200" height="800" loading="lazy"></a></li>
         <li><a href="#/about/irori/"><img class="ph" src="images/room-irori2.jpg" alt="囲炉裏を切った座敷" width="1200" height="900" loading="lazy"></a></li>
-        <li><a href="#/rooms/onsen/"><img class="ph" src="images/onsen-b.jpg" alt="蕗の葉と山の緑が水面に映る露天風呂" width="1200" height="800" loading="lazy"></a></li>
+        <li><a href="#/rooms/onsen/"><img class="ph" src="images/onsen-b.jpg" alt="窓の外の蕗の葉と山の緑が湯面に映る浴室" width="1200" height="800" loading="lazy"></a></li>
       </ul>
     </article>
   </section>
 
-  <!-- 2026-09-28 山田追加：現行サイトから移植したページへの入口（ランチ・ディナー／カフェ／焚き火ラウンジ／リラクゼーション／お買いもの） -->
   <section class="section"><div class="container">
     <div class="more-head">
       <h2 class="ttl-en">More</h2>
@@ -209,23 +188,17 @@
     </nav>
   </div></section>
 
-  <!-- Access（2026-09-14。スクロールで東京都へ寄る）
-       右の地図は画面に固定し、左の3段の説明をスクロールすると data-step が 1→2→3 と変わる（chrome.js の initAccess）。
-       1＝日本地図で東京都だけを塗る／2＝東京都へ寄り、電車とバスの経路／3＝同じく、お車の経路と宿の情報。
-       地図は Natural Earth（パブリックドメイン）から自前で生成。日本地図と東京都の拡大図は同じ座標系なので、
-       <g class="acc-z"> を拡大するだけで線がずれずに寄れる。
-       区間の所要時間は第三者2件からの目安。徒歩分数は未確定なので書かない。 -->
   <section class="section acc">
     <div class="container"><h2 class="acc-ttl ttl-en">Access</h2></div>
     <div class="acc-scrolly" data-step="1">
       <div class="acc-copy">
         <div class="acc-step" data-step="1">
-          <p class="acc-lead">新宿から<br>電車とバスで<br>およそ二時間。</p>
+          <p class="acc-lead">新宿から<br>電車とバスで<br>およそ二時間半。</p>
           <p class="acc-sub">東京都の本土でただひとつの村、檜原村。<br>新宿と同じ東京都の、いちばん西にあります。</p>
           <p class="acc-hint" aria-hidden="true">Scroll</p>
         </div>
         <div class="acc-step" data-step="2">
-          <h3 class="acc-route-h"><span class="eyebrow">By Train &amp; Bus</span>電車とバスで<small>目安 約二時間</small></h3>
+          <h3 class="acc-route-h"><span class="eyebrow">By Train &amp; Bus</span>電車とバスで<small>目安 約二時間半</small></h3>
           <ol class="acc-steps">
             <li><b>新宿駅</b></li>
             <li class="acc-mode">JR中央線・五日市線<small>目安 約一時間</small></li>
@@ -293,8 +266,6 @@
     </div>
   </section>
 
-  <!-- Okami（2026-09-27 山田追加）。Access と News の間に、女将の紹介を1区画。くわしくは /okami/ へ。
-       写真は仮（手持ちの47点に女将のお写真がないため、食事処の写真を置いている）。本人のセリフは引用しない（許諾未確認）。 -->
   <section class="section"><div class="container">
     <div class="okami">
       <a class="okami-photo" href="#/okami/" tabindex="-1" aria-hidden="true">
@@ -305,15 +276,14 @@
           <h2 class="ttl-en">Okami</h2>
           <span class="ttl-ja">迎えるひと</span>
         </div>
-        <p class="lead">兜家旅館の女将、岡部ゆみこ。都会での仕事を経て、未経験からこの山あいの一軒宿へ来ました。</p>
-        <p class="txt">四百年つづく兜造りの母屋も、囲炉裏の作法も、一から覚えました。いまは夫とともに、この宿を営んでいます。</p>
+        <p class="lead">兜家旅館の女将。数馬に四百年伝わる兜造りの母屋と、囲炉裏の宿を営んでいます。</p>
+        <p class="txt">お着きからお食事、朝のお見送りまで。迎えるひとのことを、すこしだけお話しします。</p>
         <a class="more" href="#/okami/">女将のご紹介</a>
-        <p class="note okami-note">※ 写真は仮に置いています。本番サイトでは、女将のお写真を掲載します。</p>
+        <p class="note okami-note">※ 写真と文章は仮に置いています。本番サイトでは、女将のお写真と、直接おうかがいしたお話を掲載します。</p>
       </div>
     </div>
   </div></section>
 
-  <!-- News（loof「News」の型：縦書き「お知らせ」＋巨大 News＋一行表） -->
   <section class="section"><div class="container">
     <div class="news">
       <div class="news-title">
@@ -321,7 +291,6 @@
         <h2 class="ttl-en">News</h2>
       </div>
       <div class="news-list">
-        <div class="news-row"><time>2026.09.01</time><span class="tag">今月の兜家</span><p><a class="link" href="#/seasons/09/">九月の兜家を公開しました</a></p></div>
         <div class="news-row"><time>2026.05.05</time><span class="tag tag--sub">動画</span><p><a class="link" href="#/news/">兜家旅館の一日に密着した動画が公開されました</a></p></div>
         <div class="news-row"><time>2025.04.11</time><span class="tag tag--sub">交通</span><p><a class="link" href="#/news/">檜原街道の通行止めが解除され、路線バスも運行を再開しました</a></p></div>
         <div class="news-row"><time>2025.02.08</time><span class="tag tag--sub">ご予約</span><p><a class="link" href="#/news/">2025年4月から宿泊料金が変わります。直接のご予約が割安です</a></p></div>
@@ -330,9 +299,6 @@
     </div>
   </div></section>
 
-  <!-- Media（2026-09-28 山田追加）。兜家旅館を紹介している YouTube の動画。いずれも現行サイトが自らリンク・埋め込みしているもの。
-       押すとその場で再生（chrome.js の initMedia）。サムネイルは YouTube から直接読む。共有リンク（Artifact）では表示されない。
-       本番では、各動画の掲載について配信元に確認する。 -->
   <section class="section"><div class="container">
     <div class="media-head">
       <h2 class="ttl-en">Media</h2>
@@ -369,12 +335,12 @@
         </button>
         <p class="media-src">空撮映像</p>
         <h3>空から見る、兜造りの屋根。</h3>
-        <p>主人が撮影した、当館の空撮映像です。</p>
+        <p>当館の空撮映像です。</p>
       </article>
     </div>
+    <p class="note">各配信元が公開している動画です。本番での掲載は、配信元に確認します。</p>
   </div></section>
 
-  <!-- Reservation -->
   <section class="reserve"><div class="container">
     <div class="reserve-in">
       <div>
@@ -392,7 +358,6 @@
   </div></section>
 </template>
 
-<!-- ============ 兜家について ============ -->
 <template id="tpl-about">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">About</span><span class="ttl-ja">東京に現存する、兜造りの茅葺き</span></h1>
@@ -416,8 +381,6 @@
     </div>
   </div></section>
 
-  <!-- ここから下は 2026-09-28 山田追加：現行サイトの「合掌造りの建物」「おいでませ、ふるさとへ」の内容を、宿の語りで書き直して追加。
-       屋根の図は、現行サイトに載っている宿の図をそのまま使っている（2026-09-28 山田指示）。 -->
   <section class="section"><div class="container">
     <div class="intro">
       <div>
@@ -457,8 +420,6 @@
     <span class="eyebrow eyebrow--line">Gassho &amp; Kabuto</span>
     <h2 class="h2">合掌造りと、兜造りのちがい。</h2>
     <p class="lead" style="margin-top:20px; max-width:720px">どちらも、太い材を山形に組んで屋根を支える造りです。ちがいは、屋根の端のかたちにあります。</p>
-    <!-- 2026-09-28 山田指示：図は、現行サイト「合掌造りの建物」に載っている宿の図をそのまま使う（japanese/images/p_1.gif・p_2.gif）。
-         元の図は背景が透明なので、この見本の白地にそのまま置いている。出典を図の下に明記。 -->
     <div class="roofs">
       <figure class="roof-fig">
         <figcaption><b>合掌造り</b></figcaption>
@@ -473,8 +434,6 @@
     </div>
     <p class="note roof-src">図：兜家旅館ホームページ「合掌造りの建物」より</p>
 
-    <!-- 2026-09-28 山田指示：兜造りの映像を、図の近くに。現行サイト「合掌造りの建物」で流れている宿自身の映像
-         （Vimeo #539056432「HP 建物映像」・2分15秒）。現行サイトと同じく、画面に入ったら音なし・くり返しで流す（chrome.js の initMedia）。 -->
     <div class="roof-film">
       <h3 class="h3">兜造りを、映像で。</h3>
       <p class="txt">茅葺きの屋根、屋根の端の三角の窓、木組みの大広間。図で見たかたちを、実際の建物でご覧ください。</p>
@@ -590,7 +549,6 @@
   </section>
 </template>
 
-<!-- ============ 囲炉裏（子） ============ -->
 <template id="tpl-about-irori">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Irori</span><span class="ttl-ja">囲炉裏端の、炭火。</span></h1>
@@ -611,11 +569,11 @@
     <span class="eyebrow eyebrow--line">Irori</span>
     <h2 class="h2">火を囲んで、焼きながら食べる。</h2>
     <p class="lead" style="margin-top:20px; max-width:720px">新館の客室には囲炉裏を切ってございます。炭をおこし、串を刺して、焼けたものから召し上がっていただきます。</p>
-    <p class="txt" style="margin-top:1.4em; max-width:720px">料理が運ばれてくるのを待つのではなく、火の前で過ごす時間そのものがお食事です。囲炉裏は暖房でもあります。冬は朝から火を入れ、部屋のすみずみまで炭のにおいが行き渡ります。</p>
+    <p class="txt" style="margin-top:1.4em; max-width:720px">料理が運ばれてくるのを待つのではなく、火の前で過ごす時間そのものがお食事です。炭を入れるのは、炭を使うお料理のとき。火のそばで過ごす時間が、そのままお食事になります。</p>
 
     <div class="trio">
       <div><span class="v-label">炭<small>Charcoal</small></span><p>炭を熾し、串を立てる。肉と野菜、川魚。囲炉裏の炭火でご自分で焼いていただきます。</p></div>
-      <div><span class="v-label">火<small>Fire</small></span><p>東京で囲炉裏端の炭火焼きを供する宿は多くありません。火のそばで食事をする時間そのものが献立です。</p></div>
+      <div><span class="v-label">火<small>Fire</small></span><p>東京都内で、囲炉裏端の炭火焼きを。火のそばで食事をする時間そのものが献立です。</p></div>
       <div><span class="v-label">間<small>A Quiet Hour</small></span><p>火を囲むと、自然と会話がゆっくりになります。急がず、焼けるのを待つ。その間も、ひとつの時間です。</p></div>
     </div>
   </div></section>
@@ -641,7 +599,6 @@
   </section>
 </template>
 
-<!-- ============ 女将 ============ -->
 <template id="tpl-okami">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Okami</span><span class="ttl-ja">迎えるひと</span></h1>
@@ -654,11 +611,11 @@
     <div class="intro">
       <div>
         <span class="eyebrow eyebrow--line">Okami</span>
-        <h2 class="h2">都会から、山へ。</h2>
+        <h2 class="h2">迎えるひと。</h2>
       </div>
       <div>
-        <p class="lead">兜家旅館の女将、岡部ゆみこ。都会での仕事を経て、この山あいの一軒宿へ来ました。旅館の仕事は、未経験からのはじまりでした。</p>
-        <p class="txt" style="margin-top:1.7em">四百年つづく兜造りの母屋も、囲炉裏の作法も、はじめは何も知らない場所からのスタートでした。いま宿を切り盛りしているのは、生まれたときからここにいた人ではありません。夫とともに、この宿を営んでいます。</p>
+        <p class="lead">兜家旅館の女将。数馬に四百年伝わる兜造りの母屋と、囲炉裏の宿を営んでいます。</p>
+        <p class="txt" style="margin-top:1.7em">お着きのお茶から、囲炉裏のお食事、朝のお見送りまで。この宿で過ごす一日のそばには、いつも迎えるひとがいます。女将ご自身のお話は、本番サイトでは、直接おうかがいしてから、ご本人の言葉で掲載します。</p>
       </div>
     </div>
   </div></section>
@@ -672,12 +629,11 @@
       <div class="split-body">
         <span class="eyebrow eyebrow--line">The House</span>
         <h2 class="h2">四百年の宿を、いま。</h2>
-        <p class="txt">岡部ゆみこがいま営んでいるのは、数馬に四百年伝わる兜造りの母屋。完全な形で残るのは、いま四軒だけになりました。</p>
-        <p class="txt">客室は全十六室、定員六十七名。新館の客室には囲炉裏を切り、炭火で山の幸を炙ります。未経験からこの宿にたどり着いた人が、いまこの建物を預かっています。</p>
+        <p class="txt">女将が営んでいるのは、数馬に四百年伝わる兜造りの母屋。クギをほとんど使わず、木と木を組み合わせた建物です。</p>
+        <p class="txt">客室は全十六室、定員六十七名。新館の客室には囲炉裏を切り、炭火で山の幸を炙ります。この建物を、いま預かっています。</p>
       </div>
     </div>
   </div></section>
-  <!-- 本人のセリフ・OTAの評価は載せない（許諾未確認・引き継ぎ書0-3）。宿泊とヒアリングのあとに本人の言葉で書き直す。 -->
 
   <section class="container">
     <nav class="related" aria-label="関連ページ">
@@ -691,7 +647,6 @@
   </section>
 </template>
 
-<!-- ============ 四季 ============ -->
 <template id="tpl-seasons">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Seasons</span><span class="ttl-ja">十二の月の、兜家。</span></h1>
@@ -712,7 +667,6 @@
       </div>
     </div>
 
-    <!-- season-*2 の4枚は同じ看板を主役にした同一構図のシリーズ。4枚並べてはじめて効く（引き継ぎ書0-3） -->
     <div class="seasons">
       <article class="season">
         <img class="ph" src="images/season-spring2.jpg" alt="春、つつじの咲く兜家旅館の門と茅葺きの母屋" width="1200" height="900" loading="lazy">
@@ -732,7 +686,7 @@
       <article class="season">
         <img class="ph" src="images/season-winter2.jpg" alt="冬、雪をかぶった兜家旅館の門と茅葺きの母屋" width="1200" height="900" loading="lazy">
         <h3>冬</h3><span class="en">DECEMBER — MARCH</span>
-        <p>雪が積もると、茅葺きの屋根が真っ白になります。囲炉裏に火を入れます。</p>
+        <p>雪が積もると、茅葺きの屋根が真っ白になります。新館の客室では、囲炉裏の炭火で猪鍋を。</p>
       </article>
     </div>
   </div></section>
@@ -769,7 +723,6 @@
   </section>
 </template>
 
-<!-- ============ 九月の兜家（子） ============ -->
 <template id="tpl-seasons-09">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">September</span><span class="ttl-ja">九月の兜家</span></h1>
@@ -794,7 +747,7 @@
 
     <div class="trio">
       <div><span class="v-label">山<small>The Mountain</small></span><p>山肌の色が変わるのは、もう少し先。木々はまだ青々として、空気だけが少しずつ涼しくなっていきます。</p></div>
-      <div><span class="v-label">膳<small>The Table</small></span><p>献立の基本は、一年を通して変わりません。うちの山と畑で採れる山菜、川魚の洗いと塩焼き、囲炉裏端の炭火焼き。猪鍋は、火のありがたい季節になってから。</p></div>
+      <div><span class="v-label">膳<small>The Table</small></span><p>献立の基本は、一年を通して変わりません。地元で採れた山菜と自家栽培の野菜、川魚の洗いと塩焼き、囲炉裏端の炭火焼き。猪鍋は、一年を通して。</p></div>
       <div><span class="v-label">火<small>The Fire</small></span><p>夜が冷えてくると、囲炉裏に火が入る日が増えます。九月は、その最初の合図が出はじめる月です。</p></div>
     </div>
   </div></section>
@@ -820,7 +773,6 @@
   </section>
 </template>
 
-<!-- ============ お食事 ============ -->
 <template id="tpl-meals">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Meals</span><span class="ttl-ja">山が出すものを、そのまま。</span></h1>
@@ -852,7 +804,7 @@
       </article>
       <article>
         <img class="ph" src="images/inoshishi2.jpg" alt="赤身の肉と、きのこ・野菜を盛った鍋の具材" width="1200" height="900" loading="lazy">
-        <h3>猪</h3><p>冬にお出しすることが多い、味噌仕立ての猪鍋。</p>
+        <h3>猪</h3><p>一年を通してお出しする、味噌仕立ての猪鍋。</p>
       </article>
       <article>
         <img class="ph" src="images/sumibi.jpg" alt="囲炉裏の炭火に串を刺して焼く様子" width="1200" height="800" loading="lazy">
@@ -861,7 +813,6 @@
     </div>
   </div></section>
 
-  <!-- 2026-09-28 山田追加：現行サイト（お料理について／料金・客室タイプ／宿泊プラン）の内容を、宿の語りで書き直して追加。料金の数字は載せない -->
   <section class="section"><div class="container">
     <span class="eyebrow eyebrow--line">Courses</span>
     <h2 class="h2">お食事は、お部屋に合わせて。</h2>
@@ -975,7 +926,6 @@
   </section>
 </template>
 
-<!-- ============ 猪鍋（子） ============ -->
 <template id="tpl-meals-inoshishi">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Inoshishi</span><span class="ttl-ja">東京で、猪鍋を。</span></h1>
@@ -994,9 +944,9 @@
 
   <section class="section"><div class="container">
     <span class="eyebrow eyebrow--line">Jibie to Irori</span>
-    <h2 class="h2">「ジビエと囲炉裏の宿」と、名乗っています。</h2>
-    <p class="lead" style="margin-top:20px; max-width:720px">兜家旅館は、公式Instagramのプロフィールで自ら「ジビエと囲炉裏の宿」と名乗っています。奥多摩の山あいで、猪と鹿をお出ししているのが、この宿の献立です。</p>
-    <p class="txt" style="margin-top:1.4em; max-width:720px">猪鍋は味噌仕立てでお出ししています。臭みのない肉と、脂の甘み。東京都内で猪鍋を召し上がれる宿は多くありません。</p>
+    <h2 class="h2">ジビエと、囲炉裏の宿。</h2>
+    <p class="lead" style="margin-top:20px; max-width:720px">檜原村・数馬の山あいで、猪と鹿をお出ししています。囲炉裏の炭火と山の幸が、この宿の献立です。</p>
+    <p class="txt" style="margin-top:1.4em; max-width:720px">猪鍋は味噌仕立てでお出ししています。臭みのない肉と、脂の甘み。</p>
 
     <div class="trio">
       <div><span class="v-label">味噌<small>Miso</small></span><p>味噌仕立てにすることで、脂身と赤身、しいたけや葱などの野菜が、山の恵みそのままの一皿になります。</p></div>
@@ -1006,7 +956,6 @@
     <p class="note" style="margin-top:32px">※くわしいご相談は、ご予約の際にお電話にて承ります。</p>
   </div></section>
 
-  <!-- 2026-09-28 山田追加：現行サイトのお料理・宿泊プランから -->
   <section class="section"><div class="container">
     <div class="intro">
       <div>
@@ -1047,10 +996,9 @@
   </section>
 </template>
 
-<!-- ============ お部屋 ============ -->
 <template id="tpl-rooms">
   <section class="page-head"><div class="container">
-    <h1 class="ttl-row"><span class="ttl-en">Rooms</span><span class="ttl-ja">全十六室、山あいの一軒宿</span></h1>
+    <h1 class="ttl-row"><span class="ttl-en">Rooms</span><span class="ttl-ja">全十六室、山あいの宿</span></h1>
   </div></section>
   <div class="page-visual">
     <img src="images/room-main2.jpg" alt="掛け軸と座卓のある本館の広い和室" width="1200" height="900" loading="lazy">
@@ -1064,14 +1012,13 @@
       </div>
       <div>
         <p class="lead">本館は重厚なお部屋と大広間を備え、新館には囲炉裏を切った二間続きのお部屋がございます。窓の外は、どのお部屋からも山です。</p>
-        <p class="txt" style="margin-top:1.7em">全十六室、定員六十七名。大人数でのご宴会には、宴会場も二室ご用意しております。お部屋には、それぞれ名前がついています。たとえば「龍胆（りんどう）の間」。一部屋ずつ、造りも眺めも異なります。</p>
-        <!-- 内訳は本文に流し込まず、表に置く（引き継ぎ書0-3・選ぶための情報） -->
+        <p class="txt" style="margin-top:1.7em">全十六室、定員六十七名。大人数でのご宴会には、大広間も二室ご用意しております。お部屋には、それぞれ名前がついています。たとえば「龍胆（りんどう）の間」。一部屋ずつ、造りも眺めも異なります。</p>
         <dl class="spec">
           <div><dt>三名用</dt><dd><span class="num">4</span>室</dd></div>
           <div><dt>四名用</dt><dd><span class="num">6</span>室</dd></div>
           <div><dt>五名用</dt><dd><span class="num">5</span>室</dd></div>
           <div><dt>六名用</dt><dd><span class="num">1</span>室</dd></div>
-          <div><dt>宴会場</dt><dd><span class="num">2</span>室</dd></div>
+          <div><dt>大広間</dt><dd><span class="num">2</span>室</dd></div>
         </dl>
       </div>
     </div>
@@ -1105,7 +1052,6 @@
     <p class="note" style="margin-top:30px">※お部屋の造りはひとつずつ異なります。ご希望がございましたら、お電話にてご相談ください。</p>
   </div></section>
 
-  <!-- 2026-09-28 山田追加：現行サイトの料金・客室タイプ（DATA・特色・ご予約について）から。料金の数字は載せない -->
   <section class="section"><div class="container">
     <div class="split">
       <figure>
@@ -1173,7 +1119,6 @@
   </section>
 </template>
 
-<!-- ============ 温泉（子） ============ -->
 <template id="tpl-rooms-onsen">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Onsen</span><span class="ttl-ja">山の緑を見ながら、湯に。</span></h1>
@@ -1182,9 +1127,9 @@
   <div class="container">
     <div class="strip">
       <div class="strip-track">
-        <figure><img src="images/onsen-b.jpg" alt="蕗の大きな葉と山の緑が水面に映る露天風呂" width="1200" height="800" loading="lazy"><figcaption>露天風呂。蕗の葉に囲まれて。</figcaption></figure>
-        <figure><img src="images/onsen-rotenburo.jpg" alt="竹垣と蕗の葉に囲まれ、山の緑を映す露天風呂の湯面" width="1200" height="900" loading="lazy"><figcaption>竹垣の向こうは、そのまま山です。</figcaption></figure>
-        <figure><img src="images/bath-uchiyu.jpg" alt="杉木立を望む窓のある浴室" width="1200" height="900" loading="lazy"><figcaption>内湯もご用意しております。</figcaption></figure>
+        <figure><img src="images/onsen-b.jpg" alt="窓の外の蕗の大きな葉と山の緑が湯面に映る浴室" width="1200" height="800" loading="lazy"><figcaption>窓の外は、蕗の葉と山の緑。</figcaption></figure>
+        <figure><img src="images/onsen-rotenburo.jpg" alt="竹垣と蕗の葉、山の緑を窓いっぱいに映す湯面" width="1200" height="900" loading="lazy"><figcaption>竹垣の向こうは、そのまま山です。</figcaption></figure>
+        <figure><img src="images/bath-uchiyu.jpg" alt="杉木立を望む窓のある浴室" width="1200" height="900" loading="lazy"><figcaption>杉木立を望む窓のある浴室。</figcaption></figure>
       </div>
       <p class="strip-count"><span>01 / 03</span></p>
     </div>
@@ -1193,17 +1138,17 @@
   <section class="section"><div class="container">
     <span class="eyebrow eyebrow--line">Onsen</span>
     <h2 class="h2">お部屋の湯は、天然温泉「数馬の湯」。</h2>
-    <p class="lead" style="margin-top:20px; max-width:720px">浴室のついたお部屋のお湯は、天然温泉「数馬の湯」。泉質はアルカリ性単純温泉です。男女別の大浴室には、ラジウムの人工泉をご用意しております。</p>
+    <p class="lead" style="margin-top:20px; max-width:720px">浴室のついたお部屋のお湯は、天然温泉「数馬の湯」。泉質は単純アルカリ泉です。男女別の大浴室には、ラジウムの人工泉をご用意しております。</p>
     <p class="txt" style="margin-top:1.4em; max-width:720px">大浴室は男女別に二室ございます。お泊まりが一組または二組の日は、貸切でお使いいただけます。ご家族やご友人だけで、ゆっくり湯につかってください。</p>
 
     <div class="trio">
-      <div><span class="v-label">露天<small>Rotenburo</small></span><p>露天の湯のまわりには、大きな蕗の葉が茂っています。湯につかりながら、季節ごとの緑を眺めていただけます。</p></div>
-      <div><span class="v-label">内湯<small>Uchiyu</small></span><p>露天のほかに、内湯もご用意しております。窓の外にも山の緑が広がり、季節を問わず湯あみを愉しんでいただけます。</p></div>
+      <div><span class="v-label">窓<small>Window</small></span><p>湯船の窓いっぱいに、大きな蕗の葉と山の緑。湯につかりながら、季節ごとの緑を眺めていただけます。</p></div>
+      <div><span class="v-label">湯<small>Onsen</small></span><p>浴室のついたお部屋のお湯は、天然温泉「数馬の湯」。男女別の大浴室は、ラジウムの人工泉です。</p></div>
       <div><span class="v-label">貸切<small>Private</small></span><p>お泊まりが一組または二組の日は、大浴室を貸切でお使いいただけます。</p></div>
     </div>
 
     <dl class="spec">
-      <div><dt>お部屋の浴室</dt><dd>天然温泉「数馬の湯」（アルカリ性単純温泉）。浴室付のお部屋は二室</dd></div>
+      <div><dt>お部屋の浴室</dt><dd>天然温泉「数馬の湯」（単純アルカリ泉）。浴室付のお部屋は二室</dd></div>
       <div><dt>大浴室</dt><dd>ラジウムの人工泉。男女別に二室</dd></div>
       <div><dt>貸切</dt><dd>お泊まりが一組または二組の日は、大浴室を貸切に</dd></div>
       <div><dt>備品</dt><dd>浴衣／フェイスタオル／バスタオル</dd></div>
@@ -1211,9 +1156,9 @@
   </div></section>
 
   <section class="plate">
-    <img src="images/onsen-rotenburo.jpg" alt="竹垣と蕗の葉に囲まれ、山の緑を映す露天風呂の湯面" width="1200" height="900" loading="lazy">
+    <img src="images/onsen-rotenburo.jpg" alt="竹垣と蕗の葉、山の緑を窓いっぱいに映す湯面" width="1200" height="900" loading="lazy">
     <div class="plate-cap">
-      <span class="eyebrow">Rotenburo</span>
+      <span class="eyebrow">Bath</span>
       <h2>蕗の葉に、囲まれて。</h2>
       <p>竹垣の向こうは、そのまま山です。</p>
     </div>
@@ -1231,7 +1176,6 @@
   </section>
 </template>
 
-<!-- ============ 周辺 ============ -->
 <template id="tpl-around">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Around</span><span class="ttl-ja">滝と、渓谷と、氷瀑。</span></h1>
@@ -1244,10 +1188,10 @@
     <div class="intro">
       <div>
         <span class="eyebrow eyebrow--line">Hinohara</span>
-        <h2 class="h2">東京都、唯一の村。</h2>
+        <h2 class="h2">東京都の本土で、唯一の村。</h2>
       </div>
       <div>
-        <p class="lead">檜原村は、東京都で唯一の村です。緑ふかい山々と渓谷にかこまれ、都心より六度ほど低い山あいの気候が、四季の景色をくっきりと際立たせます。</p>
+        <p class="lead">檜原村は、東京都の本土で唯一の村です。緑ふかい山々と渓谷にかこまれ、都心より六度ほど低い山あいの気候が、四季の景色をくっきりと際立たせます。</p>
         <p class="txt" style="margin-top:1.7em">檜原村には、滝と渓谷、そして冬だけの氷瀑があります。宿から足をのばせる場所を、ご紹介します。</p>
       </div>
     </div>
@@ -1288,7 +1232,6 @@
     </div>
   </div></section>
 
-  <!-- 2026-09-28 山田追加：現行サイトの観光案内（旅館周辺・空撮・奥多摩周辺）から -->
   <section class="section"><div class="container">
     <div class="split">
       <figure>
@@ -1348,10 +1291,9 @@
   </section>
 </template>
 
-<!-- ============ アクセス・宿情報 ============ -->
 <template id="tpl-access">
   <section class="page-head"><div class="container">
-    <h1 class="ttl-row"><span class="ttl-en">Access</span><span class="ttl-ja">新宿から、二時間。</span></h1>
+    <h1 class="ttl-row"><span class="ttl-en">Access</span><span class="ttl-ja">新宿から、二時間半。</span></h1>
   </div></section>
   <div class="page-visual">
     <img src="images/g-tunnel.jpg" alt="山肌のトンネルの先に見える緑の山道" width="1200" height="800" loading="lazy">
@@ -1364,7 +1306,7 @@
         <h2 class="h2">お越しの経路。</h2>
       </div>
       <div>
-        <p class="lead">東京都西多摩郡檜原村・数馬。新宿から、電車とバス、またはお車で二時間ほどです。</p>
+        <p class="lead">東京都西多摩郡檜原村・数馬。新宿から、電車とバスで二時間半ほど。お車でもお越しいただけます。</p>
         <div class="route">
           <div>
             <h4>電車とバスで</h4>
@@ -1380,7 +1322,6 @@
     </div>
   </div></section>
 
-  <!-- 2026-09-28 山田追加：現行サイトのアクセスから（お車4経路・電車とバスの乗り継ぎ・地図） -->
   <section class="section"><div class="container">
     <div class="intro">
       <div>
@@ -1461,7 +1402,6 @@
   </section>
 </template>
 
-<!-- ============ 宿泊プラン・料金 ============ -->
 <template id="tpl-plans">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Plans</span><span class="ttl-ja">お泊まりのご案内</span></h1>
@@ -1489,9 +1429,6 @@
       </div>
     </div>
 
-    <!-- 2026-09-28 山田追加：現行サイトの宿泊プラン（7本）と「ご予約について」から。料金の数字は載せない（本番は予約エンジンで表示） -->
-    <!-- 2026-09-28 山田指示：宿泊料金を掲載（現行サイト「料金・客室タイプ」「予約申込」の新料金表 2025.04.01〜）。
-         これまでは「料金の数字は載せない」方針だったが、山田判断で宿泊料金は載せる。check.py の禁止も外した。 -->
     <div style="margin-top:var(--gap-s)" id="price">
       <span class="eyebrow eyebrow--line">Rates</span>
       <h2 class="h2">宿泊料金。</h2>
@@ -1628,12 +1565,7 @@
   </section>
 </template>
 
-<!-- ============================================================
-     2026-09-28 山田追加：現行サイト（www.kabutoya.net）のメニュー項目を移植した7ページ。
-     出所は _source/現行サイト_メニュー全項目/。文章は宿の語りで書き直し、料金の数字は載せない（本番で確認のうえ掲載）。
-     ============================================================ -->
 
-<!-- ============ お知らせ ============ -->
 <template id="tpl-news">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">News</span><span class="ttl-ja">兜家からの、お知らせ。</span></h1>
@@ -1672,7 +1604,6 @@
   </section>
 </template>
 
-<!-- ============ ランチ・ディナー（子） ============ -->
 <template id="tpl-meals-lunch">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Lunch &amp; Dinner</span><span class="ttl-ja">日帰りで、山の膳を。</span></h1>
@@ -1746,7 +1677,6 @@
   </section>
 </template>
 
-<!-- ============ 渓谷展望カフェ ============ -->
 <template id="tpl-cafe">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Cafe</span><span class="ttl-ja">“のんびり”は、最高の贅沢。</span></h1>
@@ -1827,13 +1757,11 @@
   </section>
 </template>
 
-<!-- ============ 焚き火ラウンジ ============ -->
 <template id="tpl-lounge">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Takibi Lounge</span><span class="ttl-ja">火を眺める、大人の時間。</span></h1>
   </div></section>
 
-  <!-- 現行サイトの焚火ラウンジのページに埋め込まれている宿自身の映像（Vimeo #744092056・170秒）。押すと再生。 -->
   <div class="container">
     <div class="vframe" data-vimeo="744092056" data-h="b8ae456bd1" data-title="焚き火ラウンジの映像">
       <img class="ph" src="images/unkai.jpg" alt="" width="1200" height="800" loading="lazy">
@@ -1881,7 +1809,6 @@
   </section>
 </template>
 
-<!-- ============ リラクゼーション（子） ============ -->
 <template id="tpl-rooms-relaxation">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Relaxation</span><span class="ttl-ja">お部屋で、もみほぐし。</span></h1>
@@ -1923,7 +1850,6 @@
   </section>
 </template>
 
-<!-- ============ お買いもの ============ -->
 <template id="tpl-shop">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Shop</span><span class="ttl-ja">山の味を、ご自宅へ。</span></h1>
@@ -1991,9 +1917,6 @@
   </section>
 </template>
 
-<!-- ============ ご予約フォーム（子） ============
-     2026-09-28 山田追加：簡易予約フォーム。現行サイトは「予約申込→宿の返信→返信に返信」の3段階・入力23項目。
-     ここでは入力を7項目に絞り、送信後の流れを先に見せる。見本なので実際には送信しない（chrome.js の initReserve）。 -->
 <template id="tpl-reserve">
   <section class="page-head"><div class="container">
     <h1 class="ttl-row"><span class="ttl-en">Reserve</span><span class="ttl-ja">ご予約のお申し込み</span></h1>
@@ -2100,7 +2023,6 @@
   </section>
 </template>
 
-<!-- ============ English（2ページ。EN切替と hreflang 設計を見せるのが目的で、全ページは訳さない）============ -->
 <template id="tpl-en-home">
   <section class="hero">
     <div class="hero-photos">

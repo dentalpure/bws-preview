@@ -1,142 +1,260 @@
-/* 兜家旅館 プランB — ルート表
-   ページを増やすときは、このファイルだけを触る。
-   path は本番のURLと同じ形にしてある（受注後そのまま静的ファイルに切り出せる）。 */
-const SUFFIX = "｜兜家旅館｜東京・檜原村の茅葺きの宿";
-
+const SUFFIX = "\uFF5C\u515C\u5BB6\u65C5\u9928\uFF5C\u6771\u4EAC\u30FB\u6A9C\u539F\u6751\u306E\u8305\u847A\u304D\u306E\u5BBF";
 const ROUTES = [
-  { path:"/", tpl:"tpl-home", nav:false, lang:"ja", parent:null, label:"トップ",
-    title:"兜家旅館｜東京・檜原村 数馬の茅葺きの宿",
-    desc:"東京都西多摩郡檜原村・数馬。兜造りの茅葺き屋根の母屋で、囲炉裏端の炭火焼きと山の幸、猪鍋を。『龍胆の間』を含む全十六室・定員六十七名の山あいの一軒宿。新宿から二時間、銘酒二十種も。",
-    kw:"兜家旅館 / 檜原村 旅館" },
-
-  { path:"/about/", tpl:"tpl-about", nav:true, lang:"ja", parent:"/", label:"兜家について",
-    title:"兜家について"+SUFFIX,
-    desc:"東京都西多摩郡檜原村・数馬に四百年伝わる兜造り（富士系合掌造り）。完全な形で残るのは四軒だけ。釘をほとんど使わない木組み、厚さ120cmの茅葺き、養蚕を支えた四層構造。東京に現存する茅葺きの宿です。",
-    kw:"東京 茅葺き 宿" },
-
-  { path:"/about/irori/", tpl:"tpl-about-irori", nav:false, lang:"ja", parent:"/about/", label:"囲炉裏",
-    title:"囲炉裏｜兜家について"+SUFFIX,
-    desc:"東京都檜原村・数馬の兜家旅館。炭を熾した囲炉裏に串を立て、じっくりと炙る。東京で囲炉裏端の炭火焼きを供する宿は多くありません。火のそばで食事をする時間そのものが、この宿の献立です。",
-    kw:"東京 囲炉裏 旅館" },
-
-  { path:"/okami/", tpl:"tpl-okami", nav:true, lang:"ja", parent:"/", label:"女将",
-    title:"女将"+SUFFIX,
-    desc:"都会での仕事を経て、未経験から兜家旅館の女将へ。所作を一から覚え、東京都西多摩郡檜原村・数馬の山あいの一軒宿を切り盛りする岡部ゆみこ。迎えるひとのことを、すこしだけお話しします。",
-    kw:"兜家旅館 女将（指名検索・信頼性）" },
-
-  { path:"/seasons/", tpl:"tpl-seasons", nav:true, lang:"ja", parent:"/", label:"四季",
-    title:"四季"+SUFFIX,
-    desc:"東京都西多摩郡檜原村・数馬の十二の月。桜は都心より半月遅れ、夏は都心より六度低く、秋は渓谷が染まり、冬は払沢の滝が氷瀑となる。月ごとの兜家旅館の表情をお伝えします。",
-    kw:"檜原村 四季" },
-
-  { path:"/seasons/09/", tpl:"tpl-seasons-09", nav:false, lang:"ja", parent:"/seasons/", label:"九月の兜家",
-    title:"九月の兜家｜四季"+SUFFIX,
-    desc:"東京都西多摩郡檜原村・数馬の九月。紅葉にはまだ早く、朝夕に霧が出はじめる頃。渓谷の水はもう冷たく、囲炉裏に火を入れる日が増えます。九月の兜家旅館の様子をお伝えします。",
-    kw:"檜原村 九月 / 奥多摩 九月" },
-
-  { path:"/meals/", tpl:"tpl-meals", nav:true, lang:"ja", parent:"/", label:"お食事",
-    title:"お食事"+SUFFIX,
-    desc:"山菜、川魚、猪。囲炉裏端の炭火焼きで、山が出すものをそのままに。銘酒二十種も取り揃え、東京都西多摩郡檜原村・数馬の山あいで供する、ジビエと囲炉裏の宿の献立です。",
-    kw:"檜原村 旅館 食事" },
-
-  { path:"/meals/inoshishi/", tpl:"tpl-meals-inoshishi", nav:false, lang:"ja", parent:"/meals/", label:"猪鍋",
-    title:"猪鍋｜お食事"+SUFFIX,
-    desc:"東京で猪鍋を。厳選した猪肉を、自家製の味噌だれで仕立てます。臭みのない肉と、脂の甘み。兜家旅館は東京都西多摩郡檜原村で「ジビエと囲炉裏の宿」として猪と鹿をお出ししています。",
-    kw:"奥多摩 猪鍋" },
-
-  { path:"/rooms/", tpl:"tpl-rooms", nav:true, lang:"ja", parent:"/", label:"お部屋",
-    title:"お部屋"+SUFFIX,
-    desc:"全十六室、定員六十七名。本館と新館、渓谷を望む和室。龍胆の間など、名のついた部屋もございます。東京都西多摩郡檜原村・数馬の山あいの一軒宿のお部屋をご案内します。",
-    kw:"兜家旅館 客室" },
-
-  { path:"/rooms/onsen/", tpl:"tpl-rooms-onsen", nav:false, lang:"ja", parent:"/rooms/", label:"温泉",
-    title:"温泉｜お部屋"+SUFFIX,
-    desc:"浴室付のお部屋には、天然温泉「数馬の湯」（アルカリ性単純温泉）を。男女別の大浴室は、お泊まりの少ない日には貸切に。東京都西多摩郡檜原村・数馬にわく、山あいの一軒宿の湯です。",
-    kw:"檜原村 温泉 旅館" },
-
-  { path:"/around/", tpl:"tpl-around", nav:true, lang:"ja", parent:"/", label:"周辺",
-    title:"周辺のご案内"+SUFFIX,
-    desc:"払沢の滝、冬に凍る氷瀑、渓谷と吊橋、奥多摩湖。檜原村は東京都で唯一の村です。都心より六度ほど低い山あいの気候が、四季の景色を際立たせます。西多摩郡檜原村・数馬の兜家旅館がご案内します。",
-    kw:"檜原村 観光" },
-
-  { path:"/access/", tpl:"tpl-access", nav:true, lang:"ja", parent:"/", label:"アクセス・宿情報",
-    title:"アクセス・宿情報"+SUFFIX,
-    desc:"新宿から二時間、電車とバスで参ります。JR武蔵五日市駅から西東京バス数馬行にお乗り換えください。お車でも。全十六室、定員六十七名。東京都西多摩郡檜原村数馬2612、兜家旅館。",
-    kw:"兜家旅館 アクセス" },
-
-  { path:"/plans/", tpl:"tpl-plans", nav:false, lang:"ja", parent:"/", label:"宿泊プラン・料金",
-    title:"宿泊プラン・料金"+SUFFIX,
-    desc:"一泊二食、囲炉裏の炭火焼きと猪鍋のプラン。銘酒二十種もお楽しみいただけます。ご予約はお電話で承ります。東京都西多摩郡檜原村の茅葺きの宿、兜家旅館のご宿泊案内です。",
-    kw:"兜家旅館 料金 / 宿泊プラン" },
-
-  /* ---- 2026-09-28 山田追加：現行サイトのメニュー項目から移植した7ページ ---- */
-  { path:"/reserve/", tpl:"tpl-reserve", nav:false, lang:"ja", parent:"/plans/", label:"ご予約フォーム",
-    title:"ご予約フォーム｜宿泊プラン・料金"+SUFFIX,
-    desc:"兜家旅館のご予約フォームです。ご希望の日にち、人数、お部屋とお食事をお知らせください。宿から空室のお返事をさしあげます。お電話でも承ります。東京都西多摩郡檜原村・数馬の茅葺きの宿。",
-    kw:"兜家旅館 予約" },
-
-  { path:"/meals/lunch/", tpl:"tpl-meals-lunch", nav:false, lang:"ja", parent:"/meals/", label:"ランチ・ディナー",
-    title:"ランチ・ディナー｜お食事"+SUFFIX,
-    desc:"お泊まりでなくても、山の膳を。山菜料理、猪鍋、囲炉裏の炭火焼きを、ランチとディナーでお出しします。木曜定休、完全予約制。東京都西多摩郡檜原村・数馬の兜家旅館へ、日帰りでどうぞ。",
-    kw:"檜原村 ランチ / 檜原村 食事処" },
-
-  { path:"/cafe/", tpl:"tpl-cafe", nav:false, lang:"ja", parent:"/", label:"渓谷展望カフェ",
-    title:"渓谷展望カフェ"+SUFFIX,
-    desc:"渓谷を眺めながら、ゆっくり淹れたフェアトレードのコーヒーと、檜原村の無農薬紅茶を。一日三組限定、完全予約制の渓谷展望カフェです。東京都西多摩郡檜原村・数馬、兜家旅館の中にあります。",
-    kw:"檜原村 カフェ" },
-
-  { path:"/lounge/", tpl:"tpl-lounge", nav:false, lang:"ja", parent:"/", label:"焚き火ラウンジ",
-    title:"焚き火ラウンジ"+SUFFIX,
-    desc:"檜原村の山あいで、焚き火を眺めながらお酒を。ご宿泊の方だけの、各回一組限定の焚き火ラウンジです。沢の水で割るウイスキーと、沢の水で淹れるコーヒーを。東京都西多摩郡檜原村、兜家旅館。",
-    kw:"東京 焚き火 宿" },
-
-  { path:"/rooms/relaxation/", tpl:"tpl-rooms-relaxation", nav:false, lang:"ja", parent:"/rooms/", label:"リラクゼーション",
-    title:"リラクゼーション｜お部屋"+SUFFIX,
-    desc:"お部屋までお伺いする、もみほぐしのリラクゼーション。着衣のまま、肩・腰・足の疲れをやわらげます。夕方六時から九時まで、完全予約制。東京都西多摩郡檜原村・数馬の兜家旅館でのご宿泊に。",
-    kw:"兜家旅館 リラクゼーション" },
-
-  { path:"/shop/", tpl:"tpl-shop", nav:false, lang:"ja", parent:"/", label:"お買いもの",
-    title:"お買いもの"+SUFFIX,
-    desc:"塩分ひかえめの自家製「おじいちゃんの梅干」、檜原村特産の刺身こんにゃく、無農薬のひのはら紅茶、檜原村の水。東京都西多摩郡檜原村・数馬の兜家旅館から、山の味をご自宅へお届けします。",
-    kw:"檜原村 特産 / 刺身こんにゃく" },
-
-  { path:"/news/", tpl:"tpl-news", nav:false, lang:"ja", parent:"/", label:"お知らせ",
-    title:"お知らせ"+SUFFIX,
-    desc:"東京都西多摩郡檜原村・数馬の兜家旅館からのお知らせです。檜原街道の交通情報、新しいお食事やプラン、テレビや動画でのご紹介、宿泊料金とご予約についてのご案内を、日付の新しい順にお伝えします。",
-    kw:"兜家旅館 お知らせ" },
-
-  { path:"/en/", tpl:"tpl-en-home", nav:false, lang:"en", parent:null, label:"English",
-    title:"Kabutoya Ryokan｜A Thatched Inn in Tokyo",
-    desc:"A thatched kabuto-zukuri inn in Kazuma, Hinohara, Tokyo. Charcoal grilling by the sunken hearth, wild boar hotpot, and mountain vegetables. Two hours from Shinjuku.",
-    kw:"Tokyo thatched ryokan" },
-
-  { path:"/en/about/", tpl:"tpl-en-about", nav:false, lang:"en", parent:"/en/", label:"About",
-    title:"About｜Kabutoya Ryokan",
-    desc:"Only four kabuto-zukuri thatched houses survive intact in Kazuma. Timber joined almost without nails, thatch 120cm thick, four storeys once used for silkworms.",
-    kw:"Tokyo kabuto-zukuri" },
+  {
+    path: "/",
+    tpl: "tpl-home",
+    nav: false,
+    lang: "ja",
+    parent: null,
+    label: "\u30C8\u30C3\u30D7",
+    title: "\u515C\u5BB6\u65C5\u9928\uFF5C\u6771\u4EAC\u30FB\u6A9C\u539F\u6751 \u6570\u99AC\u306E\u8305\u847A\u304D\u306E\u5BBF",
+    desc: "\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u3002\u515C\u9020\u308A\u306E\u8305\u847A\u304D\u5C4B\u6839\u306E\u6BCD\u5C4B\u3067\u3001\u56F2\u7089\u88CF\u7AEF\u306E\u70AD\u706B\u713C\u304D\u3068\u5C71\u306E\u5E78\u3001\u732A\u934B\u3092\u3002\u300E\u9F8D\u80C6\u306E\u9593\u300F\u3092\u542B\u3080\u5168\u5341\u516D\u5BA4\u30FB\u5B9A\u54E1\u516D\u5341\u4E03\u540D\u306E\u5C71\u3042\u3044\u306E\u5BBF\u3002\u65B0\u5BBF\u304B\u3089\u96FB\u8ECA\u3068\u30D0\u30B9\u3067\u4E8C\u6642\u9593\u534A\u3001\u9298\u9152\u4E8C\u5341\u7A2E\u3082\u3002",
+    kw: "\u515C\u5BB6\u65C5\u9928 / \u6A9C\u539F\u6751 \u65C5\u9928"
+  },
+  {
+    path: "/about/",
+    tpl: "tpl-about",
+    nav: true,
+    lang: "ja",
+    parent: "/",
+    label: "\u515C\u5BB6\u306B\u3064\u3044\u3066",
+    title: "\u515C\u5BB6\u306B\u3064\u3044\u3066" + SUFFIX,
+    desc: "\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306B\u56DB\u767E\u5E74\u4F1D\u308F\u308B\u515C\u9020\u308A\uFF08\u5BCC\u58EB\u7CFB\u5408\u638C\u9020\u308A\uFF09\u3002\u5B8C\u5168\u306A\u5F62\u3067\u6B8B\u308B\u306E\u306F\u56DB\u8ED2\u3060\u3051\u3002\u91D8\u3092\u307B\u3068\u3093\u3069\u4F7F\u308F\u306A\u3044\u6728\u7D44\u307F\u3001\u539A\u3055120cm\u306E\u8305\u847A\u304D\u3001\u990A\u8695\u3092\u652F\u3048\u305F\u56DB\u5C64\u69CB\u9020\u3002\u6771\u4EAC\u306B\u73FE\u5B58\u3059\u308B\u8305\u847A\u304D\u306E\u5BBF\u3067\u3059\u3002",
+    kw: "\u6771\u4EAC \u8305\u847A\u304D \u5BBF"
+  },
+  {
+    path: "/about/irori/",
+    tpl: "tpl-about-irori",
+    nav: false,
+    lang: "ja",
+    parent: "/about/",
+    label: "\u56F2\u7089\u88CF",
+    title: "\u56F2\u7089\u88CF\uFF5C\u515C\u5BB6\u306B\u3064\u3044\u3066" + SUFFIX,
+    desc: "\u6771\u4EAC\u90FD\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306E\u515C\u5BB6\u65C5\u9928\u3002\u70AD\u3092\u71BE\u3057\u305F\u56F2\u7089\u88CF\u306B\u4E32\u3092\u7ACB\u3066\u3001\u3058\u3063\u304F\u308A\u3068\u7099\u308B\u3002\u6771\u4EAC\u90FD\u5185\u3067\u3001\u56F2\u7089\u88CF\u7AEF\u306E\u70AD\u706B\u713C\u304D\u3092\u3002\u706B\u306E\u305D\u3070\u3067\u98DF\u4E8B\u3092\u3059\u308B\u6642\u9593\u305D\u306E\u3082\u306E\u304C\u3001\u3053\u306E\u5BBF\u306E\u732E\u7ACB\u3067\u3059\u3002",
+    kw: "\u6771\u4EAC \u56F2\u7089\u88CF \u65C5\u9928"
+  },
+  {
+    path: "/okami/",
+    tpl: "tpl-okami",
+    nav: true,
+    lang: "ja",
+    parent: "/",
+    label: "\u5973\u5C06",
+    title: "\u5973\u5C06" + SUFFIX,
+    desc: "\u515C\u5BB6\u65C5\u9928\u306E\u5973\u5C06\u306E\u3054\u7D39\u4ECB\u3002\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306B\u56DB\u767E\u5E74\u4F1D\u308F\u308B\u515C\u9020\u308A\u306E\u6BCD\u5C4B\u3068\u56F2\u7089\u88CF\u306E\u5BBF\u3092\u55B6\u3093\u3067\u3044\u307E\u3059\u3002\u304A\u7740\u304D\u304B\u3089\u304A\u98DF\u4E8B\u3001\u671D\u306E\u304A\u898B\u9001\u308A\u307E\u3067\u3002\u8FCE\u3048\u308B\u3072\u3068\u306E\u3053\u3068\u3092\u3001\u3059\u3053\u3057\u3060\u3051\u304A\u8A71\u3057\u3057\u307E\u3059\u3002",
+    kw: "\u515C\u5BB6\u65C5\u9928 \u5973\u5C06\uFF08\u6307\u540D\u691C\u7D22\u30FB\u4FE1\u983C\u6027\uFF09"
+  },
+  {
+    path: "/seasons/",
+    tpl: "tpl-seasons",
+    nav: true,
+    lang: "ja",
+    parent: "/",
+    label: "\u56DB\u5B63",
+    title: "\u56DB\u5B63" + SUFFIX,
+    desc: "\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306E\u5341\u4E8C\u306E\u6708\u3002\u685C\u306F\u90FD\u5FC3\u3088\u308A\u534A\u6708\u9045\u308C\u3001\u590F\u306F\u90FD\u5FC3\u3088\u308A\u516D\u5EA6\u4F4E\u304F\u3001\u79CB\u306F\u6E13\u8C37\u304C\u67D3\u307E\u308A\u3001\u51AC\u306F\u6255\u6CA2\u306E\u6EDD\u304C\u6C37\u7011\u3068\u306A\u308B\u3002\u6708\u3054\u3068\u306E\u515C\u5BB6\u65C5\u9928\u306E\u8868\u60C5\u3092\u304A\u4F1D\u3048\u3057\u307E\u3059\u3002",
+    kw: "\u6A9C\u539F\u6751 \u56DB\u5B63"
+  },
+  {
+    path: "/seasons/09/",
+    tpl: "tpl-seasons-09",
+    nav: false,
+    lang: "ja",
+    parent: "/seasons/",
+    label: "\u4E5D\u6708\u306E\u515C\u5BB6",
+    title: "\u4E5D\u6708\u306E\u515C\u5BB6\uFF5C\u56DB\u5B63" + SUFFIX,
+    desc: "\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306E\u4E5D\u6708\u3002\u7D05\u8449\u306B\u306F\u307E\u3060\u65E9\u304F\u3001\u671D\u5915\u306B\u9727\u304C\u51FA\u306F\u3058\u3081\u308B\u9803\u3002\u6E13\u8C37\u306E\u6C34\u306F\u3082\u3046\u51B7\u305F\u304F\u3001\u56F2\u7089\u88CF\u306B\u706B\u3092\u5165\u308C\u308B\u65E5\u304C\u5897\u3048\u307E\u3059\u3002\u4E5D\u6708\u306E\u515C\u5BB6\u65C5\u9928\u306E\u69D8\u5B50\u3092\u304A\u4F1D\u3048\u3057\u307E\u3059\u3002",
+    kw: "\u6A9C\u539F\u6751 \u4E5D\u6708 / \u5965\u591A\u6469 \u4E5D\u6708"
+  },
+  {
+    path: "/meals/",
+    tpl: "tpl-meals",
+    nav: true,
+    lang: "ja",
+    parent: "/",
+    label: "\u304A\u98DF\u4E8B",
+    title: "\u304A\u98DF\u4E8B" + SUFFIX,
+    desc: "\u5C71\u83DC\u3001\u5DDD\u9B5A\u3001\u732A\u3002\u56F2\u7089\u88CF\u7AEF\u306E\u70AD\u706B\u713C\u304D\u3067\u3001\u5C71\u304C\u51FA\u3059\u3082\u306E\u3092\u305D\u306E\u307E\u307E\u306B\u3002\u9298\u9152\u4E8C\u5341\u7A2E\u3082\u53D6\u308A\u63C3\u3048\u3001\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306E\u5C71\u3042\u3044\u3067\u4F9B\u3059\u308B\u3001\u30B8\u30D3\u30A8\u3068\u56F2\u7089\u88CF\u306E\u5BBF\u306E\u732E\u7ACB\u3067\u3059\u3002",
+    kw: "\u6A9C\u539F\u6751 \u65C5\u9928 \u98DF\u4E8B"
+  },
+  {
+    path: "/meals/inoshishi/",
+    tpl: "tpl-meals-inoshishi",
+    nav: false,
+    lang: "ja",
+    parent: "/meals/",
+    label: "\u732A\u934B",
+    title: "\u732A\u934B\uFF5C\u304A\u98DF\u4E8B" + SUFFIX,
+    desc: "\u6771\u4EAC\u3067\u732A\u934B\u3092\u3002\u53B3\u9078\u3057\u305F\u732A\u8089\u3092\u3001\u81EA\u5BB6\u88FD\u306E\u5473\u564C\u3060\u308C\u3067\u4ED5\u7ACB\u3066\u307E\u3059\u3002\u81ED\u307F\u306E\u306A\u3044\u8089\u3068\u3001\u8102\u306E\u7518\u307F\u3002\u515C\u5BB6\u65C5\u9928\u306F\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u3067\u300C\u30B8\u30D3\u30A8\u3068\u56F2\u7089\u88CF\u306E\u5BBF\u300D\u3068\u3057\u3066\u732A\u3068\u9E7F\u3092\u304A\u51FA\u3057\u3057\u3066\u3044\u307E\u3059\u3002",
+    kw: "\u5965\u591A\u6469 \u732A\u934B"
+  },
+  {
+    path: "/rooms/",
+    tpl: "tpl-rooms",
+    nav: true,
+    lang: "ja",
+    parent: "/",
+    label: "\u304A\u90E8\u5C4B",
+    title: "\u304A\u90E8\u5C4B" + SUFFIX,
+    desc: "\u5168\u5341\u516D\u5BA4\u3001\u5B9A\u54E1\u516D\u5341\u4E03\u540D\u3002\u672C\u9928\u3068\u65B0\u9928\u3001\u6E13\u8C37\u3092\u671B\u3080\u548C\u5BA4\u3002\u9F8D\u80C6\u306E\u9593\u306A\u3069\u3001\u540D\u306E\u3064\u3044\u305F\u90E8\u5C4B\u3082\u3054\u3056\u3044\u307E\u3059\u3002\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306E\u5C71\u3042\u3044\u306E\u5BBF\u306E\u304A\u90E8\u5C4B\u3092\u3001\u3072\u3068\u3064\u305A\u3064\u3054\u6848\u5185\u3057\u307E\u3059\u3002",
+    kw: "\u515C\u5BB6\u65C5\u9928 \u5BA2\u5BA4"
+  },
+  {
+    path: "/rooms/onsen/",
+    tpl: "tpl-rooms-onsen",
+    nav: false,
+    lang: "ja",
+    parent: "/rooms/",
+    label: "\u6E29\u6CC9",
+    title: "\u6E29\u6CC9\uFF5C\u304A\u90E8\u5C4B" + SUFFIX,
+    desc: "\u6D74\u5BA4\u4ED8\u306E\u304A\u90E8\u5C4B\u306B\u306F\u3001\u5929\u7136\u6E29\u6CC9\u300C\u6570\u99AC\u306E\u6E6F\u300D\uFF08\u5358\u7D14\u30A2\u30EB\u30AB\u30EA\u6CC9\uFF09\u3092\u3002\u7537\u5973\u5225\u306E\u5927\u6D74\u5BA4\u306F\u3001\u304A\u6CCA\u307E\u308A\u306E\u5C11\u306A\u3044\u65E5\u306B\u306F\u8CB8\u5207\u306B\u3002\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306B\u308F\u304F\u3001\u5C71\u3042\u3044\u306E\u5BBF\u306E\u6E6F\u3092\u3054\u6848\u5185\u3057\u307E\u3059\u3002",
+    kw: "\u6A9C\u539F\u6751 \u6E29\u6CC9 \u65C5\u9928"
+  },
+  {
+    path: "/around/",
+    tpl: "tpl-around",
+    nav: true,
+    lang: "ja",
+    parent: "/",
+    label: "\u5468\u8FBA",
+    title: "\u5468\u8FBA\u306E\u3054\u6848\u5185" + SUFFIX,
+    desc: "\u6255\u6CA2\u306E\u6EDD\u3001\u51AC\u306B\u51CD\u308B\u6C37\u7011\u3001\u6E13\u8C37\u3068\u540A\u6A4B\u3001\u5965\u591A\u6469\u6E56\u3002\u6A9C\u539F\u6751\u306F\u6771\u4EAC\u90FD\u306E\u672C\u571F\u3067\u552F\u4E00\u306E\u6751\u3067\u3059\u3002\u90FD\u5FC3\u3088\u308A\u516D\u5EA6\u307B\u3069\u4F4E\u3044\u5C71\u3042\u3044\u306E\u6C17\u5019\u304C\u3001\u56DB\u5B63\u306E\u666F\u8272\u3092\u969B\u7ACB\u305F\u305B\u307E\u3059\u3002\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306E\u515C\u5BB6\u65C5\u9928\u304C\u3054\u6848\u5185\u3057\u307E\u3059\u3002",
+    kw: "\u6A9C\u539F\u6751 \u89B3\u5149"
+  },
+  {
+    path: "/access/",
+    tpl: "tpl-access",
+    nav: true,
+    lang: "ja",
+    parent: "/",
+    label: "\u30A2\u30AF\u30BB\u30B9\u30FB\u5BBF\u60C5\u5831",
+    title: "\u30A2\u30AF\u30BB\u30B9\u30FB\u5BBF\u60C5\u5831" + SUFFIX,
+    desc: "\u65B0\u5BBF\u304B\u3089\u4E8C\u6642\u9593\u534A\u3001\u96FB\u8ECA\u3068\u30D0\u30B9\u3067\u53C2\u308A\u307E\u3059\u3002JR\u6B66\u8535\u4E94\u65E5\u5E02\u99C5\u304B\u3089\u897F\u6771\u4EAC\u30D0\u30B9\u6570\u99AC\u884C\u306B\u304A\u4E57\u308A\u63DB\u3048\u304F\u3060\u3055\u3044\u3002\u304A\u8ECA\u3067\u3082\u3002\u5168\u5341\u516D\u5BA4\u3001\u5B9A\u54E1\u516D\u5341\u4E03\u540D\u3002\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u6570\u99AC2612\u3001\u515C\u5BB6\u65C5\u9928\u3002",
+    kw: "\u515C\u5BB6\u65C5\u9928 \u30A2\u30AF\u30BB\u30B9"
+  },
+  {
+    path: "/plans/",
+    tpl: "tpl-plans",
+    nav: false,
+    lang: "ja",
+    parent: "/",
+    label: "\u5BBF\u6CCA\u30D7\u30E9\u30F3\u30FB\u6599\u91D1",
+    title: "\u5BBF\u6CCA\u30D7\u30E9\u30F3\u30FB\u6599\u91D1" + SUFFIX,
+    desc: "\u4E00\u6CCA\u4E8C\u98DF\u3001\u56F2\u7089\u88CF\u306E\u70AD\u706B\u713C\u304D\u3068\u732A\u934B\u306E\u30D7\u30E9\u30F3\u3002\u9298\u9152\u4E8C\u5341\u7A2E\u3082\u304A\u697D\u3057\u307F\u3044\u305F\u3060\u3051\u307E\u3059\u3002\u3054\u4E88\u7D04\u306F\u304A\u96FB\u8A71\u3067\u627F\u308A\u307E\u3059\u3002\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u306E\u8305\u847A\u304D\u306E\u5BBF\u3001\u515C\u5BB6\u65C5\u9928\u306E\u3054\u5BBF\u6CCA\u6848\u5185\u3067\u3059\u3002",
+    kw: "\u515C\u5BB6\u65C5\u9928 \u6599\u91D1 / \u5BBF\u6CCA\u30D7\u30E9\u30F3"
+  },
+  {
+    path: "/reserve/",
+    tpl: "tpl-reserve",
+    nav: false,
+    lang: "ja",
+    parent: "/plans/",
+    label: "\u3054\u4E88\u7D04\u30D5\u30A9\u30FC\u30E0",
+    title: "\u3054\u4E88\u7D04\u30D5\u30A9\u30FC\u30E0\uFF5C\u5BBF\u6CCA\u30D7\u30E9\u30F3\u30FB\u6599\u91D1" + SUFFIX,
+    desc: "\u515C\u5BB6\u65C5\u9928\u306E\u3054\u4E88\u7D04\u30D5\u30A9\u30FC\u30E0\u3067\u3059\u3002\u3054\u5E0C\u671B\u306E\u65E5\u306B\u3061\u3001\u4EBA\u6570\u3001\u304A\u90E8\u5C4B\u3068\u304A\u98DF\u4E8B\u3092\u304A\u77E5\u3089\u305B\u304F\u3060\u3055\u3044\u3002\u5BBF\u304B\u3089\u7A7A\u5BA4\u306E\u304A\u8FD4\u4E8B\u3092\u3055\u3057\u3042\u3052\u307E\u3059\u3002\u304A\u96FB\u8A71\u3067\u3082\u627F\u308A\u307E\u3059\u3002\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306E\u8305\u847A\u304D\u306E\u5BBF\u3002",
+    kw: "\u515C\u5BB6\u65C5\u9928 \u4E88\u7D04"
+  },
+  {
+    path: "/meals/lunch/",
+    tpl: "tpl-meals-lunch",
+    nav: false,
+    lang: "ja",
+    parent: "/meals/",
+    label: "\u30E9\u30F3\u30C1\u30FB\u30C7\u30A3\u30CA\u30FC",
+    title: "\u30E9\u30F3\u30C1\u30FB\u30C7\u30A3\u30CA\u30FC\uFF5C\u304A\u98DF\u4E8B" + SUFFIX,
+    desc: "\u304A\u6CCA\u307E\u308A\u3067\u306A\u304F\u3066\u3082\u3001\u5C71\u306E\u81B3\u3092\u3002\u5C71\u83DC\u6599\u7406\u3001\u732A\u934B\u3001\u56F2\u7089\u88CF\u306E\u70AD\u706B\u713C\u304D\u3092\u3001\u30E9\u30F3\u30C1\u3068\u30C7\u30A3\u30CA\u30FC\u3067\u304A\u51FA\u3057\u3057\u307E\u3059\u3002\u6728\u66DC\u5B9A\u4F11\u3001\u5B8C\u5168\u4E88\u7D04\u5236\u3002\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306E\u515C\u5BB6\u65C5\u9928\u3078\u3001\u65E5\u5E30\u308A\u3067\u3069\u3046\u305E\u3002",
+    kw: "\u6A9C\u539F\u6751 \u30E9\u30F3\u30C1 / \u6A9C\u539F\u6751 \u98DF\u4E8B\u51E6"
+  },
+  {
+    path: "/cafe/",
+    tpl: "tpl-cafe",
+    nav: false,
+    lang: "ja",
+    parent: "/",
+    label: "\u6E13\u8C37\u5C55\u671B\u30AB\u30D5\u30A7",
+    title: "\u6E13\u8C37\u5C55\u671B\u30AB\u30D5\u30A7" + SUFFIX,
+    desc: "\u6E13\u8C37\u3092\u773A\u3081\u306A\u304C\u3089\u3001\u3086\u3063\u304F\u308A\u6DF9\u308C\u305F\u30D5\u30A7\u30A2\u30C8\u30EC\u30FC\u30C9\u306E\u30B3\u30FC\u30D2\u30FC\u3068\u3001\u6A9C\u539F\u6751\u306E\u7121\u8FB2\u85AC\u7D05\u8336\u3092\u3002\u4E00\u65E5\u4E09\u7D44\u9650\u5B9A\u3001\u5B8C\u5168\u4E88\u7D04\u5236\u306E\u6E13\u8C37\u5C55\u671B\u30AB\u30D5\u30A7\u3067\u3059\u3002\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u3001\u515C\u5BB6\u65C5\u9928\u306E\u4E2D\u306B\u3042\u308A\u307E\u3059\u3002",
+    kw: "\u6A9C\u539F\u6751 \u30AB\u30D5\u30A7"
+  },
+  {
+    path: "/lounge/",
+    tpl: "tpl-lounge",
+    nav: false,
+    lang: "ja",
+    parent: "/",
+    label: "\u711A\u304D\u706B\u30E9\u30A6\u30F3\u30B8",
+    title: "\u711A\u304D\u706B\u30E9\u30A6\u30F3\u30B8" + SUFFIX,
+    desc: "\u6A9C\u539F\u6751\u306E\u5C71\u3042\u3044\u3067\u3001\u711A\u304D\u706B\u3092\u773A\u3081\u306A\u304C\u3089\u304A\u9152\u3092\u3002\u3054\u5BBF\u6CCA\u306E\u65B9\u3060\u3051\u306E\u3001\u5404\u56DE\u4E00\u7D44\u9650\u5B9A\u306E\u711A\u304D\u706B\u30E9\u30A6\u30F3\u30B8\u3067\u3059\u3002\u6CA2\u306E\u6C34\u3067\u5272\u308B\u30A6\u30A4\u30B9\u30AD\u30FC\u3068\u3001\u6CA2\u306E\u6C34\u3067\u6DF9\u308C\u308B\u30B3\u30FC\u30D2\u30FC\u3092\u3002\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u3001\u515C\u5BB6\u65C5\u9928\u3002",
+    kw: "\u6771\u4EAC \u711A\u304D\u706B \u5BBF"
+  },
+  {
+    path: "/rooms/relaxation/",
+    tpl: "tpl-rooms-relaxation",
+    nav: false,
+    lang: "ja",
+    parent: "/rooms/",
+    label: "\u30EA\u30E9\u30AF\u30BC\u30FC\u30B7\u30E7\u30F3",
+    title: "\u30EA\u30E9\u30AF\u30BC\u30FC\u30B7\u30E7\u30F3\uFF5C\u304A\u90E8\u5C4B" + SUFFIX,
+    desc: "\u304A\u90E8\u5C4B\u307E\u3067\u304A\u4F3A\u3044\u3059\u308B\u3001\u3082\u307F\u307B\u3050\u3057\u306E\u30EA\u30E9\u30AF\u30BC\u30FC\u30B7\u30E7\u30F3\u3002\u7740\u8863\u306E\u307E\u307E\u3001\u80A9\u30FB\u8170\u30FB\u8DB3\u306E\u75B2\u308C\u3092\u3084\u308F\u3089\u3052\u307E\u3059\u3002\u5915\u65B9\u516D\u6642\u304B\u3089\u4E5D\u6642\u307E\u3067\u3001\u5B8C\u5168\u4E88\u7D04\u5236\u3002\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306E\u515C\u5BB6\u65C5\u9928\u3067\u306E\u3054\u5BBF\u6CCA\u306B\u3002",
+    kw: "\u515C\u5BB6\u65C5\u9928 \u30EA\u30E9\u30AF\u30BC\u30FC\u30B7\u30E7\u30F3"
+  },
+  {
+    path: "/shop/",
+    tpl: "tpl-shop",
+    nav: false,
+    lang: "ja",
+    parent: "/",
+    label: "\u304A\u8CB7\u3044\u3082\u306E",
+    title: "\u304A\u8CB7\u3044\u3082\u306E" + SUFFIX,
+    desc: "\u5869\u5206\u3072\u304B\u3048\u3081\u306E\u81EA\u5BB6\u88FD\u300C\u304A\u3058\u3044\u3061\u3083\u3093\u306E\u6885\u5E72\u300D\u3001\u6A9C\u539F\u6751\u7279\u7523\u306E\u523A\u8EAB\u3053\u3093\u306B\u3083\u304F\u3001\u7121\u8FB2\u85AC\u306E\u3072\u306E\u306F\u3089\u7D05\u8336\u3001\u6A9C\u539F\u6751\u306E\u6C34\u3002\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306E\u515C\u5BB6\u65C5\u9928\u304B\u3089\u3001\u5C71\u306E\u5473\u3092\u3054\u81EA\u5B85\u3078\u304A\u5C4A\u3051\u3057\u307E\u3059\u3002",
+    kw: "\u6A9C\u539F\u6751 \u7279\u7523 / \u523A\u8EAB\u3053\u3093\u306B\u3083\u304F"
+  },
+  {
+    path: "/news/",
+    tpl: "tpl-news",
+    nav: false,
+    lang: "ja",
+    parent: "/",
+    label: "\u304A\u77E5\u3089\u305B",
+    title: "\u304A\u77E5\u3089\u305B" + SUFFIX,
+    desc: "\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u30FB\u6570\u99AC\u306E\u515C\u5BB6\u65C5\u9928\u304B\u3089\u306E\u304A\u77E5\u3089\u305B\u3067\u3059\u3002\u6A9C\u539F\u8857\u9053\u306E\u4EA4\u901A\u60C5\u5831\u3001\u65B0\u3057\u3044\u304A\u98DF\u4E8B\u3084\u30D7\u30E9\u30F3\u3001\u30C6\u30EC\u30D3\u3084\u52D5\u753B\u3067\u306E\u3054\u7D39\u4ECB\u3001\u5BBF\u6CCA\u6599\u91D1\u3068\u3054\u4E88\u7D04\u306B\u3064\u3044\u3066\u306E\u3054\u6848\u5185\u3092\u3001\u65E5\u4ED8\u306E\u65B0\u3057\u3044\u9806\u306B\u304A\u4F1D\u3048\u3057\u307E\u3059\u3002",
+    kw: "\u515C\u5BB6\u65C5\u9928 \u304A\u77E5\u3089\u305B"
+  },
+  {
+    path: "/en/",
+    tpl: "tpl-en-home",
+    nav: false,
+    lang: "en",
+    parent: null,
+    label: "English",
+    title: "Kabutoya Ryokan\uFF5CA Thatched Inn in Tokyo",
+    desc: "A thatched kabuto-zukuri inn in Kazuma, Hinohara, Tokyo. Charcoal grilling by the sunken hearth, wild boar hotpot, and mountain vegetables. Two hours from Shinjuku.",
+    kw: "Tokyo thatched ryokan"
+  },
+  {
+    path: "/en/about/",
+    tpl: "tpl-en-about",
+    nav: false,
+    lang: "en",
+    parent: "/en/",
+    label: "About",
+    title: "About\uFF5CKabutoya Ryokan",
+    desc: "Only four kabuto-zukuri thatched houses survive intact in Kazuma. Timber joined almost without nails, thatch 120cm thick, four storeys once used for silkworms.",
+    kw: "Tokyo kabuto-zukuri"
+  }
 ];
-
-/* ============================================================
-   メニューの構成（2026-09-28 山田：ページが22に増えたので、ヘッダーとフッターを組み直した）
-   ・MENU   … ヘッダー（PC）とメニュー（スマホ）の6項目。sub は、PCでは重ねて出る小メニュー、スマホでは小さな字で並ぶ
-   ・FOOTER … フッターの4つのまとまり。「何をしたいか」で分けてある（知る／泊まる／味わう／訪ねる）
-   ページの名前は ROUTES の label を使う（ここに書いた name は、ヘッダーで短く見せたいときだけの上書き）。
-   check.py が読む書式（path / tpl / parent / nav / desc / lang）と重ならないよう、ここでは to / sub という名前を使う。
-   ============================================================ */
 const MENU = [
-  { to:"/about/",  sub:["/about/irori/", "/okami/", "/seasons/"] },
-  { to:"/rooms/",  sub:["/rooms/onsen/", "/lounge/", "/rooms/relaxation/"] },
-  { to:"/meals/",  sub:["/meals/inoshishi/", "/meals/lunch/", "/cafe/"] },
-  { to:"/plans/",  sub:["/reserve/"], name:"宿泊プラン" },
-  { to:"/around/", sub:[] },
-  { to:"/access/", sub:[], name:"アクセス" },
+  { to: "/about/", sub: ["/about/irori/", "/okami/", "/seasons/"] },
+  { to: "/rooms/", sub: ["/rooms/onsen/", "/lounge/", "/rooms/relaxation/"] },
+  { to: "/meals/", sub: ["/meals/inoshishi/", "/meals/lunch/", "/cafe/"] },
+  { to: "/plans/", sub: ["/reserve/"], name: "\u5BBF\u6CCA\u30D7\u30E9\u30F3" },
+  { to: "/around/", sub: [] },
+  { to: "/access/", sub: [], name: "\u30A2\u30AF\u30BB\u30B9" }
 ];
 const FOOTER = [
-  { head:"宿を知る", en:"Story", links:["/about/", "/about/irori/", "/okami/", "/seasons/", "/seasons/09/", "/news/"] },
-  { head:"泊まる",   en:"Stay",  links:["/rooms/", "/rooms/onsen/", "/lounge/", "/rooms/relaxation/", "/plans/", "/reserve/"] },
-  { head:"味わう",   en:"Taste", links:["/meals/", "/meals/inoshishi/", "/meals/lunch/", "/cafe/", "/shop/"] },
-  { head:"訪ねる",   en:"Visit", links:["/access/", "/around/", "/en/"] },
+  { head: "\u5BBF\u3092\u77E5\u308B", en: "Story", links: ["/about/", "/about/irori/", "/okami/", "/seasons/", "/seasons/09/", "/news/"] },
+  { head: "\u6CCA\u307E\u308B", en: "Stay", links: ["/rooms/", "/rooms/onsen/", "/lounge/", "/rooms/relaxation/", "/plans/", "/reserve/"] },
+  { head: "\u5473\u308F\u3046", en: "Taste", links: ["/meals/", "/meals/inoshishi/", "/meals/lunch/", "/cafe/", "/shop/"] },
+  { head: "\u8A2A\u306D\u308B", en: "Visit", links: ["/access/", "/around/", "/en/"] }
 ];
-
-/* 言語切替の対応表。対訳がないページからは /en/ に送る（router.js が使う） */
-const LANG_PAIRS = { "/":"/en/", "/about/":"/en/about/", "/en/":"/", "/en/about/":"/about/" };
+const LANG_PAIRS = { "/": "/en/", "/about/": "/en/about/", "/en/": "/", "/en/about/": "/about/" };
