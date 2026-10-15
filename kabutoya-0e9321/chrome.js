@@ -11,18 +11,18 @@
     ["YouTube", "https://www.youtube.com/@kabutoya_ryokan"],
     ["Vimeo", "https://vimeo.com/kabutoya"]
   ];
-  const snsHTML = () => SNS.map(([n, u]) => `<a href="${u}" target="_blank" rel="noopener" aria-label="${n}\uFF08\u65B0\u3057\u3044\u30BF\u30D6\u3067\u958B\u304D\u307E\u3059\uFF09">${n}</a>`).join("");
+  const snsHTML = () => SNS.map(([n, u]) => `<a href="${u}" target="_blank" rel="noopener" aria-label="${n}（新しいタブで開きます）">${n}</a>`).join("");
   const LOGO = `
     <svg viewBox="0 0 56 150" aria-hidden="true">
-      <text x="28" y="44" text-anchor="middle" font-family="Noto Serif JP, Hiragino Mincho ProN, serif" font-size="42" fill="currentColor">\u515C</text>
+      <text x="28" y="44" text-anchor="middle" font-family="Noto Serif JP, Hiragino Mincho ProN, serif" font-size="42" fill="currentColor">兜</text>
       <circle cx="46" cy="50" r="3.2" fill="#e72420"/>
       <text x="28" y="72" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8.5" letter-spacing="1.6" fill="currentColor">KABUTOYA</text>
       <text x="28" y="84" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8.5" letter-spacing="1.6" fill="currentColor">RYOKAN</text>
       <line x1="16" y1="94" x2="40" y2="94" stroke="currentColor" stroke-width=".6"/>
       <text x="28" y="108" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="6.5" letter-spacing="1.2" fill="currentColor">THE THATCHED</text>
-      <text x="28" y="118" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="6.5" letter-spacing="1.2" fill="currentColor">INN \xB7 TOKYO</text>
+      <text x="28" y="118" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="6.5" letter-spacing="1.2" fill="currentColor">INN · TOKYO</text>
     </svg>`;
-  const burgerHTML = (id) => `<button class="burger" type="button" id="${id}" aria-label="\u30E1\u30CB\u30E5\u30FC\u3092\u958B\u304F" aria-expanded="false" aria-controls="drawer">
+  const burgerHTML = (id) => `<button class="burger" type="button" id="${id}" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">
        <span></span><span></span>
      </button>`;
   function buildChrome() {
@@ -35,31 +35,31 @@
         </div>` : ""}
       </div>`).join("");
     document.getElementById("side").innerHTML = `
-      <a class="side-logo" href="#/" aria-label="\u515C\u5BB6\u65C5\u9928 \u30C8\u30C3\u30D7\u3078">${LOGO}</a>
+      <a class="side-logo" href="#/" aria-label="兜家旅館 トップへ">${LOGO}</a>
       ${burgerHTML("burgerSide")}
-      <p class="side-txt">KAZUMA \xB7 HINOHARA \xB7 TOKYO</p>`;
+      <p class="side-txt">KAZUMA · HINOHARA · TOKYO</p>`;
     document.getElementById("header").innerHTML = `
-      <a class="brand" href="#/" aria-label="\u515C\u5BB6\u65C5\u9928 \u30C8\u30C3\u30D7\u3078">
-        <svg viewBox="0 0 40 40" aria-hidden="true"><text x="20" y="32" text-anchor="middle" font-family="Noto Serif JP, Hiragino Mincho ProN, serif" font-size="32" fill="currentColor">\u515C</text><circle cx="35" cy="35" r="2.6" fill="#e72420"/></svg>
-        <span>\u515C\u5BB6\u65C5\u9928</span>
+      <a class="brand" href="#/" aria-label="兜家旅館 トップへ">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><text x="20" y="32" text-anchor="middle" font-family="Noto Serif JP, Hiragino Mincho ProN, serif" font-size="32" fill="currentColor">兜</text><circle cx="35" cy="35" r="2.6" fill="#e72420"/></svg>
+        <span>兜家旅館</span>
       </a>
       <div class="header-right">
-      <nav class="nav" aria-label="\u30E1\u30A4\u30F3\u30CA\u30D3\u30B2\u30FC\u30B7\u30E7\u30F3">${nav}</nav>
+      <nav class="nav" aria-label="メインナビゲーション">${nav}</nav>
       <p class="lang"><a href="#/" data-lang="ja">JP</a><span>/</span><a href="#/en/" hreflang="en" data-lang="en">EN</a></p>
-      <a class="btn" href="#/reserve/">\u3054\u4E88\u7D04</a>
+      <a class="btn" href="#/reserve/">ご予約</a>
       <button class="seo-toggle" type="button" id="seoToggle" aria-pressed="false"
-              title="\u3053\u306E\u30DA\u30FC\u30B8\u306ESEO\u8A2D\u5B9A\u3092\u8868\u793A">SEO</button>
+              title="このページのSEO設定を表示">SEO</button>
       ${burgerHTML("burgerTop")}
       </div>`;
     document.getElementById("drawer").innerHTML = `
-      <button class="drawer-close" type="button" id="drawerClose" aria-label="\u30E1\u30CB\u30E5\u30FC\u3092\u9589\u3058\u308B">CLOSE</button>
+      <button class="drawer-close" type="button" id="drawerClose" aria-label="メニューを閉じる">CLOSE</button>
       <div class="drawer-in">
         <ol>${MENU.map((m, i) => `<li><a href="#${m.to}"><i>${String(i + 1).padStart(2, "0")}</i>${nameOf(m.to, m.name)}</a>${m.sub.length ? `<p class="drawer-sub">${m.sub.map((p) => `<a href="#${p}">${nameOf(p)}</a>`).join("")}</p>` : ""}</li>`).join("")}
         </ol>
-        <p class="drawer-extra"><a href="#/news/">\u304A\u77E5\u3089\u305B</a><a href="#/shop/">\u304A\u8CB7\u3044\u3082\u306E</a></p>
+        <p class="drawer-extra"><a href="#/news/">お知らせ</a><a href="#/shop/">お買いもの</a></p>
         <div class="drawer-actions">
-          <a class="btn" href="#/reserve/">\u3054\u4E88\u7D04\u30D5\u30A9\u30FC\u30E0\u3078</a>
-          <a class="btn drawer-tel" href="tel:0425986136">042-598-6136 \u306B\u96FB\u8A71\u3059\u308B<small>\u53D7\u4ED8\u6642\u9593\u5185\u306B\u304A\u9858\u3044\u3044\u305F\u3057\u307E\u3059</small></a>
+          <a class="btn" href="#/reserve/">ご予約フォームへ</a>
+          <a class="btn drawer-tel" href="tel:0425986136">042-598-6136 に電話する<small>受付時間内にお願いいたします</small></a>
         </div>
         <p class="sns sns--drawer">${snsHTML()}</p>
         <p class="lang"><a href="#/" data-lang="ja">JAPANESE</a><span>/</span><a href="#/en/" hreflang="en" data-lang="en">ENGLISH</a></p>
@@ -67,14 +67,14 @@
     document.getElementById("footer").innerHTML = `
       <div class="footer-in">
         <div class="footer-brand">
-          <p class="footer-name">KABUTOYA RYOKAN<span>\u515C\u5BB6\u65C5\u9928</span></p>
-          <p class="footer-addr">\u3012190-0221<br>\u6771\u4EAC\u90FD\u897F\u591A\u6469\u90E1\u6A9C\u539F\u6751\u6570\u99AC 2612</p>
+          <p class="footer-name">KABUTOYA RYOKAN<span>兜家旅館</span></p>
+          <p class="footer-addr">〒190-0221<br>東京都西多摩郡檜原村数馬 2612</p>
           <p class="footer-tel"><a class="tel" href="tel:0425986136">${TEL}</a></p>
           <p class="footer-contact">FAX 042-598-6741<br><a href="mailto:info@kabutoya.net">info@kabutoya.net</a></p>
-          <p class="footer-hours">\u30C1\u30A7\u30C3\u30AF\u30A4\u30F3 15:00 \uFF0F \u3054\u51FA\u767A 10:00<br>\u5B9A\u4F11\u65E5 \u6728\u66DC\uFF08\u30B7\u30FC\u30BA\u30F3\u671F\u9593\u3068\u795D\u65E5\u3092\u9664\u304F\uFF09</p>
-          <p class="footer-cta"><a class="btn" href="#/reserve/">\u3054\u4E88\u7D04\u30D5\u30A9\u30FC\u30E0\u3078</a></p>
+          <p class="footer-hours">チェックイン 15:00 ／ ご出発 10:00<br>定休日 木曜（シーズン期間と祝日を除く）</p>
+          <p class="footer-cta"><a class="btn" href="#/reserve/">ご予約フォームへ</a></p>
         </div>
-        <nav class="footer-cols" aria-label="\u30D5\u30C3\u30BF\u30FC\u30CA\u30D3\u30B2\u30FC\u30B7\u30E7\u30F3">
+        <nav class="footer-cols" aria-label="フッターナビゲーション">
           ${FOOTER.map((g) => `
           <div>
             <h2 class="footer-head"><span>${g.en}</span>${g.head}</h2>
@@ -84,14 +84,14 @@
       </div>
       <div class="footer-sub"><div class="footer-sub-in">
         <p class="sns">${snsHTML()}</p>
-        <p class="lang"><a href="#/" data-lang="ja">\u65E5\u672C\u8A9E</a><span>/</span><a href="#/en/" hreflang="en" data-lang="en">English</a></p>
+        <p class="lang"><a href="#/" data-lang="ja">日本語</a><span>/</span><a href="#/en/" hreflang="en" data-lang="en">English</a></p>
       </div></div>
       <div class="footer-bottom"><div class="footer-bottom-in">
-        <p>\xA9 Kabutoya Ryokan. All rights reserved.</p>
+        <p>© Kabutoya Ryokan. All rights reserved.</p>
         <a class="top" href="#top" id="pageTop">PAGE TOP</a>
       </div></div>`;
     document.getElementById("bookFix").innerHTML = `
-      <strong>\u4E88\u7D04\u3059\u308B</strong><small>\u516C\u5F0F\u30B5\u30A4\u30C8\u304C\u3044\u3061\u3070\u3093\u304A\u5F97</small>`;
+      <strong>予約する</strong><small>公式サイトがいちばんお得</small>`;
     document.querySelectorAll(".burger").forEach((b) => b.addEventListener("click", toggleDrawer));
     document.getElementById("drawerClose").addEventListener("click", closeDrawer);
     document.addEventListener("keydown", (e) => {
@@ -172,7 +172,7 @@
         const f = document.createElement("iframe");
         f.src = `https://www.youtube-nocookie.com/embed/${b.dataset.yt}?autoplay=1&rel=0&playsinline=1&modestbranding=1`;
         f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
-        f.title = b.dataset.title || "\u52D5\u753B";
+        f.title = b.dataset.title || "動画";
         f.setAttribute("allowfullscreen", "");
         const box = document.createElement("div");
         box.className = "media-thumb is-playing";
@@ -191,7 +191,7 @@
         const f = document.createElement("iframe");
         f.src = `https://player.vimeo.com/video/${v.dataset.vimeo}?${h}autoplay=1&title=0&byline=0&portrait=0&dnt=1` + (quiet ? "&muted=1&loop=1" : "");
         f.allow = "autoplay; fullscreen; picture-in-picture";
-        f.title = v.dataset.title || "\u6620\u50CF";
+        f.title = v.dataset.title || "映像";
         f.setAttribute("allowfullscreen", "");
         v.appendChild(f);
         v.dataset.playing = "true";
@@ -226,15 +226,15 @@
     const t = new Date();
     date.min = `${t.getFullYear()}-${pad(t.getMonth() + 1)}-${pad(t.getDate())}`;
     const LABEL = {
-      date: "\u3054\u5BBF\u6CCA\u306E\u65E5",
-      adult: "\u5927\u4EBA",
-      child: "\u304A\u5B50\u69D8",
-      plan: "\u304A\u90E8\u5C4B\u3068\u304A\u98DF\u4E8B",
-      name: "\u304A\u540D\u524D",
-      tel: "\u304A\u96FB\u8A71\u756A\u53F7",
-      mail: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
-      note: "\u3054\u8981\u671B",
-      pamphlet: "\u30D1\u30F3\u30D5\u30EC\u30C3\u30C8"
+      date: "ご宿泊の日",
+      adult: "大人",
+      child: "お子様",
+      plan: "お部屋とお食事",
+      name: "お名前",
+      tel: "お電話番号",
+      mail: "メールアドレス",
+      note: "ご要望",
+      pamphlet: "パンフレット"
     };
     const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
     form.addEventListener("submit", (e) => {
@@ -244,25 +244,25 @@
       if (bad.length) {
         bad.forEach((el) => el.setAttribute("aria-invalid", "true"));
         err.hidden = false;
-        err.textContent = "\u5165\u529B\u3092\u304A\u78BA\u304B\u3081\u304F\u3060\u3055\u3044\uFF1A" + bad.map((el) => LABEL[el.name]).join("\u3001");
+        err.textContent = "入力をお確かめください：" + bad.map((el) => LABEL[el.name]).join("、");
         bad[0].focus();
         return;
       }
       err.hidden = true;
       const d = new Date(date.value + "T00:00:00");
-      const week = "\u65E5\u6708\u706B\u6C34\u6728\u91D1\u571F"[d.getDay()];
+      const week = "日月火水木金土"[d.getDay()];
       const rows = [
-        ["date", `${d.getFullYear()}\u5E74${d.getMonth() + 1}\u6708${d.getDate()}\u65E5\uFF08${week}\uFF09\u304B\u3089\u4E00\u6CCA`],
-        ["adult", form.adult.value + "\u540D"],
-        ["child", form.child.value === "\u306A\u3057" ? "\u306A\u3057" : form.child.value + "\u540D"],
+        ["date", `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日（${week}）から一泊`],
+        ["adult", form.adult.value + "名"],
+        ["child", form.child.value === "なし" ? "なし" : form.child.value + "名"],
         ["plan", form.plan.value],
-        ["name", form.name.value + " \u69D8"],
+        ["name", form.name.value + " 様"],
         ["tel", form.tel.value],
         ["mail", form.mail.value],
-        ["note", form.note.value || "\uFF08\u306A\u3057\uFF09"],
-        ["pamphlet", form.pamphlet.checked ? "\u90F5\u9001\u3092\u5E0C\u671B\u3059\u308B" : "\u5E0C\u671B\u3057\u306A\u3044"]
+        ["note", form.note.value || "（なし）"],
+        ["pamphlet", form.pamphlet.checked ? "郵送を希望する" : "希望しない"]
       ];
-      root.querySelector("#rsvSummary").innerHTML = rows.map(([k, v]) => `<div><dt>${LABEL[k]}</dt><dd>${esc(v)}</dd></div>`).join("") + (d.getDay() === 4 ? `<div><dt>\u3054\u78BA\u8A8D</dt><dd>\u6728\u66DC\u65E5\u306F\u5B9A\u4F11\u65E5\u3067\u3059\uFF08\u30B7\u30FC\u30BA\u30F3\u671F\u9593\u3068\u795D\u65E5\u3092\u9664\u304F\uFF09\u3002\u5BBF\u304B\u3089\u306E\u304A\u8FD4\u4E8B\u3067\u3054\u6848\u5185\u3057\u307E\u3059</dd></div>` : "");
+      root.querySelector("#rsvSummary").innerHTML = rows.map(([k, v]) => `<div><dt>${LABEL[k]}</dt><dd>${esc(v)}</dd></div>`).join("") + (d.getDay() === 4 ? `<div><dt>ご確認</dt><dd>木曜日は定休日です（シーズン期間と祝日を除く）。宿からのお返事でご案内します</dd></div>` : "");
       form.hidden = true;
       done.hidden = false;
       done.focus({ preventScroll: true });
@@ -374,7 +374,7 @@
   function setBurgers(open) {
     document.querySelectorAll(".burger").forEach((b) => {
       b.setAttribute("aria-expanded", String(open));
-      b.setAttribute("aria-label", open ? "\u30E1\u30CB\u30E5\u30FC\u3092\u9589\u3058\u308B" : "\u30E1\u30CB\u30E5\u30FC\u3092\u958B\u304F");
+      b.setAttribute("aria-label", open ? "メニューを閉じる" : "メニューを開く");
     });
   }
   function toggleDrawer() {
@@ -407,13 +407,13 @@
     bar.hidden = false;
     const trail = window.KB.crumbTrail(route).map((r) => r.label);
     bar.innerHTML = `<div class="seo-in">
-      <p class="seo-note">\u30C7\u30E2\u7528\u306E\u8868\u793A\u3067\u3059\uFF08\u672C\u756A\u30B5\u30A4\u30C8\u306B\u306F\u51FA\u307E\u305B\u3093\uFF09</p>
+      <p class="seo-note">デモ用の表示です（本番サイトには出ません）</p>
       <dl>
         <div><dt>URL</dt><dd>${route.path}</dd></div>
         <div><dt>title</dt><dd>${route.title}</dd></div>
         <div><dt>description</dt><dd>${route.desc}</dd></div>
-        <div><dt>\u72D9\u3046\u30AD\u30FC\u30EF\u30FC\u30C9</dt><dd class="seo-kw">${route.kw}</dd></div>
-        <div><dt>\u968E\u5C64</dt><dd>${trail.join(" \uFF1E ")}</dd></div>
+        <div><dt>狙うキーワード</dt><dd class="seo-kw">${route.kw}</dd></div>
+        <div><dt>階層</dt><dd>${trail.join(" ＞ ")}</dd></div>
       </dl></div>`;
   }
   function syncLangLinks() {

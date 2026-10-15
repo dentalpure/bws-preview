@@ -749,7 +749,7 @@ a:hover .more::after,
   gap: 6px;
 }
 .crumb li + li::before {
-  content: "\ff0f";
+  content: "／";
   margin-right: 6px;
   color: var(--gray);
 }
