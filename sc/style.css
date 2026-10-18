@@ -656,3 +656,7 @@ details[open] .tg{transform:rotate(90deg)}
   .track > .photo{grid-column:2;grid-row:1/3}
   .track .jobs-head,.track .cards,.track .grad-table{grid-column:1/3}
 }
+/* ===== 2026-10-18 募集職種カードを左端までいっぱいに（PC） ===== */
+@media (min-width:1101px){
+  .track .cards{margin-left:var(--bleed);padding-left:24px;scroll-padding-left:24px}
+}
