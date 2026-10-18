@@ -7,7 +7,7 @@
   --accent:#3FA9F5;
   --jp:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;
   --en:"Montserrat","Noto Sans JP",sans-serif;
-  --max:1400px; --gutter:48px; --label-col:300px; --bleed:calc(50% - 50vw);
+  --max:1400px; --gutter:48px; --label-col:170px; --bleed:calc(50% - 50vw);
   --r-photo:24px; --r-card:8px;
 }
 *{box-sizing:border-box}
