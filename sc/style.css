@@ -673,3 +673,5 @@ details[open] .tg{transform:rotate(90deg)}
   /* FAQ ボタン：80px 内側 → 本文線 271 */
   .faq-more{padding-left:0}
 }
+/* ===== 2026-10-18 検索バーを本文幅いっぱい（左右対称）に ===== */
+@media (min-width:1101px){ .search .wrap{padding-right:var(--gutter)} }
