@@ -660,3 +660,7 @@ details[open] .tg{transform:rotate(90deg)}
 @media (min-width:1101px){
   .track .cards{margin-left:var(--bleed);padding-left:24px;scroll-padding-left:24px}
 }
+/* ===== 2026-10-18 新卒の写真も左の角を丸く（写真は右端まで） ===== */
+@media (min-width:1101px){
+  .track.flip .photo{border-radius:var(--r-photo) 0 0 var(--r-photo)}
+}
