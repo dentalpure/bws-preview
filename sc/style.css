@@ -664,3 +664,14 @@ details[open] .tg{transform:rotate(90deg)}
 @media (min-width:1101px){
   .track.flip .photo{border-radius:var(--r-photo) 0 0 var(--r-photo)}
 }
+/* ===== 2026-10-18 中心線・バランス統一（PC）：ボタンは各章の本文線から始める ===== */
+@media (min-width:1101px){
+  /* 数字 VIEW MORE：中央 → 本文線 x=61 */
+  .ig-more{text-align:left;max-width:var(--max);margin-left:auto;margin-right:auto;padding:0 var(--gutter)}
+  /* メッセージ VIEW MORE：480 → 他の pill と同じ 280 */
+  .ab-more .ig-btn{min-width:280px}
+  /* FAQ ボタン：80px 内側 → 本文線 271 */
+  .faq-more{padding-left:0}
+  /* 募集職種カード：最初のカードを見出しと同じ x=61 に揃え、右へ流す */
+  .track .cards{--edge:max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));padding-left:var(--edge);scroll-padding-left:var(--edge)}
+}
