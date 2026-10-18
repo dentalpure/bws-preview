@@ -648,3 +648,11 @@ details[open] .tg{transform:rotate(90deg)}
 .three p{flex:1}
 @media (min-width:769px){.ab-body p,.sw-lead,.three p,.iv .bd p,.env p{text-align:justify}}
 @media (max-width:768px){.iv-cards{grid-template-columns:1fr 1fr;gap:12px}.iv{flex:auto;width:auto}.iv .bd{padding:12px 12px 14px}.iv .bd p{font-size:12.5px}.iv .who{font-size:11px}.three > div{display:grid}}
+/* ===== 2026-10-18 ラベルを見出しの上へ（PC） ===== */
+@media (min-width:1101px){
+  .track{grid-template-columns:1fr 1.25fr;grid-template-rows:auto auto;gap:0 64px;align-items:start}
+  .track > .label-jp{grid-column:1;grid-row:1;display:block;margin:0 0 24px;font-size:16px;color:var(--ink-soft);letter-spacing:.08em}
+  .track > .body{grid-column:1;grid-row:2;align-self:center}
+  .track > .photo{grid-column:2;grid-row:1/3}
+  .track .jobs-head,.track .cards,.track .grad-table{grid-column:1/3}
+}
