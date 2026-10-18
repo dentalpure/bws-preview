@@ -368,6 +368,19 @@
 <div class="sp-cta"><a class="pill" href="#entry">エントリーする <span class="arr">→</span></a></div>
 
 <script>
+/* 募集職種カード：自動スライド（ホバー・タッチ・手動スクロールで一時停止、端まで行ったら先頭へ継ぎ目なく戻る） */
+(function(){const t=document.querySelector('#career .cards');if(!t||!t.children.length)return;if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+const items=[...t.children];items.forEach(c=>{const d=c.cloneNode(true);d.setAttribute('aria-hidden','true');d.tabIndex=-1;d.classList.add('is-clone');t.appendChild(d)});
+let half=0;const measure=()=>{half=t.children[items.length].offsetLeft-items[0].offsetLeft};measure();addEventListener('resize',measure);
+let paused=false,visible=false,userTimer=0,expected=-1;const SPEED=40;/* px/秒 */
+const pause=()=>{paused=true};const resume=()=>{paused=false};
+t.addEventListener('pointerenter',pause);t.addEventListener('pointerleave',resume);t.addEventListener('focusin',pause);t.addEventListener('focusout',resume);
+t.addEventListener('touchstart',pause,{passive:true});t.addEventListener('touchend',()=>{clearTimeout(userTimer);userTimer=setTimeout(resume,4000)},{passive:true});
+t.addEventListener('scroll',()=>{if(expected>=0&&Math.abs(t.scrollLeft-expected)<=2)return;/* スクリプト自身の移動は無視 */t.style.scrollSnapType='';expected=-1;paused=true;clearTimeout(userTimer);userTimer=setTimeout(()=>{paused=false},4000)},{passive:true});
+new IntersectionObserver(e=>{visible=e[0].isIntersecting},{threshold:0.1}).observe(t);
+let acc=0,last=0;(function step(now){const dt=last?Math.min(now-last,200):0;last=now;if(visible&&!paused&&half>0){t.style.scrollSnapType='none';acc+=SPEED*dt/1000;const d=Math.floor(acc);if(d){acc-=d;let x=t.scrollLeft+d;if(x>=half)x-=half;t.scrollLeft=x;expected=t.scrollLeft}}requestAnimationFrame(step)})();})();
+</script>
+<script>
 const igm=document.getElementById('igModal');const igOpen=()=>{igm.hidden=false;document.body.style.overflow='hidden';igm.querySelector('.ig-close').focus()};const igClose=()=>{igm.hidden=true;document.body.style.overflow=''};
 document.querySelectorAll('[data-ig-open]').forEach(b=>b.addEventListener('click',igOpen));document.querySelectorAll('[data-ig-close]').forEach(b=>b.addEventListener('click',igClose));
 addEventListener('keydown',e=>{if(e.key==='Escape'&&!igm.hidden)igClose()});if(location.search.includes('detail=1'))igOpen();
