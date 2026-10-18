@@ -672,6 +672,4 @@ details[open] .tg{transform:rotate(90deg)}
   .ab-more .ig-btn{min-width:280px}
   /* FAQ ボタン：80px 内側 → 本文線 271 */
   .faq-more{padding-left:0}
-  /* 募集職種カード：最初のカードを見出しと同じ x=61 に揃え、右へ流す */
-  .track .cards{--edge:max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));padding-left:var(--edge);scroll-padding-left:var(--edge)}
 }
