@@ -13,8 +13,8 @@
 .for-clients .tel-list a{font-family:"Montserrat",sans-serif;font-weight:600;text-decoration:none!important}
 @media screen and (max-width:768px){.for-clients .key-facts{grid-template-columns:1fr;gap:.4rem}.for-clients .key-facts dd{border-top:0;padding-top:0;padding-bottom:1.2rem}}
 /* 会社紹介 K8 */
-#history li.proposed h3,#history li.proposed p{background:#eaf3fc}
-#history li.proposed.confirm h3{color:#c0392b}
+#history li.proposed p{background:#eaf3fc;padding:.4rem .8rem;border-radius:.6rem}
+#history li.proposed.confirm h3{background:#fff;color:#c0392b;border:1px solid #c0392b}
 #history .proposed-note{max-width:100rem;margin:2rem auto 0;font-size:1.2rem;color:#5a6478}
 /* 会社紹介 K5 */
 .figures-text{max-width:100rem;margin:-2rem auto 4rem;padding:2rem 2.4rem;background:#f7f9ff;border-radius:1.2rem;font-size:1.4rem;line-height:1.9}
