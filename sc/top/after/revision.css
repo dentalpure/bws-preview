@@ -1,5 +1,5 @@
 /* 修正後の案で追加した要素のスタイルのみ（2026-10-24）。既存のテーマCSSは変更しない。
-   組み込み時は子テーマの style.css 末尾、または front-page.css に追記する。 */
+   組み込み時はテーマ 3w_2026 の assets/css/front-page.css の末尾に追記する（自作テーマのため親テーマを直接編集。着手前にバックアップ）。 */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 /* T1 大見出し（h1）＋冒頭文：最初の画面の直後の帯 */
