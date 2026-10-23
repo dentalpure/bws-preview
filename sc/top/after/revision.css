@@ -2,6 +2,17 @@
    組み込み時はテーマ 3w_2026 の assets/css/front-page.css の末尾に追記する（自作テーマのため親テーマを直接編集。着手前にバックアップ）。 */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
+/* 追加（山田提案 10/24）スマートフォンの最初の画面：動画を画面いっぱいにし、見出しと文を動画の上に重ねる（PCと同じ見せ方）。
+   現状は動画（高さ30rem）の下に濃い青の帯で見出しを出している。PCの表示は変えない */
+@media screen and (max-width:768px){
+  .home .fv{height:100vh;height:100svh;min-height:56rem}
+  .home .fv .bg{position:absolute;top:0;left:0;width:100%;height:100%}
+  .home .fv .bg::after{background:linear-gradient(180deg,rgba(30,79,132,.35) 0%,rgba(30,79,132,.5) 45%,rgba(30,79,132,.82) 100%)}
+  .home .fv .wrapper{background:transparent;height:100%;justify-content:flex-end;padding:2rem 2rem 6.4rem}
+  .home .fv .wrapper p.lead{font-size:3.2rem;text-shadow:0 2px 12px rgba(10,30,60,.35)}
+  .home .fv .wrapper p.sub{text-shadow:0 1px 8px rgba(10,30,60,.4)}
+}
+
 /* T1 大見出し（h1）＋冒頭文：最初の画面の直後の帯 */
 .home .intro-headline{background:#fff;border-bottom:1px solid #e6ebf3}
 .home .intro-headline .wrapper{padding:5.6rem 12rem 4.8rem;text-align:center}
