@@ -675,3 +675,26 @@ details[open] .tg{transform:rotate(90deg)}
 }
 /* ===== 2026-10-18 検索バーを本文幅いっぱい（左右対称）に ===== */
 @media (min-width:1101px){ .search .wrap{padding-right:var(--gutter)} }
+/* ===== 2026-10-23 山田指示: ENTRY を SALARY と同じトンマナに（白地＋斜めの淡いグレー、青ラベル、40px見出し、白タイル＋青の数字） ===== */
+.entry{background:#fff;color:var(--ink);position:relative;overflow:hidden}
+.entry::before{content:"";position:absolute;left:0;top:0;width:40%;height:100%;background:#F1F3F6;clip-path:polygon(0 0,100% 0,0 100%);opacity:.6;pointer-events:none}
+.entry .wrap{position:relative}
+.entry .grid-label{grid-template-columns:1fr;gap:0}
+.entry .grid-label > div:first-child{display:flex;align-items:baseline;gap:16px;margin-bottom:10px}
+.entry .label{color:var(--primary);font-size:20px}
+.entry .grid-label > div:first-child p{margin:0 !important;font-size:13px;color:var(--ink-soft)}
+.entry .sw-h2{font-size:40px;font-weight:800;margin-bottom:12px;color:var(--ink)}
+.entry .sw-lead{font-size:15px;color:var(--ink-soft);margin-bottom:36px;max-width:40em}
+.entry .flow-label{font-size:14px;letter-spacing:.06em;color:var(--primary);margin:28px 0 12px;display:flex;align-items:center;gap:10px}
+.entry .flow-label::before{content:"";width:22px;height:2px;background:var(--primary)}
+.entry .flow{gap:16px;margin-bottom:28px}
+.entry .flow li{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);box-shadow:0 4px 16px rgba(30,79,132,.06);padding:22px 22px 20px}
+.entry .flow li::before{content:counter(step,decimal-leading-zero);font-family:var(--en);font-weight:700;font-size:28px;line-height:1;color:var(--primary);letter-spacing:-.01em;margin-bottom:12px}
+.entry .flow li b{font-size:16px;margin-bottom:6px}
+.entry .flow li span{font-size:12px;color:var(--ink-soft)}
+.entry .entry-form{margin-top:44px;background:#fff;border:1px solid var(--line);box-shadow:0 4px 16px rgba(30,79,132,.06);padding:40px}
+.entry .entry-form label{font-size:13px;font-weight:700;color:var(--ink)}
+.entry .entry-form input,.entry .entry-form select,.entry .entry-form textarea{border:1.5px solid var(--line);border-radius:6px;background:#FBFCFE}
+.entry .entry-form .pill{min-width:320px}
+.entry .numbers-note{margin-top:20px}
+@media (max-width:768px){.entry::before{width:70%;height:50%}.entry .sw-h2{font-size:28px}.entry .flow{grid-template-columns:1fr 1fr}.entry .flow li::before{font-size:22px}.entry .entry-form{padding:20px}}
