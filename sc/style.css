@@ -740,3 +740,4 @@ body{overflow-x:clip}
 .header.nav-open .burger span:nth-child(1){transform:translateY(5px) rotate(45deg)}
 .header.nav-open .burger span:nth-child(2){opacity:0}
 .header.nav-open .burger span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+body:has(.header.nav-open) .sp-cta{display:none}
