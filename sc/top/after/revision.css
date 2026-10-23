@@ -1,0 +1,55 @@
+/* 修正後の案で追加した要素のスタイルのみ（2026-10-24）。既存のテーマCSSは変更しない。
+   組み込み時は子テーマの style.css 末尾、または front-page.css に追記する。 */
+.bws-demo-label{position:fixed;left:16px;bottom:16px;z-index:1200;background:#C0392B;color:#fff;font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;font-family:sans-serif;letter-spacing:.05em;pointer-events:none}
+
+/* T1 大見出し（h1）＋冒頭文：最初の画面の直後の帯 */
+.home .intro-headline{background:#fff;border-bottom:1px solid #e6ebf3}
+.home .intro-headline .wrapper{padding:5.6rem 12rem 4.8rem;text-align:center}
+.home .intro-headline h1{font-size:2.8rem;font-weight:700;line-height:1.7;letter-spacing:.1rem;color:#1e4f84}
+.home .intro-headline p{margin-top:1.6rem;font-size:1.6rem;line-height:2;color:#222}
+@media screen and (max-width:768px){
+  .home .intro-headline .wrapper{padding:3.2rem 1.6rem;text-align:left}
+  .home .intro-headline h1{font-size:2rem;line-height:1.7}
+  .home .intro-headline h1 br.pc{display:none}
+  .home .intro-headline p{font-size:1.4rem}
+}
+
+/* T2 理念→事業の橋渡しの一文（既存 .lead と同じ見た目。下余白のみ調整） */
+.home main section.about .wrapper .lead.philosophy-bridge{margin-top:-2rem;margin-bottom:6rem}
+@media screen and (max-width:768px){
+  .home main section.about .wrapper .lead.philosophy-bridge br{display:none}
+}
+
+/* T4 数字ブロック（文字で1列） */
+.home .key-numbers{background:#f7f9ff}
+.home .key-numbers .wrapper{padding:5.6rem 12rem}
+.home .key-numbers ul{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.home .key-numbers li{flex:1 1 0;min-width:16rem;text-align:center;padding:0 1rem;border-left:1px dashed #1e4f84}
+.home .key-numbers li:first-child{border-left:0}
+.home .key-numbers .label{display:block;font-size:1.3rem;font-weight:700;color:#1e4f84;letter-spacing:.1rem;margin-bottom:.6rem}
+.home .key-numbers b{font-family:"Montserrat",sans-serif;font-size:4rem;font-weight:600;line-height:1;color:#1e4f84}
+.home .key-numbers .unit{font-size:1.6rem;font-weight:700;color:#1e4f84;margin-left:.3rem}
+.home .key-numbers .sep{font-size:1.6rem;color:#1e4f84;margin:0 .6rem}
+.home .key-numbers small{display:block;margin-top:.8rem;font-size:1.2rem;line-height:1.6;color:#555}
+.home .key-numbers .note{margin-top:2.4rem;font-size:1.2rem;color:#777;text-align:right}
+@media screen and (max-width:768px){
+  .home .key-numbers .wrapper{padding:4rem 1.6rem}
+  .home .key-numbers ul{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem 1.6rem}
+  .home .key-numbers li{border-left:0;padding:0;text-align:left;min-width:0}
+  .home .key-numbers li:nth-child(4){grid-column:1/3}
+  .home .key-numbers b{font-size:3.2rem}
+  .home .key-numbers .note{text-align:left}
+}
+
+/* T3 事業の柱：既存の .services h3（破線の見出し）と .rounded-button を流用。追加は軸名・説明文のみ */
+.home main section.consultant-service .wrapper .right .services.pillar + .services.pillar{margin-top:5.6rem}
+.home main section.consultant-service .wrapper .right .services.pillar h3{display:flex;align-items:center;gap:1.6rem;font-size:2.4rem;padding-bottom:1.6rem;margin-bottom:1.2rem}
+.home main section.consultant-service .wrapper .right .services.pillar h3 .pillar-key{display:inline-flex;align-items:center;justify-content:center;min-width:6.4rem;height:3.2rem;padding:0 1.2rem;border-radius:1.6rem;background:#1e4f84;color:#fff;font-size:1.5rem;font-weight:700;letter-spacing:.2rem}
+.home main section.consultant-service .wrapper .right .services.pillar .pillar-desc{margin-bottom:2.4rem;font-size:1.5rem;line-height:1.9;color:#333}
+.home main section.consultant-service .wrapper .right .services.pillar ul{gap:2rem}
+.home main section.consultant-service .wrapper .right .services.pillar .service-desc{margin-top:.8rem;padding:0 .4rem;font-size:1.3rem;line-height:1.7;color:#333}
+.home main section.consultant-service .wrapper .right .pillar-note{margin-top:3.2rem;font-size:1.2rem;color:#777}
+@media screen and (max-width:768px){
+  .home main section.consultant-service .wrapper .right .services.pillar + .services.pillar{margin-top:4rem}
+  .home main section.consultant-service .wrapper .right .services.pillar h3{font-size:2rem}
+}
