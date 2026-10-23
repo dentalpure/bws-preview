@@ -1,0 +1,56 @@
+/* 残り20項目の修正後で追加した要素のスタイルのみ（2026-10-24）。組み込み時はテーマ style.css の末尾に追記 */
+.req{color:#c0392b;font-size:1.2rem;margin-left:.6rem;font-weight:700}
+.opt{display:inline-block;margin-left:.8rem;padding:.1rem .8rem;border:1px solid #9aa7b8;border-radius:1rem;font-size:1.1rem;font-weight:500;color:#5a6478;vertical-align:middle}
+
+/* 会社紹介 K4 */
+.for-clients .wrapper{padding-top:0}
+.for-clients .key-facts{display:grid;grid-template-columns:22rem 1fr;gap:1.6rem 3.2rem;max-width:100rem;margin:0 auto;font-size:1.5rem;line-height:1.9}
+.for-clients .key-facts dt{font-weight:700;color:#1e4f84;border-top:1px dashed #1e4f84;padding-top:1.6rem}
+.for-clients .key-facts dd{border-top:1px dashed #1e4f84;padding-top:1.6rem}
+.for-clients .key-facts dd a{color:#1e4f84;text-decoration:underline}
+.for-clients .tel-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(26rem,1fr));gap:.6rem 2rem;margin-bottom:1rem}
+.for-clients .tel-list li{display:flex;justify-content:space-between;gap:1rem}
+.for-clients .tel-list a{font-family:"Montserrat",sans-serif;font-weight:600;text-decoration:none!important}
+@media screen and (max-width:768px){.for-clients .key-facts{grid-template-columns:1fr;gap:.4rem}.for-clients .key-facts dd{border-top:0;padding-top:0;padding-bottom:1.2rem}}
+/* 会社紹介 K8 */
+#history li.proposed h3,#history li.proposed p{background:#eaf3fc}
+#history li.proposed.confirm h3{color:#c0392b}
+#history .proposed-note{max-width:100rem;margin:2rem auto 0;font-size:1.2rem;color:#5a6478}
+/* 会社紹介 K5 */
+.figures-text{max-width:100rem;margin:-2rem auto 4rem;padding:2rem 2.4rem;background:#f7f9ff;border-radius:1.2rem;font-size:1.4rem;line-height:1.9}
+.figures-text p+p{margin-top:.6rem}.figures-text b{color:#1e4f84;margin-right:.8rem}
+/* 会社紹介 K6 */
+.coverage{margin-top:.8rem;font-size:1.3rem;line-height:1.8;color:#333}
+.coverage span{display:inline-block;min-width:7em;font-weight:700;color:#1e4f84}
+.coverage a{color:#1e4f84;text-decoration:underline}
+.coverage-note{font-size:1.2rem;color:#5a6478;margin:0 0 1.6rem}
+#access .place a[href^="tel:"]{color:inherit;text-decoration:underline}
+
+/* 事業ページ J2 J4 */
+.headline-section .right .intro-lead{margin:1.6rem 0 2.4rem;padding:1.6rem 2rem;border-left:.4rem solid #1e4f84;background:#f7f9ff;font-size:1.6rem;font-weight:700;line-height:1.9;color:#1e4f84}
+.button-wrapper.related-links{display:flex;flex-wrap:wrap;gap:1.6rem}
+.button-wrapper.related-links .rounded-button{min-width:0;padding:0 5.6rem 0 3.2rem;height:6.4rem;font-size:1.6rem}
+@media screen and (max-width:768px){.button-wrapper.related-links{flex-direction:column}.button-wrapper.related-links .rounded-button{width:100%}}
+
+/* 実績一覧 W1 */
+.article-card .sector-link{display:inline-block;margin-top:1.2rem;font-size:1.3rem;font-weight:700;color:#1e4f84;text-decoration:underline}
+/* 実績詳細 W2 W4 W5 */
+.work-meta{display:flex;flex-wrap:wrap;gap:.8rem 2.4rem;margin-bottom:1.6rem;font-size:1.4rem}
+.work-meta .meta-item b{display:inline-block;margin-right:.8rem;padding:.2rem 1rem;border-radius:1rem;background:#1e4f84;color:#fff;font-size:1.2rem}
+.work-meta a{color:#1e4f84;text-decoration:underline}
+.work-related{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:4rem;padding-top:3.2rem;border-top:1px dashed #1e4f84}
+.work-related .rounded-button{min-width:0;padding:0 5.6rem 0 3.2rem;height:6.4rem;font-size:1.6rem}
+.work-related .rounded-button.invert{border-color:#1e4f84}
+@media screen and (max-width:768px){.work-related{flex-direction:column}.work-related .rounded-button{width:100%}}
+
+/* お問い合わせ I1 I2 I3 */
+.branch-contacts{max-width:100rem;margin:0 auto 4rem}
+.branch-contacts h2{font-size:2rem;font-weight:700;color:#1e4f84;margin-bottom:1.6rem}
+.branch-contacts table{width:100%;border-collapse:collapse;font-size:1.4rem}
+.branch-contacts th,.branch-contacts td{padding:1.2rem 1.6rem;border-bottom:1px solid #d7dde8;text-align:left;vertical-align:top}
+.branch-contacts thead th{background:#1e4f84;color:#fff;font-weight:700}
+.branch-contacts tbody th{font-weight:700;white-space:nowrap}
+.branch-contacts td a{font-family:"Montserrat",sans-serif;font-weight:600;color:#1e4f84;text-decoration:underline;white-space:nowrap}
+.branch-contacts .note{margin-top:1rem;font-size:1.2rem;color:#5a6478}
+.autoreply-note{margin:1.6rem 0 0;font-size:1.3rem;color:#5a6478}
+@media screen and (max-width:768px){.branch-contacts table,.branch-contacts tbody,.branch-contacts tr,.branch-contacts td,.branch-contacts th{display:block}.branch-contacts thead{display:none}.branch-contacts tr{padding:1.2rem 0;border-bottom:1px solid #d7dde8}.branch-contacts th,.branch-contacts td{padding:.3rem 0;border:0}}

@@ -1,0 +1,121 @@
+@media screen and (max-width: 768px) {
+  .pc-only {
+    display: none;
+  }
+}
+
+.sp-only {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .sp-only {
+    display: block;
+  }
+}
+
+.page-header .wrapper {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: 0.6rem;
+  padding: 14.5rem 0;
+}
+
+.single-page .wrapper {
+  padding: 12rem;
+}
+@media screen and (max-width: 768px) {
+  .single-page .wrapper {
+    padding: 5.6rem 1.6rem;
+  }
+}
+.single-page .wrapper > article > h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+  color: #1e4f84;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .single-page .wrapper > article > h1 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    line-height: 1.6;
+    letter-spacing: 0.05rem;
+  }
+}
+.single-page .wrapper > article .post-categories {
+  margin-bottom: 6.7rem;
+  border: 0.1rem solid #1e4f84;
+  border-radius: 2.4rem;
+  padding: 0.85rem 4.2rem;
+  width: fit-content;
+}
+.single-page .wrapper > article .post-categories > span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  list-style: 2.8;
+  letter-spacing: 0.05rem;
+  color: #1e4f84;
+}
+.single-page .wrapper > article .post-eyecatch {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.single-page .wrapper > article .post-eyecatch img {
+  width: 90rem;
+  height: auto;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .single-page .wrapper > article .post-eyecatch img {
+    width: 100%;
+  }
+}
+.single-page .wrapper > article .content > h2 {
+  text-align: left;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .single-page .wrapper > article .content > h2 {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    line-height: 1;
+    letter-spacing: 0.04rem;
+  }
+}
+.single-page .wrapper > article .content > h2::after {
+  content: "";
+  width: 3.5rem;
+  height: 0.4rem;
+  margin: 1.2rem auto 0;
+  margin-left: 0;
+  background: #1e4f84;
+}
+.single-page .wrapper > article .content > p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #222;
+}
+.single-page .wrapper > article .content .has-text-align-right {
+  text-align: right;
+  color: #222;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.06rem;
+}
+
+/*# sourceMappingURL=single.css.map */

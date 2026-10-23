@@ -1,0 +1,342 @@
+@media screen and (max-width: 768px) {
+  .pc-only {
+    display: none;
+  }
+}
+
+.sp-only {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .sp-only {
+    display: block;
+  }
+}
+
+.home {
+  padding-top: 0;
+}
+.home .opening-animation {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  background: #fff;
+}
+.home .opening-animation canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.home .opening-animation .opening-copy {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  font-size: 6.6rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+}
+@media screen and (max-width: 768px) {
+  .home .opening-animation .opening-copy {
+    font-size: 3rem;
+  }
+}
+.home .fv {
+  position: relative;
+  height: 100vh;
+}
+@media screen and (max-width: 768px) {
+  .home .fv {
+    height: auto;
+  }
+}
+.home .fv .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .home .fv .bg {
+    position: relative;
+    height: 30rem;
+  }
+}
+.home .fv .bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home .fv .bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 79, 132, 0.5019607843);
+}
+.home .fv .wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  padding-bottom: 7.7rem;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .home .fv .wrapper {
+    background: #1f4f83;
+    padding: 2rem 2rem 5rem;
+  }
+}
+.home .fv .wrapper p.lead {
+  margin-bottom: 4rem;
+  font-size: 6.6rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+@media screen and (max-width: 768px) {
+  .home .fv .wrapper p.lead {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+.home .fv .wrapper p.sub {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2;
+}
+@media screen and (max-width: 768px) {
+  .home .fv .wrapper p.sub {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+.home main section .wrapper {
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+}
+@media screen and (max-width: 768px) {
+  .home main section .wrapper {
+    padding-top: 5.6rem;
+    padding-bottom: 5.6rem;
+  }
+}
+.home main section .wrapper .with-subtitle {
+  margin-bottom: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .home main section.about .wrapper .with-subtitle {
+    margin-bottom: 5.6rem;
+    text-align: left;
+  }
+  .home main section.about .wrapper .with-subtitle::before {
+    text-align: center;
+  }
+}
+.home main section.about .wrapper .lead {
+  text-align: center;
+  margin-bottom: 6rem;
+  line-height: 2;
+}
+@media screen and (max-width: 768px) {
+  .home main section.about .wrapper .lead {
+    text-align: left;
+  }
+}
+.home main section.about .wrapper ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  max-width: 100rem;
+  margin: 0 auto 8rem;
+}
+@media screen and (max-width: 768px) {
+  .home main section.about .wrapper ol {
+    grid-template-columns: 100%;
+  }
+}
+.home main section.about .wrapper ol > li {
+  background: #f7f9ff;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+.home main section.about .wrapper ol > li .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6.4rem;
+}
+.home main section.about .wrapper ol > li .number img {
+  height: 3.6rem;
+  width: auto;
+  object-fit: contain;
+}
+.home main section.about .wrapper ol > li p {
+  color: #1e4f84;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.8;
+}
+.home main section.consultant-service {
+  background: url("../img/home/consultant-service-bg.webp") lightgray 50%/cover no-repeat;
+}
+.home main section.consultant-service .wrapper {
+  display: flex;
+  gap: 10rem;
+}
+@media screen and (max-width: 768px) {
+  .home main section.consultant-service .wrapper {
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+}
+.home main section.consultant-service .wrapper .left {
+  width: 40rem;
+}
+@media screen and (max-width: 768px) {
+  .home main section.consultant-service .wrapper .left {
+    width: 100%;
+  }
+}
+.home main section.consultant-service .wrapper .left .with-subtitle {
+  margin-bottom: 2rem;
+}
+.home main section.consultant-service .wrapper .right {
+  width: 70rem;
+}
+@media screen and (max-width: 768px) {
+  .home main section.consultant-service .wrapper .right {
+    width: 100%;
+  }
+}
+.home main section.consultant-service .wrapper .right .services h3 {
+  padding-bottom: 2.8rem;
+  margin-bottom: 2.8rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+  border-bottom: dashed 0.1rem #1e4f84;
+}
+.home main section.consultant-service .wrapper .right .services ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.8rem 2rem;
+}
+@media screen and (max-width: 768px) {
+  .home main section.consultant-service .wrapper .right .services ul {
+    grid-template-columns: 100%;
+  }
+}
+.home main section.consultant-service .wrapper .right .services .rounded-button {
+  min-width: 0;
+  height: 5.6rem;
+  font-size: 1.6rem;
+}
+.home main section.consultant-service .wrapper .right .services + .services {
+  margin-top: 10rem;
+}
+@media screen and (max-width: 768px) {
+  .home main section.consultant-service .wrapper .right .services + .services {
+    margin-top: 5.6rem;
+  }
+}
+.home main section.consultant-service .wrapper .right .services.next ul {
+  grid-template-columns: 100%;
+}
+.home section.works {
+  background: #1e4f84;
+}
+.home section.works h2 {
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .home section.works .wrapper .with-subtitle {
+    margin-bottom: 3rem;
+  }
+}
+.home section.works ul {
+  display: flex;
+  gap: 4rem;
+  width: calc(100% + 12rem);
+  margin-bottom: 6rem;
+  padding-bottom: 6rem;
+  overflow-x: scroll;
+}
+@media screen and (max-width: 768px) {
+  .home section.works ul {
+    width: calc(100% + 1.6rem);
+    gap: 2rem;
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+  }
+}
+.home section.works ul::-webkit-scrollbar {
+  height: 1px;
+}
+.home section.works ul::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.5);
+}
+.home section.works ul::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 9999px;
+}
+.home section.works ul li {
+  width: 43rem;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 768px) {
+  .home section.works ul li {
+    width: 30rem;
+  }
+}
+.home .news {
+  background: #f7f9ff;
+}
+.home .news .wrapper {
+  display: flex;
+  gap: 10rem;
+}
+@media screen and (max-width: 768px) {
+  .home .news .wrapper {
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+}
+.home .news .wrapper .left {
+  width: 40rem;
+}
+@media screen and (max-width: 768px) {
+  .home .news .wrapper .left {
+    width: 100%;
+  }
+}
+.home .news .wrapper .left .with-subtitle {
+  margin-bottom: 2rem;
+}
+.home .news .wrapper .left p {
+  margin-bottom: 4rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.home .news .wrapper .right {
+  width: 70rem;
+}
+@media screen and (max-width: 768px) {
+  .home .news .wrapper .right {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=front-page.css.map */
