@@ -708,7 +708,7 @@ details[open] .tg{transform:rotate(90deg)}
 
 /* ===== 2026-10-24 納品前点検の修正 ===== */
 section[id]{scroll-margin-top:110px}
-.track,.feature{overflow:hidden}
+body{overflow-x:clip}
 .f-note{font-size:12px;color:var(--ink-soft);line-height:1.8;margin:4px 0 8px}
 .privacy-box p{font-size:15px;line-height:2;margin-bottom:16px}
 .privacy-box .req-dl{grid-template-columns:220px 1fr}
@@ -725,5 +725,4 @@ section[id]{scroll-margin-top:110px}
   .entry .entry-form .pill{min-width:0;width:100%}
   .privacy-box .req-dl{grid-template-columns:1fr}
   .req-table td,.req-table th{white-space:normal}
-  .req-table td:last-child{white-space:nowrap}
 }
