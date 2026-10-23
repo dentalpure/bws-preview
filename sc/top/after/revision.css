@@ -13,6 +13,26 @@
   .home .fv .wrapper p.sub{text-shadow:0 1px 8px rgba(10,30,60,.4)}
 }
 
+/* 追加 最初の画面の右下：スクロールの合図（下向きの線が流れる＋縦書き SCROLL） */
+.home .fv .scroll-cue{position:absolute;right:4.8rem;bottom:4rem;z-index:2;display:flex;flex-direction:column;align-items:center;gap:1rem;color:#fff;pointer-events:none}
+.home .fv .scroll-cue__label{writing-mode:vertical-rl;font-family:"Montserrat",sans-serif;font-size:1.1rem;font-weight:600;letter-spacing:.3em}
+.home .fv .scroll-cue__line{position:relative;display:block;width:1px;height:7.2rem;background:rgba(255,255,255,.35);overflow:hidden}
+.home .fv .scroll-cue__line::before{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:#fff;animation:scrollCue 1.8s cubic-bezier(.6,0,.3,1) infinite}
+.home .fv .scroll-cue__line::after{content:"";position:absolute;left:50%;bottom:0;width:.8rem;height:.8rem;border-right:1px solid #fff;border-bottom:1px solid #fff;transform:translate(-50%,-.1rem) rotate(45deg)}
+@keyframes scrollCue{0%{top:-50%}100%{top:100%}}
+@media (prefers-reduced-motion:reduce){.home .fv .scroll-cue__line::before{animation:none;top:0;height:100%}}
+@media screen and (max-width:768px){
+  .home .fv .scroll-cue{right:1.6rem;bottom:2.4rem;gap:.8rem}
+  .home .fv .scroll-cue__line{height:5.6rem}
+  .home .fv .wrapper{padding-right:5.6rem}
+}
+
+/* 追加 スマートフォン：「ABOUT US」の小見出しを見出しと同じ左寄せに／理念の導入文は文節で折り返す */
+@media screen and (max-width:768px){
+  .home main section.about .wrapper .with-subtitle::before{display:block;text-align:left}
+  .home main section.about .wrapper .lead.about-lead{word-break:auto-phrase;text-wrap:pretty}
+}
+
 /* T1 大見出し（h1）＋冒頭文：最初の画面の直後の帯 */
 .home .intro-headline{background:#fff;border-bottom:1px solid #e6ebf3}
 .home .intro-headline .wrapper{padding:5.6rem 12rem 4.8rem;text-align:center}
