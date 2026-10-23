@@ -698,3 +698,10 @@ details[open] .tg{transform:rotate(90deg)}
 .entry .entry-form .pill{min-width:320px}
 .entry .numbers-note{margin-top:20px}
 @media (max-width:768px){.entry::before{width:70%;height:50%}.entry .sw-h2{font-size:28px}.entry .flow{grid-template-columns:1fr 1fr}.entry .flow li::before{font-size:22px}.entry .entry-form{padding:20px}}
+/* ===== 2026-10-23 山田指示: ステップの箱の裏に、左→右の矢印を1行につき1本 ===== */
+.entry .flow{position:relative;isolation:isolate}
+.entry .flow::before{content:"";position:absolute;left:0;right:14px;top:50%;height:2px;background:var(--primary);opacity:.55;transform:translateY(-50%);z-index:0}
+.entry .flow::after{content:"";position:absolute;right:0;top:50%;width:0;height:0;border-left:16px solid var(--primary);border-top:9px solid transparent;border-bottom:9px solid transparent;transform:translateY(-50%);opacity:.55;z-index:0}
+.entry .flow li{position:relative;z-index:1}
+.entry .flow{padding-right:36px}
+@media (max-width:768px){.entry .flow{padding-right:0}.entry .flow::before,.entry .flow::after{display:none}}
