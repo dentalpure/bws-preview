@@ -719,6 +719,7 @@ body{overflow-x:clip}
   .three{grid-template-columns:1fr;gap:16px}
   .three>div{min-width:0}
   .info-list li{grid-template-columns:auto 1fr}
+  .track .photo,.track.flip .photo{margin-right:0;border-radius:16px}
   section[id]{scroll-margin-top:90px}
 }
 @media (max-width:768px){
@@ -726,3 +727,15 @@ body{overflow-x:clip}
   .privacy-box .req-dl{grid-template-columns:1fr}
   .req-table td,.req-table th{white-space:normal}
 }
+
+/* ハンバーガーのドロワー（2026-10-24） */
+.header.nav-open .nav{display:flex;flex-direction:column;gap:0;position:fixed;left:0;right:0;top:0;bottom:0;margin:0;padding:104px 24px 32px;background:#1E2E43;z-index:40;overflow:auto}
+.header.nav-open .nav a{color:#fff;font-size:20px;font-weight:700;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.header.nav-open .nav a.active{border-bottom-color:#9FC6EE}
+.header.nav-open .logo,.header.nav-open .header-cta{position:relative;z-index:41}
+.header.nav-open .logo img.dark{display:none}.header.nav-open .logo img.light{display:block}
+.header.nav-open .burger{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.5)}
+.header.nav-open .burger span{background:#fff;transition:transform .25s,opacity .25s}
+.header.nav-open .burger span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.header.nav-open .burger span:nth-child(2){opacity:0}
+.header.nav-open .burger span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}

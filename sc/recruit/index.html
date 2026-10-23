@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700;800&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="../style.css?v=20261024b">
+<link rel="stylesheet" href="../style.css?v=20261024c">
 </head>
 <body>
 <div class="ribbon">DEMO ｜ 改修案</div>
@@ -38,6 +38,13 @@
       <button class="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
     </div>
   </div>
+  <script>
+  /* ハンバーガー：ナビをドロワーで開閉（WP組み込み時はテーマのドロワーに置換可） */
+  (function(){var h=document.getElementById('header'),b=h.querySelector('.burger');if(!b)return;b.setAttribute('aria-expanded','false');b.setAttribute('aria-controls','siteNav');var n=h.querySelector('.nav');if(n)n.id='siteNav';
+  b.addEventListener('click',function(){var o=h.classList.toggle('nav-open');b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'メニューを閉じる':'メニュー');document.body.style.overflow=o?'hidden':''});
+  h.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('nav-open');document.body.style.overflow=''})});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&h.classList.contains('nav-open')){h.classList.remove('nav-open');b.setAttribute('aria-expanded','false');document.body.style.overflow=''}});})();
+  </script>
 </header>
 
 <!-- ============ HERO ============ -->
