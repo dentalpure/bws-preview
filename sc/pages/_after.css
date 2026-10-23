@@ -27,7 +27,7 @@
 #access .place a[href^="tel:"]{color:inherit;text-decoration:underline}
 
 /* 事業ページ J2 J4 */
-.headline-section .right .intro-lead{margin:1.6rem 0 2.4rem;padding:1.6rem 2rem;border-left:.4rem solid #1e4f84;background:#f7f9ff;font-size:1.6rem;font-weight:700;line-height:1.9;color:#1e4f84}
+.headline-section .right .intro-lead,.page-template-page-jisseki .headline-section .right p.intro-lead{white-space:normal;margin:1.6rem 0 2.4rem;padding:1.6rem 2rem;border-left:.4rem solid #1e4f84;background:#f7f9ff;font-size:1.6rem;font-weight:700;line-height:1.9;color:#1e4f84}
 .button-wrapper.related-links{display:flex;flex-wrap:wrap;gap:1.6rem}
 .button-wrapper.related-links .rounded-button{min-width:0;padding:0 5.6rem 0 3.2rem;height:6.4rem;font-size:1.6rem}
 @media screen and (max-width:768px){.button-wrapper.related-links{flex-direction:column}.button-wrapper.related-links .rounded-button{width:100%}}
@@ -52,5 +52,7 @@
 .branch-contacts tbody th{font-weight:700;white-space:nowrap}
 .branch-contacts td a{font-family:"Montserrat",sans-serif;font-weight:600;color:#1e4f84;text-decoration:underline;white-space:nowrap}
 .branch-contacts .note{margin-top:1rem;font-size:1.2rem;color:#5a6478}
-.autoreply-note{margin:1.6rem 0 0;font-size:1.3rem;color:#5a6478}
-@media screen and (max-width:768px){.branch-contacts table,.branch-contacts tbody,.branch-contacts tr,.branch-contacts td,.branch-contacts th{display:block}.branch-contacts thead{display:none}.branch-contacts tr{padding:1.2rem 0;border-bottom:1px solid #d7dde8}.branch-contacts th,.branch-contacts td{padding:.3rem 0;border:0}}
+.autoreply-note{margin:1.6rem 0 4rem;font-size:1.3rem;color:#5a6478}
+.figures-text .src{font-size:1.2rem;color:#777}
+.article-card .title-link{color:inherit;text-decoration:underline;text-decoration-color:#9fb6d3}
+@media screen and (max-width:768px){.branch-contacts table,.branch-contacts tbody,.branch-contacts tr,.branch-contacts td,.branch-contacts th{display:block}.branch-contacts thead{display:none}.branch-contacts tr{padding:1.2rem 0;border-bottom:1px solid #d7dde8}.branch-contacts th,.branch-contacts td{padding:.3rem 0;border:0}.branch-contacts td::before{content:attr(data-label) "：";font-weight:700;color:#1e4f84}}
