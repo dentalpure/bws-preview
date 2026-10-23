@@ -24,7 +24,7 @@
 @media screen and (max-width:768px){
   .home .fv .scroll-cue{right:1.6rem;bottom:2.4rem;gap:.8rem}
   .home .fv .scroll-cue__line{height:5.6rem}
-  .home .fv .wrapper p.sub{padding-right:3.2rem}
+  .home .fv .wrapper p.sub{padding-right:3.2rem;word-break:auto-phrase;text-wrap:pretty}
 }
 
 /* 追加 スマートフォン：「ABOUT US」の小見出しを見出しと同じ左寄せに／理念の導入文は文節で折り返す */
