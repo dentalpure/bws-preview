@@ -52,7 +52,32 @@
   .home main section.about .wrapper .lead.philosophy-bridge br{display:none}
 }
 
-/* T4 数字ブロック（文字で1列） */
+/* T5 グループ会社ブロック（新設）。薄い水色の帯にカード3枚。社数が増えても li を足すだけ */
+.home .group-companies{background:#f7f9ff}
+.home .group-companies .wrapper{padding:11rem 12rem 10rem}
+.home .group-companies .group-lead{text-align:center;margin:-6.4rem 0 5.6rem;line-height:2}
+.home .group-companies .group-list{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4rem;max-width:100rem;margin:0 auto}
+.home .group-companies .group-list li{background:#fff;border:1px solid #d9deea;border-radius:1.2rem;padding:2.8rem 2.4rem;text-align:center}
+.home .group-companies .group-list li.core{border-color:#1e4f84}
+.home .group-companies .role{display:inline-block;font-size:1.2rem;font-weight:700;color:#1e4f84;letter-spacing:.1rem;border:1px solid #1e4f84;border-radius:999px;padding:.2rem 1.2rem;margin-bottom:1.4rem}
+.home .group-companies .group-list li.core .role{background:#1e4f84;color:#fff}
+.home .group-companies b{display:block;font-size:1.8rem;font-weight:700;color:#222;line-height:1.5}
+.home .group-companies small{display:block;margin-top:.8rem;font-size:1.3rem;line-height:1.7;color:#555}
+.home .group-companies .note{margin-top:2.4rem;font-size:1.2rem;color:#777;text-align:center}
+.home .group-companies .button-wrapper{margin-top:3.2rem}
+@media screen and (max-width:768px){
+  .home .group-companies .wrapper{padding:4.8rem 1.6rem 4rem}
+  .home .group-companies .group-lead{margin:-2.4rem 0 2.4rem;text-align:left;font-size:1.4rem;line-height:1.9}
+  .home .group-companies .group-list{grid-template-columns:1fr;gap:1.2rem}
+  .home .group-companies .group-list li{display:grid;grid-template-columns:auto 1fr;column-gap:1.2rem;align-items:center;text-align:left;padding:1.4rem 1.6rem}
+  .home .group-companies .role{margin:0;font-size:1.1rem;white-space:nowrap}
+  .home .group-companies b{font-size:1.5rem}
+  .home .group-companies small{grid-column:2;margin-top:.2rem;font-size:1.2rem}
+  .home .group-companies .note{text-align:left}
+  .home .group-companies .button-wrapper{margin-top:2.4rem}
+}
+
+/* T4 数字ブロック（文字で1列・トップの最後、お知らせの直後） */
 .home .key-numbers{background:#f7f9ff}
 .home .key-numbers .wrapper{padding:5.6rem 12rem}
 .home .key-numbers ul{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}

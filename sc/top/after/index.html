@@ -69,7 +69,7 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
     var analyticsSnippet = 'disabled';
     var analyticsEventTracking = 'enabled';
 </script>
-<link rel="stylesheet" href="revision.css?v=20261024k">
+<link rel="stylesheet" href="revision.css?v=20261025a">
 </head>
 
 <body data-rsssl=1 class="home blog" data-template-url="../site/wp-content/themes/3w_2026">
@@ -180,6 +180,7 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 
 <main>
   <div class="opening-animation"></div>
+  <script>if(/[?&]cap=/.test(location.search)){var o=document.querySelector(".opening-animation");o&&o.parentNode.removeChild(o);}</script>
   <header class="fv">
     <div class="bg">
       <video src="../site/wp-content/themes/3w_2026/assets/video/fv.mp4" muted loop playsinline></video>
@@ -256,17 +257,21 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
       </div>
     </div>
   </section>
-  <section class="key-numbers">
+  <section class="group-companies">
     <div class="wrapper">
-      <h2 class="sr-only">数字で見る三水コンサルタント</h2>
-      <ul>
-        <li><span class="label">創業</span><b>1974</b><span class="unit">年</span><small>昭和49年・創業52年</small></li>
-        <li><span class="label">社員数</span><b>263</b><span class="unit">名</span><small>2026年7月現在</small></li>
-        <li><span class="label">技術士</span><b>66</b><span class="unit">名</span><small>令和8年9月1日現在</small></li>
-        <li><span class="label">日経コンストラクション</span><b>6</b><span class="unit">位</span><span class="sep">／</span><b>7</b><span class="unit">位</span><small>下水道部門／上水道部門（2025 売上高ランキング）</small></li>
-        <li><span class="label">拠点</span><b>5</b><span class="unit">支社</span><small>大阪・東京・仙台・名古屋・福岡＋全国53のエリア事務所</small></li>
+      <h2 class="with-subtitle" data-before="GROUP">三水グループ</h2>
+      <p class="lead group-lead">水と環境の総合コンサルタントとして、グループ各社の技術を合わせて地域の課題にお応えします。</p>
+      <ul class="group-list">
+        <li class="core"><span class="role">中核会社</span><b>株式会社三水コンサルタント</b><small>大阪本社（大阪市北区中之島）／東京・仙台・名古屋・福岡支社</small></li>
+        <li><span class="role">グループ会社</span><b>株式会社エスエスシー</b><small>東京都文京区小石川</small></li>
+        <li><span class="role">グループ会社</span><b>株式会社恵進コンサル</b><small>千葉県千葉市中央区</small></li>
       </ul>
-      <p class="note">※ 数値は貴社ご確認のうえ確定します（出典：会社紹介・採用「数字で見る三水」・日経コンストラクション2025）。</p>
+      <p class="note">※ 各社の役割・事業内容の一文は貴社ご確認のうえ記載します。社数が増えても同じ型で1社ずつ足せます（グループ各社の紹介ページは第2弾）。</p>
+      <div class="button-wrapper">
+        <a href="https://www.3wcon.co.jp/company/" class="rounded-button arrow">
+          グループ会社の所在地（会社紹介）
+        </a>
+      </div>
     </div>
   </section>
   <section class="consultant-service">
@@ -654,6 +659,19 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
                       </ul>
                   
       </div>
+    </div>
+  </section>
+  <section class="key-numbers">
+    <div class="wrapper">
+      <h2 class="sr-only">数字で見る三水コンサルタント</h2>
+      <ul>
+        <li><span class="label">創業</span><b>1974</b><span class="unit">年</span><small>昭和49年・創業52年</small></li>
+        <li><span class="label">社員数</span><b>263</b><span class="unit">名</span><small>2026年7月現在</small></li>
+        <li><span class="label">技術士</span><b>66</b><span class="unit">名</span><small>令和8年9月1日現在</small></li>
+        <li><span class="label">日経コンストラクション</span><b>6</b><span class="unit">位</span><span class="sep">／</span><b>7</b><span class="unit">位</span><small>下水道部門／上水道部門（2025 売上高ランキング）</small></li>
+        <li><span class="label">拠点</span><b>5</b><span class="unit">支社</span><small>大阪・東京・仙台・名古屋・福岡＋全国53のエリア事務所</small></li>
+      </ul>
+      <p class="note">※ 数値は貴社ご確認のうえ確定します（出典：会社紹介・採用「数字で見る三水」・日経コンストラクション2025）。</p>
     </div>
   </section>
 </main>
