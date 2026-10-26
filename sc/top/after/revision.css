@@ -52,31 +52,27 @@
   .home main section.about .wrapper .lead.philosophy-bridge br{display:none}
 }
 
-/* T5 グループ会社ブロック（新設）。薄い水色の帯にカード3枚。社数が増えても li を足すだけ */
-.home .group-companies{background:#f7f9ff}
-.home .group-companies .wrapper{padding:11rem 12rem 10rem}
-.home .group-companies .group-lead{text-align:center;margin:-6.4rem 0 5.6rem;line-height:2}
-.home .group-companies .group-list{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4rem;max-width:100rem;margin:0 auto}
-.home .group-companies .group-list li{background:#fff;border:1px solid #d9deea;border-radius:1.2rem;padding:2.8rem 2.4rem;text-align:center}
-.home .group-companies .group-list li.core{border-color:#1e4f84}
-.home .group-companies .role{display:inline-block;font-size:1.2rem;font-weight:700;color:#1e4f84;letter-spacing:.1rem;border:1px solid #1e4f84;border-radius:999px;padding:.2rem 1.2rem;margin-bottom:1.4rem}
-.home .group-companies .group-list li.core .role{background:#1e4f84;color:#fff}
-.home .group-companies b{display:block;font-size:1.8rem;font-weight:700;color:#222;line-height:1.5}
-.home .group-companies small{display:block;margin-top:.8rem;font-size:1.3rem;line-height:1.7;color:#555}
-.home .group-companies .note{margin-top:2.4rem;font-size:1.2rem;color:#777;text-align:center}
-.home .group-companies .button-wrapper{margin-top:3.2rem}
+/* T5 グループ企業の帯（新設）：実績紹介とお知らせの間。写真の上に見出し、右に「グループ企業一覧」ページへのボタン */
+.home .group-banner{position:relative;overflow:hidden;color:#fff}
+.home .group-banner__bg{position:absolute;inset:0;background-size:cover;background-position:center 30%}
+.home .group-banner__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,79,132,.85) 0%,rgba(30,79,132,.55) 55%,rgba(30,79,132,.3) 100%)}
+.home .group-banner__in{position:relative;display:flex;align-items:center;justify-content:space-between;gap:4rem;max-width:144rem;margin:0 auto;padding:11rem 12rem}
+.home .group-banner__en{font-family:"Montserrat",sans-serif;font-size:2rem;font-weight:600;letter-spacing:.1rem}
+.home .group-banner h2{margin:.4rem 0 0;font-size:4.8rem;font-weight:700;letter-spacing:.4rem;line-height:1.4}
+.home .group-banner__sub{margin-top:.6rem;font-size:1.8rem;font-weight:700}
+.home .group-banner__lead{margin-top:2.4rem;font-size:1.8rem;font-weight:700;line-height:2;letter-spacing:.1rem}
+.home .group-banner__btn{flex:none;display:flex;align-items:center;justify-content:space-between;gap:2.4rem;width:36rem;height:8rem;padding:0 3.2rem 0 4rem;border-radius:4rem;background:#fff;color:#1e4f84;font-size:1.8rem;font-weight:700;text-decoration:none;transition:opacity .3s}
+.home .group-banner__btn:hover{opacity:.85}
+.home .group-banner__btn span{position:relative;width:3rem;height:3rem;border:2px solid #1e4f84;border-radius:50%}
+.home .group-banner__btn span::after{content:"";position:absolute;top:50%;left:42%;width:.8rem;height:.8rem;border-top:2px solid #1e4f84;border-right:2px solid #1e4f84;transform:translate(-50%,-50%) rotate(45deg)}
 @media screen and (max-width:768px){
-  .home .group-companies .wrapper{padding:4.8rem 1.6rem 4rem}
-  .home .group-companies .wrapper .with-subtitle{text-align:left;margin-bottom:4.8rem}
-  .home .group-companies .wrapper .with-subtitle::before{display:block;text-align:left}
-  .home .group-companies .group-lead{margin:-2.4rem 0 2.4rem;text-align:left;font-size:1.4rem;line-height:1.9}
-  .home .group-companies .group-list{grid-template-columns:1fr;gap:1.2rem}
-  .home .group-companies .group-list li{display:grid;grid-template-columns:auto 1fr;column-gap:1.2rem;align-items:center;text-align:left;padding:1.4rem 1.6rem}
-  .home .group-companies .role{margin:0;font-size:1.1rem;white-space:nowrap}
-  .home .group-companies b{font-size:1.5rem}
-  .home .group-companies small{grid-column:2;margin-top:.2rem;font-size:1.2rem}
-  .home .group-companies .note{text-align:left}
-  .home .group-companies .button-wrapper{margin-top:2.4rem}
+  .home .group-banner__in{flex-direction:column;align-items:stretch;gap:3.2rem;padding:5.6rem 1.6rem}
+  .home .group-banner__en{font-size:1.6rem}
+  .home .group-banner h2{font-size:2.8rem;letter-spacing:.2rem}
+  .home .group-banner__sub{font-size:1.4rem}
+  .home .group-banner__lead{margin-top:1.6rem;font-size:1.4rem;line-height:1.9}
+  .home .group-banner__lead br{display:none}
+  .home .group-banner__btn{width:100%;height:6.4rem;font-size:1.6rem;padding:0 2.4rem 0 3.2rem}
 }
 
 /* T4 数字ブロック（文字で1列・トップの最後、お知らせの直後） */
