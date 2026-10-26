@@ -54,20 +54,20 @@
 }
 
 /* 10/26 HERO の下を2つに：メッセージ（紺の帯・h1・導入文・円形の写真） */
-.home .message{position:relative;overflow:hidden;background:linear-gradient(135deg,#1e4f84 0%,#2d6aa6 100%);color:#fff}
+.home .message{position:relative;overflow:hidden;background:#eef0f3;color:#222}
 .home .message .wrapper{position:relative;z-index:2}
-.home .message__circle{position:absolute;z-index:1;right:-6rem;top:50%;width:52rem;height:52rem;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;transform:translateY(-50%);box-shadow:0 0 0 1.6rem rgba(255,255,255,.12),0 2rem 6rem rgba(10,30,60,.25)}
+.home .message__circle{position:absolute;z-index:1;right:-6rem;top:50%;width:52rem;height:52rem;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;transform:translateY(-50%);box-shadow:0 0 0 1.6rem rgba(255,255,255,.6),0 2rem 6rem rgba(30,79,132,.18)}
 .home .message__circle img{width:64%;height:auto}
-.home .message__mark{position:absolute;z-index:1;left:38%;top:12%;font-family:"Montserrat",sans-serif;font-size:11rem;font-weight:600;white-space:nowrap;color:rgba(255,255,255,.07);transform:rotate(-24deg);transform-origin:left top;pointer-events:none}
-.home .message__h1{margin:0 0 5.6rem;font-size:5rem;font-weight:500;line-height:1.55;letter-spacing:.15rem;color:#fff}
+.home .message__mark{position:absolute;z-index:1;left:38%;top:12%;font-family:"Montserrat",sans-serif;font-size:11rem;font-weight:600;white-space:nowrap;color:rgba(30,79,132,.06);transform:rotate(-24deg);transform-origin:left top;pointer-events:none}
+.home .message__h1{margin:0 0 5.6rem;font-size:5rem;font-weight:500;line-height:1.55;letter-spacing:.15rem;color:#1e4f84}
 .home .message__body{max-width:60rem}
 .home .message__body p{margin:0 0 2.8rem;font-size:1.5rem;font-weight:400;line-height:2.4;letter-spacing:.08rem}
 .home .message__body{max-width:68rem}
-.home .message__body p:last-child{margin:4.8rem 0 0;font-size:3.4rem;font-weight:500;line-height:1.7;letter-spacing:.1rem;text-decoration:underline;text-decoration-thickness:.1rem;text-underline-offset:1rem}
+.home .message__body p:last-child{margin:4.8rem 0 0;color:#1e4f84;font-size:3.4rem;font-weight:500;line-height:1.7;letter-spacing:.1rem;text-decoration:underline;text-decoration-thickness:.1rem;text-underline-offset:1rem}
 @media screen and (max-width:768px){
-  /* スマートフォン：ロゴの円を右端に半分はみ出させ、本文に重ねる（文字が読めるよう円は半透明・ロゴは白抜き） */
-  .home .message__circle{width:28rem;height:28rem;right:-13rem;top:52%;transform:translateY(-50%);background:rgba(255,255,255,.14);box-shadow:0 0 0 1rem rgba(255,255,255,.06)}
-  .home .message__circle img{filter:brightness(0) invert(1);opacity:.55}
+  /* スマートフォン：ロゴの円を右端に半分はみ出させ、本文に重ねる（文字が読めるようロゴは薄く） */
+  .home .message__circle{width:28rem;height:28rem;right:-13rem;top:52%;transform:translateY(-50%);background:rgba(255,255,255,.75);box-shadow:0 0 0 1rem rgba(255,255,255,.35)}
+  .home .message__circle img{opacity:.22}
   .home .message__mark{font-size:6rem;left:30%;top:18%}
   .home .message__h1{margin-bottom:3.2rem;font-size:2.8rem;font-weight:500;line-height:1.5}
   .home .message__body p{margin-bottom:2.6rem;font-size:1.4rem;line-height:2.4;letter-spacing:.02rem}
