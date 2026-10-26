@@ -1,0 +1,243 @@
+/* 修正後の案で追加した要素のスタイルのみ（2026-10-24）。既存のテーマCSSは変更しない。
+   組み込み時はテーマ 3w_2026 の assets/css/front-page.css の末尾に追記する（自作テーマのため親テーマを直接編集。着手前にバックアップ）。 */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* 追加 スマートフォンの最初の画面：動画を画面いっぱいにし、見出しと文を動画の上に重ねる（PCと同じ見せ方）。
+   現状は動画（高さ30rem）の下に濃い青の帯で見出しを出している。PCの表示は変えない */
+@media screen and (max-width:768px){
+  .home .fv{height:100vh;height:100svh;min-height:56rem}
+  .home .fv .bg{position:absolute;top:0;left:0;width:100%;height:100%}
+  .home .fv .bg::after{background:linear-gradient(180deg,rgba(30,79,132,.35) 0%,rgba(30,79,132,.5) 45%,rgba(30,79,132,.82) 100%)}
+  .home .fv .wrapper{background:transparent;height:100%;justify-content:flex-end;padding:2rem 2rem 8rem}
+  .home .fv .wrapper p.lead{font-size:2.6rem;line-height:1.5;margin-bottom:1.6rem;text-shadow:0 2px 12px rgba(10,30,60,.35)}
+  .home .fv .wrapper p.sub{text-shadow:0 1px 8px rgba(10,30,60,.4)}
+}
+
+/* 追加 最初の画面の右下：スクロールの合図（下向きの線が流れる＋縦書き SCROLL） */
+.home .fv .scroll-cue{position:absolute;right:4.8rem;bottom:4rem;z-index:2;display:flex;flex-direction:column;align-items:center;gap:1rem;color:#fff;pointer-events:none}
+.home .fv .scroll-cue__label{writing-mode:vertical-rl;font-family:"Montserrat",sans-serif;font-size:1.1rem;font-weight:600;letter-spacing:.3em}
+.home .fv .scroll-cue__line{position:relative;display:block;width:1px;height:7.2rem;background:rgba(255,255,255,.35);overflow:hidden}
+.home .fv .scroll-cue__line::before{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:#fff;animation:scrollCue 1.8s cubic-bezier(.6,0,.3,1) infinite}
+.home .fv .scroll-cue::after{content:"";display:block;width:1rem;height:1rem;margin-top:-1.4rem;border-right:1.5px solid #fff;border-bottom:1.5px solid #fff;transform:rotate(45deg)}
+@keyframes scrollCue{0%{top:-50%}100%{top:100%}}
+@media (prefers-reduced-motion:reduce){.home .fv .scroll-cue__line::before{animation:none;top:0;height:100%}}
+@media screen and (max-width:768px){
+  .home .fv .scroll-cue{right:1.6rem;bottom:2.4rem;gap:.8rem}
+  .home .fv .scroll-cue__line{height:5.6rem}
+  .home .fv .wrapper p.sub{padding-right:3.2rem;word-break:auto-phrase;text-wrap:pretty}
+}
+
+/* 追加 スマートフォン：「ABOUT US」の小見出しを見出しと同じ左寄せに／理念の導入文は文節で折り返す */
+@media screen and (max-width:768px){
+  .home main section.about .wrapper .with-subtitle::before{display:block;text-align:left}
+  .home main section.about .wrapper .lead.about-lead{word-break:auto-phrase;text-wrap:pretty}
+  .home main section.about .wrapper .lead.about-lead .nw{white-space:nowrap}
+}
+
+
+/* T1 大見出し（h1）：ABOUT US の見出しの直後。理念の導入文と1つにまとめる */
+.home main section.about .wrapper .about-h1{margin:-2.4rem 0 2.4rem;text-align:center;font-size:2.4rem;font-weight:700;line-height:1.6;letter-spacing:.1rem;color:#1e4f84}
+@media screen and (max-width:768px){
+  .home main section.about .wrapper .about-h1{margin:-.8rem 0 1.2rem;text-align:left;font-size:1.8rem;line-height:1.5}
+}
+
+/* お知らせ：説明文を外し、スマートフォンでは見出しの右に小さな「もっと見る」 */
+.home .news .wrapper .left p{display:none}
+@media screen and (max-width:768px){
+  .home .news .wrapper{gap:2.4rem}
+  .home .news .wrapper .left{display:flex;align-items:flex-end;justify-content:space-between;gap:1.6rem}
+  .home .news .wrapper .left .with-subtitle{margin-bottom:0;display:block;flex:1 1 auto;white-space:nowrap}
+  .home .news .wrapper .left .with-subtitle::before{display:block;text-align:left}
+  .home .news .wrapper .left .button-wrapper{flex:none}
+  .home .news .wrapper .left .rounded-button{width:auto;min-width:0;height:4rem;padding:0 4.4rem 0 1.8rem;font-size:1.3rem}
+  .home .news .wrapper .left .rounded-button.arrow::after{right:1.2rem;width:1.8rem;height:1.8rem}
+}
+
+/* 10/26 HERO の下を2つに：メッセージ（紺の帯・h1・導入文・円形の写真） */
+.home .message{position:relative;overflow:hidden;background:#f7f9ff;color:#222}  /* About Us と同じ背景色 */
+.home .message .wrapper{position:relative;z-index:2}
+.home .message__circle{position:absolute;z-index:1;right:-10rem;top:50%;width:64rem;height:64rem;border-radius:50%;display:flex;align-items:center;justify-content:center;transform:translateY(-50%);perspective:120rem;
+  background:radial-gradient(circle at 34% 28%,#ffffff 0%,#f6f9fd 38%,#e3ecf6 72%,#cbdcee 100%);
+  box-shadow:inset -2.4rem -3rem 6rem rgba(30,79,132,.16),inset 1.6rem 1.6rem 4rem rgba(255,255,255,.95),0 0 0 1.6rem rgba(255,255,255,.55),0 3.6rem 8rem rgba(30,79,132,.28)}
+.home .message__circle::after{content:"";position:absolute;left:18%;top:9%;width:36%;height:18%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 70%);pointer-events:none}
+.home .message__circle img{width:62%;height:auto;transform:rotateY(-16deg) rotateX(8deg);filter:drop-shadow(0 .25rem 0 #1b5fa8) drop-shadow(0 .5rem 0 #174f8c) drop-shadow(0 1.6rem 1.6rem rgba(10,40,90,.35));animation:bwsLogoSway 7s ease-in-out infinite}
+@keyframes bwsLogoSway{0%,100%{transform:rotateY(-16deg) rotateX(8deg)}50%{transform:rotateY(10deg) rotateX(4deg)}}
+@media (prefers-reduced-motion:reduce){.home .message__circle img{animation:none}}
+.home .message__mark{position:absolute;z-index:1;left:38%;top:12%;font-family:"Montserrat",sans-serif;font-size:11rem;font-weight:600;white-space:nowrap;color:rgba(30,79,132,.06);transform:rotate(-24deg);transform-origin:left top;pointer-events:none}
+.home .message__h1{margin:0 0 5.6rem;font-size:6rem;font-weight:700;line-height:1.5;letter-spacing:.08em;color:#1e4f84}
+.home .message__body{max-width:60rem}
+.home .message__body p{margin:0 0 3.2rem;font-size:1.9rem;font-weight:500;line-height:2.3;letter-spacing:.08em}
+.home .message__body{max-width:82rem}
+.home .message__body p:last-child{margin:5.6rem 0 0;color:#1e4f84;font-size:4rem;font-weight:700;line-height:1.7;letter-spacing:.08em;text-decoration:underline;text-decoration-thickness:.1rem;text-underline-offset:1rem}
+@media screen and (max-width:768px){
+  /* スマートフォン：PCと同じ立体的なロゴを、右端に半分はみ出させて本文に重ねる（文字が読めるようロゴは少し薄く） */
+  .home .message__circle{width:30rem;height:30rem;right:-13rem;top:50%;transform:translateY(-50%);box-shadow:inset -1.2rem -1.6rem 3rem rgba(30,79,132,.16),inset .8rem .8rem 2rem rgba(255,255,255,.95),0 0 0 .8rem rgba(255,255,255,.55),0 1.6rem 4rem rgba(30,79,132,.22)}
+  .home .message__circle img{opacity:.6;filter:drop-shadow(0 .15rem 0 #1b5fa8) drop-shadow(0 .3rem 0 #174f8c) drop-shadow(0 .8rem .8rem rgba(10,40,90,.3))}
+  .home .message__mark{font-size:6rem;left:30%;top:18%}
+  .home .message__h1{margin-bottom:3.2rem;font-size:2.8rem;line-height:1.5}
+  .home .message__body p{margin-bottom:2.6rem;font-size:1.4rem;line-height:2.4;letter-spacing:.04em}
+  .home .message__body p:last-child{margin-top:3.2rem;font-size:2.1rem;line-height:1.7;text-underline-offset:.7rem}
+}
+
+/* 10/26 About Us：企業理念を「中心の円＋3つの心構え」の図で */
+.home main section.about{background:#f7f9ff}
+.home main section.about .wrapper{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"head head" "philo text";gap:4.8rem 8rem;align-items:center}
+.home .about__head{grid-area:head}
+.home main section.about .wrapper .about__head .with-subtitle{display:block;margin:0;text-align:left;white-space:nowrap}
+.home main section.about .wrapper .about__head .with-subtitle::before{display:block;margin-bottom:.8rem;text-align:left}
+.home .philo{grid-area:philo;position:relative;width:100%;max-width:52rem;aspect-ratio:1/1;margin:0 auto}
+.home .philo__lines{position:absolute;inset:0;width:100%;height:100%}
+.home .philo__lines line{stroke:#3fa9f5;stroke-width:.35}
+.home .philo__core{position:absolute;left:50%;top:50%;width:56%;aspect-ratio:1/1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 50% 40%,#ffffff 0%,#e3eefa 70%,#cfe0f3 100%);box-shadow:0 1.2rem 3.6rem rgba(30,79,132,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.home .philo__core span{font-family:"Montserrat",sans-serif;font-size:1.2rem;font-weight:600;letter-spacing:.3rem;color:#3fa9f5;margin-bottom:.8rem}
+.home .philo__core p{margin:0;font-size:2.4rem;font-weight:700;line-height:1.55;color:#1e4f84}
+.home .philo__item{position:absolute;width:31%;aspect-ratio:1/1;border-radius:50%;background:#fff;box-shadow:0 .8rem 2.4rem rgba(30,79,132,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;padding:1.6rem;text-align:center}
+.home .philo__item img{height:2.4rem;width:auto}
+.home .philo__item p{margin:0;font-size:1.3rem;font-weight:700;line-height:1.55;color:#1e4f84}
+.home .philo__item--1{left:34.5%;top:0}
+.home .philo__item--2{left:1.5%;top:60.5%}
+.home .philo__item--3{right:1.5%;top:50.5%}
+.home .about__text{grid-area:text}
+.home main section.about .wrapper .about__text .lead.philosophy-bridge{margin:0 0 4rem;text-align:left}
+.home main section.about .wrapper .about__text .lead.philosophy-bridge br{display:none}
+.home main section.about .wrapper .about__text .button-wrapper{justify-content:flex-start}
+@media screen and (max-width:768px){
+  .home main section.about .wrapper{grid-template-columns:1fr;grid-template-areas:"head" "philo" "text";gap:3.2rem}
+  .home main section.about .wrapper .about__head .with-subtitle{font-size:3rem;letter-spacing:.3rem;white-space:normal}
+  .home .philo{max-width:34rem}
+  .home .philo__core p{font-size:1.6rem}
+  .home .philo__core span{font-size:1rem;margin-bottom:.4rem}
+  .home .philo__item{width:33%;padding:.8rem;gap:.3rem}
+  .home .philo__item img{height:1.6rem}
+  .home .philo__item p{font-size:1rem;line-height:1.45;letter-spacing:0}
+  .home .philo__item--1{left:33.5%}
+  .home main section.about .wrapper .about__text .lead.philosophy-bridge{margin-bottom:2.8rem}
+  .home main section.about .wrapper .about__text .button-wrapper{justify-content:center}
+}
+
+/* 案B：メッセージを About Us に統合（about--b のときだけ有効） */
+.home main section.about.about--b .wrapper{grid-template-areas:"head head" "left text"}
+.home .about--b .about__left{grid-area:left}
+.home .about--b .about__label{display:flex;align-items:center;gap:1rem;margin:0 0 2.4rem;font-size:1.6rem;font-weight:700;color:#1e4f84;letter-spacing:.08em}
+.home .about--b .about__label::before{content:"";width:1.2rem;height:1.2rem;background:#3fa9f5;transform:rotate(45deg)}
+.home .about--b .philo__logo{width:22%;height:auto;margin-bottom:.8rem;filter:drop-shadow(0 .15rem 0 #1b5fa8) drop-shadow(0 .5rem .6rem rgba(10,40,90,.25))}
+.home .about--b .about__lead{margin:0 0 3.2rem;font-size:1.7rem;font-weight:500;line-height:2.1;letter-spacing:.08em}
+.home .about--b .about__catch{display:inline-block;margin:0 0 3.2rem;font-size:2.8rem;font-weight:700;line-height:1.6;letter-spacing:.08em;color:#1e4f84;text-decoration:underline;text-decoration-thickness:.1rem;text-underline-offset:.9rem}
+.home .about--b .about__bridge{margin:0 0 4rem;font-size:1.5rem;font-weight:500;line-height:2;letter-spacing:.08em;color:#444}
+.home .about--b .button-wrapper{justify-content:flex-start}
+@media screen and (max-width:768px){
+  .home main section.about.about--b .wrapper{grid-template-areas:"head" "left" "text"}
+  .home .about--b .about__head .with-subtitle{font-size:2.8rem}
+  .home .about--b .about__label{justify-content:center;font-size:1.4rem;margin-bottom:1.6rem}
+  .home .about--b .about__lead{font-size:1.4rem;line-height:2}
+  .home .about--b .about__catch{font-size:2rem;margin-bottom:2.4rem}
+  .home .about--b .about__bridge{font-size:1.3rem;margin-bottom:2.8rem}
+  .home .about--b .button-wrapper{justify-content:center}
+}
+
+/* T2 理念→事業の橋渡しの一文（既存 .lead と同じ見た目。下余白のみ調整） */
+.home main section.about .wrapper .lead.philosophy-bridge{margin-top:-2rem;margin-bottom:6rem}
+@media screen and (max-width:768px){
+  .home main section.about .wrapper .lead.philosophy-bridge br{display:none}
+}
+
+/* T5 グループ企業の帯（新設）：実績紹介とお知らせの間。写真の上に見出し、右に「グループ企業一覧」ページへのボタン */
+.home .group-banner{position:relative;overflow:hidden;color:#fff}
+.home .group-banner__bg{position:absolute;inset:0;background-size:cover;background-position:center 30%}
+.home .group-banner__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,79,132,.85) 0%,rgba(30,79,132,.55) 55%,rgba(30,79,132,.3) 100%)}
+.home .group-banner__in{position:relative;display:flex;align-items:center;justify-content:space-between;gap:4rem;max-width:144rem;margin:0 auto;padding:11rem 12rem}
+.home .group-banner__en{font-family:"Montserrat",sans-serif;font-size:2rem;font-weight:600;letter-spacing:.1rem}
+.home .group-banner h2{margin:.4rem 0 0;font-size:4.8rem;font-weight:700;letter-spacing:.4rem;line-height:1.4}
+.home .group-banner__sub{margin-top:.6rem;font-size:1.8rem;font-weight:700}
+.home .group-banner__lead{margin-top:2.4rem;font-size:1.8rem;font-weight:700;line-height:2;letter-spacing:.1rem}
+.home .group-banner__btn{flex:none;display:flex;align-items:center;justify-content:space-between;gap:2.4rem;width:36rem;height:8rem;padding:0 3.2rem 0 4rem;border-radius:4rem;background:#fff;color:#1e4f84;font-size:1.8rem;font-weight:700;text-decoration:none;transition:opacity .3s}
+.home .group-banner__btn:hover{opacity:.85}
+.home .group-banner__btn span{position:relative;width:3rem;height:3rem;border:2px solid #1e4f84;border-radius:50%}
+.home .group-banner__btn span::after{content:"";position:absolute;top:50%;left:42%;width:.8rem;height:.8rem;border-top:2px solid #1e4f84;border-right:2px solid #1e4f84;transform:translate(-50%,-50%) rotate(45deg)}
+@media screen and (max-width:768px){
+  .home .group-banner__in{flex-direction:column;align-items:stretch;gap:3.2rem;padding:5.6rem 1.6rem}
+  .home .group-banner__en{font-size:1.6rem}
+  .home .group-banner h2{font-size:2.8rem;letter-spacing:.2rem}
+  .home .group-banner__sub{font-size:1.4rem}
+  .home .group-banner__lead{margin-top:1.6rem;font-size:1.4rem;line-height:1.9}
+  .home .group-banner__lead br{display:none}
+  .home .group-banner__btn{width:100%;height:6.4rem;font-size:1.6rem;padding:0 2.4rem 0 3.2rem}
+}
+
+/* T4 数字ブロック（文字で1列・トップの最後、お知らせの直後） */
+.home .key-numbers{background:#f7f9ff}
+.home .key-numbers .wrapper{padding:5.6rem 12rem}
+.home .key-numbers ul{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.home .key-numbers li{flex:1 1 0;min-width:16rem;text-align:center;padding:0 1rem;border-left:1px dashed #1e4f84}
+.home .key-numbers li:first-child{border-left:0}
+.home .key-numbers .label{display:block;font-size:1.3rem;font-weight:700;color:#1e4f84;letter-spacing:.1rem;margin-bottom:.6rem}
+.home .key-numbers b{font-family:"Montserrat",sans-serif;font-size:4rem;font-weight:600;line-height:1;color:#1e4f84}
+.home .key-numbers .unit{font-size:1.6rem;font-weight:700;color:#1e4f84;margin-left:.3rem}
+.home .key-numbers .sep{font-size:1.6rem;color:#1e4f84;margin:0 .6rem}
+.home .key-numbers small{display:block;margin-top:.8rem;font-size:1.2rem;line-height:1.6;color:#555}
+.home .key-numbers .note{margin-top:2.4rem;font-size:1.2rem;color:#777;text-align:right}
+@media screen and (max-width:768px){
+  /* スマートフォン：上段3つ・下段2つの小さな表にまとめる */
+  .home .key-numbers .wrapper{padding:2.8rem 1.6rem 2.4rem}
+  .home .key-numbers ul{display:grid;grid-template-columns:repeat(6,1fr);gap:0;background:#fff;border:1px solid #d9deea;border-radius:1rem;overflow:hidden}
+  .home .key-numbers li{grid-column:span 2;border-left:0;border-top:1px solid #d9deea;padding:1.2rem .6rem;text-align:center;min-width:0}
+  .home .key-numbers li:nth-child(-n+3){border-top:0}
+  .home .key-numbers li:nth-child(n+4){grid-column:span 3}
+  .home .key-numbers li:nth-child(2),.home .key-numbers li:nth-child(3),.home .key-numbers li:nth-child(5){border-left:1px solid #d9deea}
+  .home .key-numbers .label{font-size:1.05rem;letter-spacing:0;margin-bottom:.4rem}
+  .home .key-numbers b{font-size:2.4rem}
+  .home .key-numbers .unit{font-size:1.1rem;margin-left:.15rem}
+  .home .key-numbers .sep{font-size:1.2rem;margin:0 .3rem}
+  .home .key-numbers small{margin-top:.4rem;font-size:1rem;line-height:1.45;letter-spacing:0}
+  .home .key-numbers .note{margin-top:1rem;font-size:1rem;text-align:left}
+}
+
+/* T3 事業の柱：既存の .services h3（破線の見出し）と .rounded-button を流用。追加は軸名・説明文のみ */
+.home main section.consultant-service .wrapper .right .services.pillar + .services.pillar{margin-top:5.6rem}
+.home main section.consultant-service .wrapper .right .services.pillar h3{display:flex;align-items:center;gap:1.6rem;font-size:2.4rem;padding-bottom:1.6rem;margin-bottom:1.2rem}
+.home main section.consultant-service .wrapper .right .services.pillar h3 .pillar-key{display:inline-flex;align-items:center;justify-content:center;min-width:6.4rem;height:3.2rem;padding:0 1.2rem;border-radius:1.6rem;background:#1e4f84;color:#fff;font-size:1.5rem;font-weight:700;letter-spacing:.2rem}
+.home main section.consultant-service .wrapper .right .services.pillar .pillar-desc{margin-bottom:2.4rem;font-size:1.5rem;line-height:1.9;color:#333}
+.home main section.consultant-service .wrapper .right .services.pillar ul{gap:2rem}
+.home main section.consultant-service .wrapper .right .services.pillar .service-desc{margin-top:.8rem;padding:0 .4rem;font-size:1.3rem;line-height:1.7;color:#333}
+.home main section.consultant-service .wrapper .right .pillar-note{margin-top:3.2rem;font-size:1.2rem;color:#777}
+/* PC：左右2段をやめて1段に。上に見出しと説明文、その下に「くらし・環境・活用」を横に3列 */
+@media screen and (min-width:769px){
+  .home main section.consultant-service .wrapper{flex-direction:column;gap:5.6rem}
+  .home main section.consultant-service .wrapper .left{width:100%;display:grid;grid-template-columns:auto 1fr;gap:0 8rem;align-items:end}
+  .home main section.consultant-service .wrapper .left .with-subtitle{margin-bottom:0;display:block;white-space:nowrap}
+  .home main section.consultant-service .wrapper .left .with-subtitle::before{display:block;margin-bottom:.8rem}
+  .home main section.consultant-service .wrapper .left .with-subtitle br{display:none}
+  .home main section.consultant-service .wrapper .left p{max-width:64rem}
+  .home main section.consultant-service .wrapper .right{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:4.8rem}
+  .home main section.consultant-service .wrapper .right .services.pillar + .services.pillar{margin-top:0}
+  .home main section.consultant-service .wrapper .right .services.pillar h3{font-size:2.2rem;padding-bottom:1.6rem}
+  .home main section.consultant-service .wrapper .right .services.pillar .pillar-desc{min-height:5.8em;margin-bottom:2rem;font-size:1.4rem}
+  .home main section.consultant-service .wrapper .right .services.pillar ul{grid-template-columns:1fr;gap:1.6rem}
+  .home main section.consultant-service .wrapper .right .pillar-note{grid-column:1/-1;margin-top:0}
+}
+/* スマートフォンではボタン下の1行説明を出さない（文字量を抑える）。PCでは表示 */
+@media screen and (max-width:768px){.home main section.consultant-service .wrapper .right .services.pillar .service-desc{display:none}.home main section.consultant-service .wrapper .right .services.pillar ul{gap:1.2rem}}
+@media screen and (max-width:768px){
+  .home main section.consultant-service .wrapper .right .services.pillar + .services.pillar{margin-top:4rem}
+  .home main section.consultant-service .wrapper .right .services.pillar h3{font-size:2rem}
+}
+
+/* 追加 スマートフォンの文章量を抑える
+   PC／スマホで出し分ける部品。テーマの .pc-only/.sp-only に依存しない */
+.bws-sp{display:none}
+@media screen and (max-width:768px){
+  .bws-pc{display:none}
+  .bws-sp{display:inline}
+  /* ABOUT US：見出し・導入文・余白を詰める。段落間の空行は出さない */
+  .home main section.about .wrapper{padding-top:4.8rem}
+  .home main section.about .wrapper .with-subtitle{font-size:2.4rem;line-height:1.5;letter-spacing:.1rem;margin-bottom:2.8rem}
+  .home main section.about .wrapper .lead{font-size:1.4rem;line-height:1.9;margin-bottom:3.6rem}
+  .home main section.about .wrapper .lead.about-lead{word-break:normal;text-wrap:wrap}
+  .home main section.about .wrapper .lead.philosophy-bridge{margin-top:-1rem;margin-bottom:3.2rem}
+  /* 3つの心構え：スマートフォンでも横に3つ並べる（スクロール量を減らす） */
+  .home main section.about .wrapper ol{grid-template-columns:repeat(3,1fr);gap:.8rem;margin-bottom:4rem}
+  .home main section.about .wrapper ol > li{padding:1.4rem .4rem 1.6rem;border-radius:1.2rem}
+  .home main section.about .wrapper ol > li .number{height:3.6rem}
+  .home main section.about .wrapper ol > li .number img{height:2.2rem}
+  .home main section.about .wrapper ol > li p{font-size:1.1rem;line-height:1.6;letter-spacing:0}
+}
