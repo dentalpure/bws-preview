@@ -40,7 +40,8 @@ p{margin:0}
 .header .wrap{display:flex;align-items:center;gap:32px;height:104px;max-width:none;padding:0 56px}
 .logo img{height:40px;width:auto}
 .nav{display:flex;gap:32px;margin:0 auto}
-.nav a{font-weight:700;font-size:15px;padding:8px 0;border-bottom:2px solid transparent}
+.nav a{font-weight:700;font-size:15px;padding:8px 0;border-bottom:2px solid transparent;white-space:nowrap}
+@media (max-width:1280px){.header .wrap{gap:20px;padding:0 28px}.nav{gap:20px}.nav a{font-size:14px}.pill.head{min-width:0;padding:0 20px}}
 .nav a.active{border-bottom-color:var(--primary)}
 .header-cta{margin-left:auto;display:flex;align-items:center;gap:12px}
 .pill.head{min-width:0;height:52px;padding:0 26px;font-size:14px;gap:10px;white-space:nowrap}
