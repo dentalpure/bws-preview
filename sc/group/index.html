@@ -61,13 +61,9 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 .grp-kv::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,79,132,.82) 0%,rgba(30,79,132,.45) 60%,rgba(30,79,132,.2) 100%)}
 .grp-kv-in{position:relative;width:min(1200px,90%);margin:0 auto;padding-top:60px;color:#fff}
 .grp-kv h1{font-size:48px;font-weight:700;letter-spacing:.08em;line-height:1.3;margin:0}
-.grp-kv-sub{font-size:20px;font-weight:700;margin:6px 0 22px}
 .grp-kv-lead{font-size:20px;font-weight:700;line-height:1.9;letter-spacing:.06em}
 .grp .breadcrumb{width:min(1200px,90%);margin:16px auto 0}
-.grp-search{position:relative;width:min(1200px,92%);margin:0 auto;padding:110px 0 70px}
-.grp-watermark{position:absolute;left:-2%;top:10px;margin:0;font-family:Montserrat,sans-serif;font-size:150px;font-weight:500;line-height:1;color:#eef3fa;white-space:nowrap;pointer-events:none;z-index:0}
-.grp-tolist{position:relative;z-index:1;display:block;width:max-content;margin:0 0 18px auto;text-align:right;font-size:15px;font-weight:700;color:#1e4f84 !important;text-decoration:none;border-bottom:1px solid #1e4f84;padding-bottom:6px}
-.grp-tolist small{font-size:13px;font-weight:500}
+.grp-search{position:relative;width:min(1200px,92%);margin:0 auto;padding:56px 0 56px}
 .grp-bar{position:relative;z-index:1;display:flex;align-items:center;gap:28px;background:#fff;border-radius:999px;box-shadow:0 8px 32px rgba(30,79,132,.12);padding:20px 24px 20px 44px}
 .grp-bar-t{font-weight:700;font-size:16px;white-space:nowrap;color:#222}
 .grp-radios{display:flex;gap:24px}
@@ -78,50 +74,51 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 .grp-sep{width:1px;height:48px;background:#d7dde8;flex:none}
 .grp-go{display:flex;align-items:center;justify-content:space-between;min-width:220px;height:60px;padding:0 28px 0 36px;border:0;border-radius:999px;background:#1e4f84;color:#fff;font-family:Montserrat,sans-serif;font-size:16px;font-weight:700;letter-spacing:.1em;cursor:pointer}
 .grp-go span{font-size:18px}
-.grp-hit{text-align:center;font-size:14px;color:#1e4f84;font-weight:700;min-height:1.5em;margin:12px 0 0}
+.grp-kv-en{margin:0 0 10px;font-family:Montserrat,sans-serif;font-size:16px;font-weight:600;letter-spacing:.2em;opacity:.9}
 .grp-index{background:#eef0f3;padding:70px 5% 80px}
-.grp-index>h2{text-align:center;font-size:26px;font-weight:700;margin:0 0 36px;color:#222}
-.grp-index>h2 small{display:block;font-size:13px;font-weight:500;margin-top:4px}
-.grp-index-tbl{width:min(1100px,100%);margin:0 auto}
-.grp-index-row{display:grid;grid-template-columns:240px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid #d5d9e0}
-.grp-index-row h3{margin:0;font-size:16px;font-weight:700;color:#1e4f84;border-bottom:2px solid #1e4f84;align-self:start;padding-bottom:6px}
-.grp-index-row ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px 24px}
-.grp-index-row a{display:block;font-size:15px;font-weight:700;color:#1e4f84 !important;text-decoration:none;border-bottom:1px solid #1e4f84;padding:6px 0}
-.grp-result{background:#eef3fa;padding:0 0 40px}
-.grp-domain-h{position:relative;background-size:cover;background-position:center;color:#fff;text-align:center;padding:60px 5% 40px;margin-bottom:56px}
-.grp-domain-h::before{content:"";position:absolute;inset:0;background:rgba(15,35,65,.6)}
+.grp-index>h2{text-align:center;font-size:26px;font-weight:700;margin:0 0 32px;color:#222}
+.grp-cards{width:min(1000px,100%);margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.grp-card{position:relative;display:flex;flex-direction:column;gap:8px;background:#fff;border-radius:20px;padding:22px 64px 22px 26px;text-decoration:none;box-shadow:0 6px 20px rgba(30,79,132,.08);transition:transform .2s,box-shadow .2s}
+.grp-card:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(30,79,132,.14)}
+.grp-card b{font-size:18px;color:#1e4f84}
+.grp-card i{position:absolute;right:22px;top:50%;width:30px;height:30px;margin-top:-15px;border-radius:50%;background:#1e4f84}
+.grp-card i::after{content:"";position:absolute;left:10px;top:11px;width:7px;height:7px;border-top:2px solid #fff;border-right:2px solid #fff;transform:rotate(135deg)}
+.grp-chip{align-self:flex-start;font-size:12px;font-weight:700;color:#1e4f84;background:#e3edf8;border-radius:999px;padding:3px 12px}
+.grp-asof{width:min(1000px,100%);margin:14px auto 0;text-align:right;font-size:12px;color:#777}
+.grp-domain-h{position:relative;width:min(1000px,92%);margin:0 auto 32px;border-radius:24px;overflow:hidden;background-size:cover;background-position:center;color:#fff;padding:44px 48px}
+.grp-domain-h::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,55,100,.88) 0%,rgba(20,55,100,.55) 70%,rgba(20,55,100,.35) 100%)}
 .grp-domain-h>*{position:relative}
-.grp-domain-h svg{width:46px;height:46px}
-.grp-domain-h h2{margin:8px 0 12px;font-size:30px;font-weight:700;letter-spacing:.06em}
+.grp-domain-en{margin:0 0 6px;font-family:Montserrat,sans-serif;font-size:13px;font-weight:600;letter-spacing:.2em;opacity:.85}
+.grp-domain-h h2{margin:0 0 10px;font-size:28px;font-weight:700;letter-spacing:.08em}
 .grp-domain-h p{margin:0;font-size:15px;line-height:1.9}
-.grp-domain-h ul{list-style:none;margin:22px 0 0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:8px 28px}
-.grp-domain-h li a{font-size:13px;color:#fff !important;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.7)}
 .grp-domain-h .grp-confirm{color:#fff;border-color:#fff}
-.grp-company{width:min(1000px,92%);margin:0 auto 56px;background:#fff;padding:0 56px 48px;scroll-margin-top:90px}
-.grp-company-h{position:relative;top:-18px;margin:0 0 6px;background:#1e4f84;color:#fff;text-align:center;font-size:20px;font-weight:700;padding:16px 10px;letter-spacing:.06em}
-.grp-core{display:inline-block;font-size:12px;background:#e8a33a;color:#fff;border-radius:999px;padding:2px 10px;margin-right:10px;vertical-align:2px}
-.grp-profile{display:grid;grid-template-columns:420px 1fr;gap:40px;margin-left:-110px}
-.grp-slider{position:relative;aspect-ratio:3/2;background:#dfe6f0}
+.grp-company{width:min(1000px,92%);margin:0 auto 56px;background:#fff;border-radius:24px;padding:40px 48px 48px;box-shadow:0 8px 28px rgba(30,79,132,.08);scroll-margin-top:90px}
+.grp-company-h{margin:0 0 28px;padding:0 0 18px;border-bottom:1px solid #d9e2ef;color:#1e4f84;font-size:24px;font-weight:700;letter-spacing:.08em}
+.grp-core{display:inline-block;font-size:12px;background:#1e4f84;color:#fff;border-radius:999px;padding:2px 10px;margin-right:10px;vertical-align:3px}
+.grp-profile{display:grid;grid-template-columns:400px 1fr;gap:40px}
+.grp-slider{position:relative;aspect-ratio:3/2;background:#dfe6f0;border-radius:16px;overflow:hidden}
+.grp-tags li{font-size:13px;color:#1e4f84;background:#eef3fa;border-radius:999px;padding:4px 12px}
+.grp-job{background:#f7f9ff;border-radius:16px;margin:40px 0 0;padding:32px 36px 36px}
+.grp-job h3{text-align:left;font-size:18px;font-weight:700;color:#1e4f84;margin:0 0 22px}
+.grp-hit{text-align:center;font-size:14px;color:#1e4f84;font-weight:700;min-height:1.5em;margin:12px 0 0}
+.grp-result{background:#eef3fa;padding:0 0 40px}
 .grp-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s}
 .grp-slider img.on{opacity:1}
-.grp-dots{position:absolute;left:0;right:0;bottom:-30px;display:flex;justify-content:center;gap:8px}
-.grp-dots button{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:#c6d2e2;font-size:0;cursor:pointer}
-.grp-dots button.on{background:#1e4f84}
+.grp-dots{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:8px}
+.grp-dots button{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.6);font-size:0;cursor:pointer}
+.grp-dots button.on{background:#fff}
 .grp-noimg{display:flex;flex-direction:column;align-items:center;justify-content:center;background:#1e4f84;color:#fff;font-weight:700;font-size:18px;gap:8px}
 .grp-noimg .grp-confirm{color:#fff;border-color:#fff}
 .grp-catch{margin:0 0 20px;font-size:26px;font-weight:700;line-height:1.6;color:#1e4f84}
 .grp-profile dl{margin:0;font-size:14px;line-height:1.85}
 .grp-profile dt{font-weight:700;color:#1e4f84;margin-top:10px}
 .grp-profile dd{margin:2px 0 0}
-.grp-rows{margin-top:50px;border-top:1px solid #1e4f84}
+.grp-rows{margin-top:36px;border-top:1px solid #1e4f84}
 .grp-row{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:center;padding:18px 0;border-bottom:1px solid #1e4f84}
 .grp-row h4{margin:0;font-size:16px;font-weight:700;color:#1e4f84}
 .grp-tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.grp-tags li{font-size:13px;color:#1e4f84;border:1px solid #1e4f84;border-radius:4px;padding:3px 10px}
 .grp-none{margin:0}
 .grp-note{font-size:13px;color:#555;margin:14px 0 0}
-.grp-job{background:#fbf3e6;margin:40px -56px 0;padding:36px 56px 40px}
-.grp-job h3{text-align:center;font-size:18px;font-weight:700;color:#e8a33a;margin:0 0 26px;border-bottom:2px solid #e8a33a;padding-bottom:10px}
 .grp-job-in{display:grid;grid-template-columns:180px 1fr;gap:40px;align-items:start}
 .grp-job figure{margin:0;text-align:center}.grp-job img{width:100%;border-radius:4px;background:#fff}
 .grp-job figcaption{font-size:13px;margin-top:8px;line-height:1.6}.grp-job figcaption b{display:block;font-size:17px;color:#1e4f84}
@@ -134,16 +131,16 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 .grp-foot-note{width:min(1000px,92%);margin:0 auto;padding:30px 0 70px;font-size:13px;color:#555;line-height:1.8}
 @media (max-width:1100px){.grp-profile{margin-left:0;grid-template-columns:1fr 1fr}}
 @media (max-width:768px){
- .grp-kv{height:420px;text-align:center}.grp-kv h1{font-size:28px}.grp-kv-sub{font-size:15px}.grp-kv-lead{font-size:15px}
- .grp-search{padding:70px 0 40px}.grp-watermark{font-size:72px}
+ .grp-kv{height:420px;text-align:center}.grp-kv h1{font-size:28px}.grp-kv-en{font-size:13px}.grp-kv-lead{font-size:15px}
+ .grp-search{padding:40px 0 32px}
  .grp-bar{flex-direction:column;align-items:stretch;gap:18px;border-radius:28px;padding:28px 22px 24px}.grp-bar-t{text-align:center;font-size:17px}
  .grp-radios{justify-content:center;flex-wrap:wrap;gap:14px 24px}.grp-select{flex:none}.grp-sep{width:100%;height:1px}.grp-go{width:100%;min-width:0}
- .grp-index{padding:50px 5% 56px}.grp-index-row{grid-template-columns:1fr;gap:10px}.grp-index-row ul{grid-template-columns:1fr}
- .grp-domain-h h2{font-size:22px}.grp-domain-h p{font-size:13px}.grp-domain-h br{display:none}
- .grp-company{padding:0 18px 32px}.grp-company-h{font-size:17px}
+ .grp-index{padding:50px 5% 56px}.grp-cards{grid-template-columns:1fr}
+ .grp-domain-h{padding:28px 22px;border-radius:18px}.grp-domain-h h2{font-size:21px}.grp-domain-h p{font-size:13px}.grp-domain-h br{display:none}
+ .grp-company{padding:26px 18px 30px;border-radius:18px}.grp-company-h{font-size:19px;margin-bottom:20px}
  .grp-profile{grid-template-columns:1fr;gap:44px}.grp-catch{font-size:20px}.grp-catch br{display:none}
  .grp-row{grid-template-columns:1fr;gap:8px}
- .grp-job{margin:36px -18px 0;padding:28px 18px}.grp-job-in{grid-template-columns:1fr;gap:16px}.grp-job figure{width:150px;margin:0 auto}.grp-job-head{font-size:18px}
+ .grp-job{margin:28px 0 0;padding:24px 18px}.grp-job-in{grid-template-columns:1fr;gap:16px}.grp-job figure{width:150px;margin:0 auto}.grp-job-head{font-size:18px}
  .grp-links{flex-direction:column;align-items:stretch}.grp-links a{min-width:0}
 }
 </style>
@@ -255,13 +252,11 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
   
 <main class="grp">
 <section class="grp-kv" style="background-image:url(img/kv.webp)">
-  <div class="grp-kv-in"><h1>三水グループ企業を探す</h1><p class="grp-kv-sub">（2026年10月現在）</p>
+  <div class="grp-kv-in"><p class="grp-kv-en">GROUP COMPANIES</p><h1>三水グループのご紹介</h1>
   <p class="grp-kv-lead">水と環境の総合コンサルタントとして、<br>グループ各社の技術を合わせて、地域の課題にお応えします。</p></div>
 </section>
 <nav class="breadcrumb" aria-label="パンくずリスト"><ul><li class="breadcrumb-item"><a href="../top/after/">HOME</a></li><li class="breadcrumb-item"><span>グループ企業一覧</span></li></ul></nav>
 <section class="grp-search">
-  <p class="grp-watermark" aria-hidden="true">Group companies</p>
-  <a class="grp-tolist" href="#grp-index">グループ企業一覧を見る<br><small>（2026年10月現在）</small></a>
   <form class="grp-bar" onsubmit="return false">
     <span class="grp-bar-t">グループ企業を探す</span>
     <div class="grp-radios" role="radiogroup" aria-label="事業フィールド"><label><input type="radio" name="grp-field" value="all" checked> すべて</label><label><input type="radio" name="grp-field" value="water"> 上下水道</label><label><input type="radio" name="grp-field" value="civil"> 建設コンサルタント</label></div>
@@ -271,13 +266,13 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
   </form>
   <p class="grp-hit" aria-live="polite"></p>
 </section>
-<section class="grp-result" id="grp-result"><div class="grp-domain" data-field="water"><div class="grp-domain-h" style="background-image:url(img/d1.jpg)"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c-7 9-12 15.5-12 22a12 12 0 0 0 24 0c0-6.5-5-13-12-22z" fill="none" stroke="#fff" stroke-width="2"/><path d="M18 30a6 6 0 0 0 6 6" fill="none" stroke="#fff" stroke-width="2"/></svg><h2>上下水道事業領域</h2><p>上下水道の管路を中心に、計画・調査・設計から<br>診断・測量・施工管理まで、水インフラの維持と更新を支えます。</p><ul><li><a href="#ssc">株式会社エスエスシー</a></li></ul></div><article class="grp-company" id="ssc" data-field="water" data-area="tokyo">
+<section class="grp-result" id="grp-result"><div class="grp-domain" data-field="water"><div class="grp-domain-h" style="background-image:url(img/d1.jpg)"><p class="grp-domain-en">BUSINESS AREA</p><h2>上下水道事業領域</h2><p>上下水道の管路を中心に、計画・調査・設計から<br>診断・測量・施工管理まで、水インフラの維持と更新を支えます。</p></div><article class="grp-company" id="ssc" data-field="water" data-area="tokyo">
   <h2 class="grp-company-h">株式会社エスエスシー</h2>
   <div class="grp-profile"><div class="grp-slider"><img src="https://www.sscon.co.jp/wpr/wp-content/themes/ssc/images/top.jpg" alt="" class="on" loading="lazy"><div class="grp-dots"></div></div>
     <div class="grp-profile-txt"><p class="grp-catch">インフラの未来を<br>ともに描く。</p>
       <dl><dt>事業内容</dt><dd>三水コンサルタントのグループ企業として2023年に設立。上下水道計画と上下水道管路の調査・設計に強みを持ち、上下水道関連施設の調査・点検、測量、施工管理まで手がけています。従業員21名（令和7年8月現在）。</dd><dt>所在地・お問い合わせ</dt><dd>本社・東日本支社　〒112-0002 東京都文京区小石川5丁目5番5号 プライム茗荷谷ビル7階<br>TEL：03-6912-1293／FAX：03-6912-1312<br>関東事務所　〒362-0022 埼玉県上尾市大字瓦葺1067-1</dd></dl></div></div>
   <div class="grp-rows"><div class="grp-row"><h4>主な業務</h4><ul class="grp-tags"><li>上水道配管（調査・設計）</li><li>下水道管路（調査・設計）</li><li>上下水道の調査・診断</li><li>測量・調査</li><li>施工管理</li></ul></div><div class="grp-row"><h4>調査・診断</h4><ul class="grp-tags"><li>管渠内TVカメラ調査・目視調査</li><li>コンクリート構造物劣化診断</li></ul></div><div class="grp-row"><h4>主な資格</h4><ul class="grp-tags"><li>技術士（総合技術監理・上下水道）</li><li>測量士</li><li>1級土木施工管理技士</li><li>下水道管路管理総合技士</li></ul></div></div><p class="grp-note">会社の一言・事業内容・写真は株式会社エスエスシーの公式サイト（2026年10月時点）の記載によります。</p><ul class="grp-links"><li><a href="https://www.sscon.co.jp/" target="_blank" rel="noopener">企業サイト</a></li></ul>
-</article></div><div class="grp-domain" data-field="civil"><div class="grp-domain-h" style="background-image:url(img/d2.jpg)"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c-7 9-12 15.5-12 22a12 12 0 0 0 24 0c0-6.5-5-13-12-22z" fill="none" stroke="#fff" stroke-width="2"/><path d="M18 30a6 6 0 0 0 6 6" fill="none" stroke="#fff" stroke-width="2"/></svg><h2>建設コンサルタント事業領域</h2><p>道路・河川・橋梁から測量・補償まで。<br>地域の社会基盤を、設計と測量で支えます。</p><ul><li><a href="#keishin">株式会社恵進コンサル</a></li></ul></div><article class="grp-company" id="keishin" data-field="civil" data-area="chiba">
+</article></div><div class="grp-domain" data-field="civil"><div class="grp-domain-h" style="background-image:url(img/d2.jpg)"><p class="grp-domain-en">BUSINESS AREA</p><h2>建設コンサルタント事業領域</h2><p>道路・河川・橋梁から測量・補償まで。<br>地域の社会基盤を、設計と測量で支えます。</p></div><article class="grp-company" id="keishin" data-field="civil" data-area="chiba">
   <h2 class="grp-company-h">株式会社恵進コンサル</h2>
   <div class="grp-profile"><div class="grp-slider"><img src="img/ks1.jpg" alt="" class="on" loading="lazy"><img src="img/ks2.jpg" alt="" class="" loading="lazy"><div class="grp-dots"><button type="button" class="on" aria-label="1枚目">1</button><button type="button" class="" aria-label="2枚目">2</button></div></div>
     <div class="grp-profile-txt"><p class="grp-catch">千葉の社会資本を、<br>設計・測量・補償で支える。</p>
@@ -285,8 +280,9 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
   <div class="grp-rows"><div class="grp-row"><h4>主な業務</h4><ul class="grp-tags"><li>土木設計</li><li>測量</li><li>補償コンサルタント</li><li>地質調査</li><li>許認可申請</li><li>建築設計</li><li>土地家屋調査士</li></ul></div><div class="grp-row"><h4>登録</h4><ul class="grp-tags"><li>建設コンサルタント</li><li>補償コンサルタント</li><li>測量業</li><li>土地家屋調査士事務所</li></ul></div><div class="grp-row"><h4>募集職種</h4><ul class="grp-tags"><li>測量技師</li><li>設計技師</li><li>補償コンサルタント</li><li>営業</li></ul></div></div><p class="grp-note">会社の一言・募集職種は現行サイトの記載をもとにした案です。<span class="grp-confirm">貴社確認</span></p><ul class="grp-links"><li><a href="http://ksin.co.jp/" target="_blank" rel="noopener">企業サイト</a></li></ul>
 </article></div></section>
 <section class="grp-index" id="grp-index">
-  <h2>グループ企業一覧<small>（2026年10月現在）</small></h2>
-  <div class="grp-index-tbl"><div class="grp-index-row"><h3>上下水道事業領域</h3><ul><li><a href="#ssc">株式会社エスエスシー</a></li></ul></div><div class="grp-index-row"><h3>建設コンサルタント事業領域</h3><ul><li><a href="#keishin">株式会社恵進コンサル</a></li></ul></div></div>
+  <h2>グループ企業一覧</h2>
+  <div class="grp-cards"><a class="grp-card" href="#ssc"><span class="grp-chip">上下水道事業領域</span><b>株式会社エスエスシー</b><i aria-hidden="true"></i></a><a class="grp-card" href="#keishin"><span class="grp-chip">建設コンサルタント事業領域</span><b>株式会社恵進コンサル</b><i aria-hidden="true"></i></a></div>
+  <p class="grp-asof">2026年10月現在</p>
 </section>
 <p class="grp-foot-note">※ このページは新規ページの案です（確認用）。各社の掲載内容は、それぞれの公式サイトの記載をもとにしています。「貴社確認」の箇所と掲載の可否をご確認のうえ確定します。<br>グループ会社が増えた場合は、会社のブロックを1つ足すだけで一覧・絞り込みにも反映されます。</p>
 </main>
