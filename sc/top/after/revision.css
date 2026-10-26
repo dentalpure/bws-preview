@@ -88,12 +88,19 @@
 .home .key-numbers small{display:block;margin-top:.8rem;font-size:1.2rem;line-height:1.6;color:#555}
 .home .key-numbers .note{margin-top:2.4rem;font-size:1.2rem;color:#777;text-align:right}
 @media screen and (max-width:768px){
-  .home .key-numbers .wrapper{padding:4rem 1.6rem}
-  .home .key-numbers ul{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem 1.6rem}
-  .home .key-numbers li{border-left:0;padding:0;text-align:left;min-width:0}
-  .home .key-numbers li:nth-child(n+3){grid-column:1/3}
-  .home .key-numbers b{font-size:3.2rem}
-  .home .key-numbers .note{text-align:left}
+  /* スマートフォン：上段3つ・下段2つの小さな表にまとめる（10/26 山田「大きすぎる。小さくまとめて」） */
+  .home .key-numbers .wrapper{padding:2.8rem 1.6rem 2.4rem}
+  .home .key-numbers ul{display:grid;grid-template-columns:repeat(6,1fr);gap:0;background:#fff;border:1px solid #d9deea;border-radius:1rem;overflow:hidden}
+  .home .key-numbers li{grid-column:span 2;border-left:0;border-top:1px solid #d9deea;padding:1.2rem .6rem;text-align:center;min-width:0}
+  .home .key-numbers li:nth-child(-n+3){border-top:0}
+  .home .key-numbers li:nth-child(n+4){grid-column:span 3}
+  .home .key-numbers li:nth-child(2),.home .key-numbers li:nth-child(3),.home .key-numbers li:nth-child(5){border-left:1px solid #d9deea}
+  .home .key-numbers .label{font-size:1.05rem;letter-spacing:0;margin-bottom:.4rem}
+  .home .key-numbers b{font-size:2.4rem}
+  .home .key-numbers .unit{font-size:1.1rem;margin-left:.15rem}
+  .home .key-numbers .sep{font-size:1.2rem;margin:0 .3rem}
+  .home .key-numbers small{margin-top:.4rem;font-size:1rem;line-height:1.45}
+  .home .key-numbers .note{margin-top:1rem;font-size:1rem;text-align:left}
 }
 
 /* T3 事業の柱：既存の .services h3（破線の見出し）と .rounded-button を流用。追加は軸名・説明文のみ */
@@ -104,6 +111,8 @@
 .home main section.consultant-service .wrapper .right .services.pillar ul{gap:2rem}
 .home main section.consultant-service .wrapper .right .services.pillar .service-desc{margin-top:.8rem;padding:0 .4rem;font-size:1.3rem;line-height:1.7;color:#333}
 .home main section.consultant-service .wrapper .right .pillar-note{margin-top:3.2rem;font-size:1.2rem;color:#777}
+/* スマートフォンではボタン下の1行説明を出さない（10/26 山田「文字数が多く見えて体力が要る」）。PCでは表示 */
+@media screen and (max-width:768px){.home main section.consultant-service .wrapper .right .services.pillar .service-desc{display:none}.home main section.consultant-service .wrapper .right .services.pillar ul{gap:1.2rem}}
 @media screen and (max-width:768px){
   .home main section.consultant-service .wrapper .right .services.pillar + .services.pillar{margin-top:4rem}
   .home main section.consultant-service .wrapper .right .services.pillar h3{font-size:2rem}
