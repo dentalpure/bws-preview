@@ -56,16 +56,19 @@
 /* 10/26 HERO の下を2つに：メッセージ（紺の帯・h1・導入文・円形の写真） */
 .home .message{position:relative;overflow:hidden;background:linear-gradient(135deg,#1e4f84 0%,#2d6aa6 100%);color:#fff}
 .home .message .wrapper{position:relative;z-index:2}
-.home .message__circle{position:absolute;z-index:1;right:-14rem;top:50%;width:60rem;height:60rem;border-radius:50%;background-size:cover;background-position:center;transform:translateY(-50%);box-shadow:0 0 0 1.2rem rgba(255,255,255,.08)}
+.home .message__circle{position:absolute;z-index:1;right:-6rem;top:50%;width:52rem;height:52rem;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;transform:translateY(-50%);box-shadow:0 0 0 1.6rem rgba(255,255,255,.12),0 2rem 6rem rgba(10,30,60,.25)}
+.home .message__circle img{width:64%;height:auto}
 .home .message__mark{position:absolute;z-index:1;left:38%;top:12%;font-family:"Montserrat",sans-serif;font-size:11rem;font-weight:600;white-space:nowrap;color:rgba(255,255,255,.07);transform:rotate(-24deg);transform-origin:left top;pointer-events:none}
 .home .message__h1{margin:0 0 4.8rem;font-size:4rem;font-weight:700;line-height:1.6;letter-spacing:.2rem;color:#fff}
 .home .message__body{max-width:60rem}
 .home .message__body p{margin:0 0 3.2rem;font-size:1.8rem;font-weight:500;line-height:2.2;letter-spacing:.1rem}
 .home .message__body p:last-child{margin-bottom:0;font-weight:700;text-decoration:underline;text-decoration-thickness:.1rem;text-underline-offset:.8rem}
 @media screen and (max-width:768px){
-  .home .message__circle{width:30rem;height:30rem;right:-13rem;top:58%;opacity:.55}
+  .home .message__circle{width:24rem;height:24rem;right:-7rem;top:auto;bottom:-4rem;transform:none;opacity:.9}
   .home .message__mark{font-size:6rem;left:30%;top:18%}
   .home .message__h1{margin-bottom:3.2rem;font-size:2.6rem;line-height:1.55}
+  .home .message .wrapper{padding-bottom:22rem}
+  .home .message__body p br{display:none}
   .home .message__body p{margin-bottom:2.4rem;font-size:1.5rem;line-height:2.1;letter-spacing:.05rem}
   .home .message__body p:last-child{text-underline-offset:.6rem}
 }
