@@ -10,7 +10,7 @@
   .home .fv .bg{position:absolute;top:0;left:0;width:100%;height:100%}
   .home .fv .bg::after{background:linear-gradient(180deg,rgba(30,79,132,.35) 0%,rgba(30,79,132,.5) 45%,rgba(30,79,132,.82) 100%)}
   .home .fv .wrapper{background:transparent;height:100%;justify-content:flex-end;padding:2rem 2rem 5.6rem}
-  .home .fv .wrapper p.lead{font-size:3.2rem;text-shadow:0 2px 12px rgba(10,30,60,.35)}
+  .home .fv .wrapper p.lead{font-size:2.6rem;line-height:1.5;margin-bottom:1.6rem;text-shadow:0 2px 12px rgba(10,30,60,.35)}  /* 10/26 山田「大きすぎる」3.2→2.6rem */
   .home .fv .wrapper p.sub{text-shadow:0 1px 8px rgba(10,30,60,.4)}
 }
 
@@ -139,6 +139,5 @@
   .home main section.about .wrapper ol > li{padding:1.4rem .4rem 1.6rem;border-radius:1.2rem}
   .home main section.about .wrapper ol > li .number{height:3.6rem}
   .home main section.about .wrapper ol > li .number img{height:2.2rem}
-  .home main section.about .wrapper ol > li p{font-size:1.2rem;line-height:1.6;letter-spacing:0;text-wrap:balance}
-  .home main section.about .wrapper ol > li p br{display:none}
+  .home main section.about .wrapper ol > li p{font-size:1.1rem;line-height:1.6;letter-spacing:0}
 }
