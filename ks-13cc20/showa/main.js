@@ -51,3 +51,21 @@
   const wipe=()=>{const r=set.getBoundingClientRect(), span=set.offsetHeight-innerHeight;const p=Math.min(Math.max((-r.top-span*.25)/(span*.5),0),1);rec.style.clipPath=`inset(${(1-p)*100}% 0 0 0)`};
   addEventListener('scroll',wipe,{passive:true}); addEventListener('resize',wipe); wipe();
 })();
+
+(()=>{
+  const sec=document.querySelector('.biz2'), cards=[...document.querySelectorAll('#bzStack .bz')];
+  if(!sec||!cards.length) return;
+  const upd=()=>{
+    if(matchMedia('(max-width:820px)').matches){cards.forEach(c=>{c.style.setProperty('--y',0);c.querySelector('.bz__in').style.setProperty('--s',1)});return}
+    const r=sec.getBoundingClientRect(); const span=sec.offsetHeight-innerHeight;
+    const p=Math.min(Math.max(-r.top/span,0),1)*(cards.length-1);   // 0〜N-1 の進み
+    cards.forEach((c,i)=>{
+      const d=i-p;                                   // 正：まだ下にある / 負：すでに上に積まれた
+      const y=d>0?Math.min(d,1)*110:0;               // 下から入ってくる
+      const s=d<0?Math.max(1+d*0.06,0.82):1;         // 積まれたカードは少し縮む
+      c.style.setProperty('--y',y); c.querySelector('.bz__in').style.setProperty('--s',s);
+      c.style.zIndex=String(10+i);
+    });
+  };
+  addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
+})();

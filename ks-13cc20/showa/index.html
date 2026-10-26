@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261026d">
+<link rel="stylesheet" href="style.css?v=20261027">
 </head>
 <body>
 <div class="study-label">社内検討用｜昭和設計の構成を模写した試作（先方提示用ではありません）</div>
@@ -69,27 +69,27 @@
   </ul>
 </section>
 
-<section class="pickup">
-  <div class="pickup__top"><h2 class="pickup__head">Pick Up</h2><div class="dots" id="puDots"></div></div>
+<section class="pickup" id="news">
+  <div class="pickup__top"><div class="pickup__hl"><h2 class="pickup__head">News</h2><a class="btn02" href="#news">ニュース一覧<i class="arw"></i></a></div><div class="dots" id="puDots"></div></div>
   <div class="pickup__viewport"><ul class="pickup__list" id="puList">
-    <li class="pu"><div class="pu__img g"><b>4</b><small>Registration</small></div>
-      <p class="pu__meta"><span class="cat">Company</span></p>
-      <p class="pu__ttl">建設コンサルタント・補償コンサルタント・測量業・土地家屋調査士の4部門に登録<i class="arw"></i></p></li>
-    <li class="pu"><div class="pu__img g"><b>NOTO</b><small>Field Survey 2024</small><img class="gen" src="../assets/gen/pu-noto.jpg" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.png')}else{this.remove()}"></div>
+    <li class="pu"><div class="pu__img g"><b>NOTO</b><small>Field Survey</small><img class="gen" src="../assets/gen/pu-noto.jpg" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.png')}else{this.remove()}"></div>
       <p class="pu__meta"><span class="cat">Blog</span><span class="date">2024.04.20</span></p>
       <p class="pu__ttl">能登半島の被災地へ。石川県七尾市の下水道処理場で現況測量を実施<i class="arw"></i></p></li>
-    <li class="pu"><div class="pu__img g"><b>1980</b><small>Since</small></div>
-      <p class="pu__meta"><span class="cat">Company</span></p>
-      <p class="pu__ttl">昭和55年の創立以来、千葉市中央区矢作町を拠点に<i class="arw"></i></p></li>
-    <li class="pu"><div class="pu__img g g--navy"><b>JICA</b><small>Overseas</small></div>
-      <p class="pu__meta"><span class="cat">Projects</span><span class="date">S60</span></p>
-      <p class="pu__ttl">タンザニア連合共和国 ダルエスサラーム上水道整備調査測量業務に参画<i class="arw"></i></p></li>
-    <li class="pu"><div class="pu__img g"><b>14</b><small>Qualifications</small></div>
-      <p class="pu__meta"><span class="cat">Company</span></p>
-      <p class="pu__ttl">技術士・RCCM・測量士・土地家屋調査士など14種の有資格者が在籍<i class="arw"></i></p></li>
-    <li class="pu"><div class="pu__img"><img src="../assets/_orig/IMGP4221_slide2.jpg" alt=""></div>
-      <p class="pu__meta"><span class="cat">Philosophy</span></p>
-      <p class="pu__ttl">「大切な地球を守りたい」——人と植物と動物が共存する原風景を<i class="arw"></i></p></li>
+    <li class="pu"><div class="pu__img g"><b>R8.6</b><small>President's Blog</small></div>
+      <p class="pu__meta"><span class="cat">Blog</span><span class="date">2026.06.10</span></p>
+      <p class="pu__ttl">社長のブログ 令和８年６月<i class="arw"></i></p></li>
+    <li class="pu"><div class="pu__img g"><b>R8.1</b><small>President's Blog</small></div>
+      <p class="pu__meta"><span class="cat">Blog</span><span class="date">2026.01.06</span></p>
+      <p class="pu__ttl">社長のブログ 令和８年１月<i class="arw"></i></p></li>
+    <li class="pu"><div class="pu__img g g--navy"><b>INFO</b><small>Information</small></div>
+      <p class="pu__meta"><span class="cat">Information</span><span class="date">2026.09.16</span></p>
+      <p class="pu__ttl">業務経歴（設計・測量）を更新しました<i class="arw"></i></p></li>
+    <li class="pu"><div class="pu__img g"><b>R7.12</b><small>President's Blog</small></div>
+      <p class="pu__meta"><span class="cat">Blog</span><span class="date">2025.12.19</span></p>
+      <p class="pu__ttl">社長のブログ 令和７年１２月<i class="arw"></i></p></li>
+    <li class="pu"><div class="pu__img g g--navy"><b>INFO</b><small>Information</small></div>
+      <p class="pu__meta"><span class="cat">Information</span><span class="date">2026.01.27</span></p>
+      <p class="pu__ttl">会社概要を更新しました<i class="arw"></i></p></li>
   </ul></div>
 </section>
 
@@ -110,32 +110,36 @@
   <div class="dots dots--r" id="pjDots"></div>
 </section>
 
-<section class="service" id="service">
-  <div class="sec-head">
-    <div class="sec-head__l"><h2 class="en-h">Service</h2><a class="btn01" href="#service"><span>業務内容一覧</span><i class="sq"></i></a></div>
-    <p class="sec-head__r">設計・測量・補償をひとつの会社で担える総合建設コンサルタント<br><span class="gray">計画から用地、完成後の登記まで、事業の各段階に切れ目なく対応します</span></p>
+<section class="biz2" id="service">
+  <div class="biz2__sticky">
+    <div class="biz2__l">
+      <p class="biz2__lab"><i></i>業務領域</p>
+      <h2 class="biz2__h"><span>Our</span>Business</h2>
+      <p class="biz2__lead">設計・測量・補償をひとつの会社で担える総合建設コンサルタントです。<br>計画から用地、完成後の登記まで、事業の各段階に切れ目なく対応します。</p>
+    </div>
+    <ul class="biz2__stack" id="bzStack">
+    <li class="bz" style="--i:0"><div class="bz__in"><div class="bz__tx"><span class="bz__num">1</span><h3>土木設計</h3><p>道路、河川、橋梁、上下水道、宅地造成、鋼構造及びコンクリート他。千葉市・近隣市町の公共事業を中心に、予備設計から実施設計まで、計画を図面のかたちにします。</p></div><div class="bz__gfx"><img src="../assets/gen/md/svc-civil.jpg" alt=""><span class="gen-note gen-note--s">仮</span></div></div></li>
+    <li class="bz" style="--i:1"><div class="bz__in"><div class="bz__tx"><span class="bz__num">2</span><h3>測量</h3><p>地形測量、用地測量、路線測量、地積測量他。測量士7名・測量士補2名が、事業の土台となる精度を担います。基準点から用地境界まで、現場で確かめた数値を次の設計へつなぎます。</p></div><div class="bz__gfx"><img src="../assets/gen/md/svc-survey.jpg" alt=""><span class="gen-note gen-note--s">仮</span></div></div></li>
+    <li class="bz" style="--i:2"><div class="bz__in"><div class="bz__tx"><span class="bz__num">3</span><h3>補償コンサルタント</h3><p>事業損失、物件調査、復旧積算他。家屋の事前・事後調査、物件の算定など、公共事業と沿道の暮らしをつなぐ業務です。丁寧な説明と正確な記録で、発注者と住民の双方に向き合います。</p></div><div class="bz__gfx"><img src="../assets/gen/md/svc-compensation.jpg" alt=""><span class="gen-note gen-note--s">仮</span></div></div></li>
+    <li class="bz" style="--i:3"><div class="bz__in"><div class="bz__tx"><span class="bz__num">4</span><h3>地質調査・調査業務</h3><p>機械ボーリング、原位置試験、交通量調査、下水管渠調査他。設計の前提となる地盤と現況を、現場で測って確かめます。</p></div><div class="bz__gfx"><img src="../assets/gen/md/svc-geo.jpg" alt=""><span class="gen-note gen-note--s">仮</span></div></div></li>
+    <li class="bz" style="--i:4"><div class="bz__in"><div class="bz__tx"><span class="bz__num">5</span><h3>許認可申請・地図情報</h3><p>開発許認可申請書及び各種事業の許認可申請業務、地図情報システム開発・デジタル地図の入力、各種台帳システム作成他。手続きと情報整備で、事業を前に進めます。</p></div><div class="bz__gfx"><img src="../assets/gen/md/svc-permit.jpg" alt=""><span class="gen-note gen-note--s">仮</span></div></div></li>
+    <li class="bz" style="--i:5"><div class="bz__in"><div class="bz__tx"><span class="bz__num">6</span><h3>建築設計・施工監理・登記</h3><p>一般建築設計・公共建築設計、土木・建築・廃棄物処理施設の施工監理。鈴木博也土地家屋調査士事務所を併設し、土地分筆・合筆、建物表示登記まで一貫して対応します。</p></div><div class="bz__gfx"><img src="../assets/gen/md/svc-arch.jpg" alt=""><span class="gen-note gen-note--s">仮</span></div></div></li>
+    </ul>
   </div>
-  <div class="svc">
-    <div class="svc__head"><span>Title</span><span>Explanation</span></div>
-    <a class="svc__row" href="#service">
-      <div class="svc__l"><p class="svc__sub">Civil Engineering Design</p><div class="svc__thumb ph"><img class="gen" src="../assets/gen/svc-civil.jpg" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.png')}else{this.remove()}"></div><h3 class="svc__ttl">土木設計</h3></div>
-      <p class="svc__r">道路、河川、橋梁、上下水道、宅地造成、鋼構造及びコンクリート他<br><span class="gray">千葉市・近隣市町の公共事業を中心に、予備設計から実施設計まで</span></p><i class="arw"></i></a>
-    <a class="svc__row" href="#service">
-      <div class="svc__l"><p class="svc__sub">Surveying</p><div class="svc__thumb ph"><img class="gen" src="../assets/gen/svc-survey.jpg" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.png')}else{this.remove()}"></div><h3 class="svc__ttl">測量</h3></div>
-      <p class="svc__r">地形測量、用地測量、路線測量、地積測量他<br><span class="gray">測量士7名・測量士補2名が在籍</span></p><i class="arw"></i></a>
-    <a class="svc__row" href="#service">
-      <div class="svc__l"><p class="svc__sub">Compensation Consulting</p><div class="svc__thumb ph"><img class="gen" src="../assets/gen/svc-compensation.jpg" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.png')}else{this.remove()}"></div><h3 class="svc__ttl">補償コンサルタント</h3></div>
-      <p class="svc__r">事業損失、物件調査、復旧積算他<br><span class="gray">家屋の事前・事後調査など、工事と周辺の暮らしをつなぐ業務</span></p><i class="arw"></i></a>
-    <a class="svc__row" href="#service">
-      <div class="svc__l"><p class="svc__sub">Geological &amp; Field Survey</p><div class="svc__thumb ph"><img class="gen" src="../assets/gen/svc-geo.jpg" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.png')}else{this.remove()}"></div><h3 class="svc__ttl">地質調査・調査業務</h3></div>
-      <p class="svc__r">機械ボーリング、原位置試験、交通量調査、下水管渠調査他</p><i class="arw"></i></a>
-    <a class="svc__row" href="#service">
-      <div class="svc__l"><p class="svc__sub">Permits &amp; GIS</p><div class="svc__thumb ph"><img class="gen" src="../assets/gen/svc-permit.jpg" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.png')}else{this.remove()}"></div><h3 class="svc__ttl">許認可申請・地図情報</h3></div>
-      <p class="svc__r">開発許認可申請書及び各種事業の許認可申請業務、地図情報システム開発・デジタル地図の入力、各種台帳システム作成他</p><i class="arw"></i></a>
-    <a class="svc__row" href="#service">
-      <div class="svc__l"><p class="svc__sub">Architecture &amp; Registration</p><div class="svc__thumb ph"><img class="gen" src="../assets/gen/svc-arch.jpg" alt="" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.png')}else{this.remove()}"></div><h3 class="svc__ttl">建築設計・施工監理・登記</h3></div>
-      <p class="svc__r">一般建築設計・公共建築設計、土木・建築・廃棄物処理施設の施工監理<br><span class="gray">土地家屋調査士事務所を併設し、土地分筆・合筆、建物表示登記まで</span></p><i class="arw"></i></a>
-  </div>
+</section>
+
+<section class="str">
+ <div class="str__grid">
+  <div class="str__center"><h2 class="en-h en-h--g">Our Strengths</h2><p class="str__st">なぜ、選ばれ続けるのか。<br>それは、設計・測量・補償を<br>ひとつの会社で担えるからです。</p></div>
+  <ul class="str__list">
+    <li class="scard scard--r"><p class="scard__num">( 01 ) <span>Strengths</span></p><h3>設計・測量・補償の<br>一貫対応</h3><p>計画から用地、完成後の登記まで。事業の各段階に、切れ目なく対応します。</p><div class="scard__img"><img src="../assets/gen/md/svc-civil.jpg" alt=""><span class="gen-note gen-note--s">仮</span></div></li>
+    <li class="scard scard--l"><p class="scard__num">( 02 ) <span>Strengths</span></p><h3>登録4部門の<br>総合建設コンサルタント</h3><p>建設コンサルタント・補償コンサルタント・測量業・土地家屋調査士事務所。4つの登録を一社で。</p><div class="scard__img"><img src="../assets/gen/md/svc-permit.jpg" alt=""><span class="gen-note gen-note--s">仮</span></div></li>
+    <li class="scard scard--r"><p class="scard__num">( 03 ) <span>Strengths</span></p><h3>14種の資格を持つ<br>技術者集団</h3><p>技術士2名、RCCM 2名、測量士7名、一級土木施工管理技士2名、土地家屋調査士など。</p><div class="scard__img"><img src="../assets/gen/md/svc-survey.jpg" alt=""><span class="gen-note gen-note--s">仮</span></div></li>
+    <li class="scard scard--l"><p class="scard__num">( 04 ) <span>Strengths</span></p><h3>千葉の公共事業で<br>積み重ねた45年</h3><p>昭和55年の創立以来、千葉市・千葉県・近隣市町の道路・下水道・河川・用地の業務を担ってきました。</p><div class="scard__img"><img src="../assets/gen/mv-01-civil.jpg" alt=""><span class="gen-note gen-note--s">仮</span></div></li>
+    <li class="scard scard--r"><p class="scard__num">( 05 ) <span>Strengths</span></p><h3>海外プロジェクトへの<br>参画経験</h3><p>JICA（国際協力事業団）のタンザニア上水道整備調査測量、ルーマニア最終処分場設計に参画。</p><div class="scard__img"><img src="../assets/gen/md/svc-geo.jpg" alt=""><span class="gen-note gen-note--s">仮</span></div></li>
+    <li class="scard scard--l"><p class="scard__num">( 06 ) <span>Strengths</span></p><h3>現場に近い、<br>千葉市中央区の拠点</h3><p>矢作町の本社から、千葉市内・近隣市町の現場へ。発注者の声に、すぐ応えられる距離です。</p><div class="scard__img"><img src="../assets/gen/md/svc-compensation.jpg" alt=""><span class="gen-note gen-note--s">仮</span></div></li>
+  </ul>
+ </div>
 </section>
 
 <section class="set" id="company">
@@ -159,20 +163,6 @@
       </div>
     </div>
   </div>
-</section>
-
-<section class="news" id="news">
-  <div class="news__l">
-    <h2 class="news__head">News</h2>
-    <a class="btn02" href="#news">お知らせ一覧<i class="arw"></i></a>
-    <ul class="news__cat"><li><a class="is-on" href="#news">All</a></li><li><a href="#news">Information</a></li><li><a href="#news">Blog</a></li></ul>
-  </div>
-  <ul class="news__list">
-    <li><a href="#news"><p class="meta"><span class="cat">Blog</span><span class="date">2026.06.10</span></p><p class="ttl">社長のブログ 令和８年６月</p><i class="arw"></i></a></li>
-    <li><a href="#news"><p class="meta"><span class="cat">Blog</span><span class="date">2026.01.06</span></p><p class="ttl">社長のブログ 令和８年１月</p><i class="arw"></i></a></li>
-    <li><a href="#news"><p class="meta"><span class="cat">Blog</span><span class="date">2025.12.19</span></p><p class="ttl">社長のブログ 令和７年１２月</p><i class="arw"></i></a></li>
-    <li><a href="#news"><p class="meta"><span class="cat">Blog</span><span class="date">2024.04.20</span></p><p class="ttl">社長のブログ 令和６年４月</p><i class="arw"></i></a></li>
-  </ul>
 </section>
 
 </main>
@@ -207,6 +197,6 @@
   </div>
 </footer>
 
-<script src="main.js?v=20261026d"></script>
+<script src="main.js?v=20261027"></script>
 </body>
 </html>

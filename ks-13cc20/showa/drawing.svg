@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="900" viewBox="0 0 1100 900" fill="none" stroke="#1f2a36" stroke-opacity=".10" stroke-width="1">
+<rect x="60" y="80" width="420" height="260"/><rect x="90" y="110" width="360" height="200"/><line x1="60" y1="210" x2="480" y2="210"/><line x1="270" y1="80" x2="270" y2="340"/>
+<circle cx="270" cy="210" r="70"/><circle cx="270" cy="210" r="34"/>
+<path d="M640 120 h380 v60 h-380z M640 200 h380 v22 h-380z M660 222 v120 M1000 222 v120 M640 342 h380"/>
+<path d="M80 480 c120 -60 240 -60 360 0 s240 60 360 0 s240 -60 300 -20" stroke-dasharray="6 6"/>
+<path d="M80 540 c120 -60 240 -60 360 0 s240 60 360 0 s240 -60 300 -20"/>
+<rect x="120" y="640" width="260" height="180"/><path d="M120 700 h260 M120 760 h260 M185 640 v180 M250 640 v180 M315 640 v180"/>
+<path d="M560 620 l200 -40 l200 40 v180 h-400z M600 800 v-150 M760 800 v-190 M920 800 v-150"/>
+<text x="70" y="70" font-family="monospace" font-size="11" fill="#1f2a36" fill-opacity=".12" stroke="none">PLAN S=1:500</text>
+<text x="640" y="110" font-family="monospace" font-size="11" fill="#1f2a36" fill-opacity=".12" stroke="none">SECTION A-A</text>
+</svg>
