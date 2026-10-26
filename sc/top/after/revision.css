@@ -99,7 +99,7 @@
   .home .key-numbers b{font-size:2.4rem}
   .home .key-numbers .unit{font-size:1.1rem;margin-left:.15rem}
   .home .key-numbers .sep{font-size:1.2rem;margin:0 .3rem}
-  .home .key-numbers small{margin-top:.4rem;font-size:1rem;line-height:1.45}
+  .home .key-numbers small{margin-top:.4rem;font-size:1rem;line-height:1.45;letter-spacing:0}
   .home .key-numbers .note{margin-top:1rem;font-size:1rem;text-align:left}
 }
 
