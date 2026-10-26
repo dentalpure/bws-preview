@@ -68,14 +68,16 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 .grp-watermark{position:absolute;left:-2%;top:10px;margin:0;font-family:Montserrat,sans-serif;font-size:150px;font-weight:500;line-height:1;color:#eef3fa;white-space:nowrap;pointer-events:none;z-index:0}
 .grp-tolist{position:relative;z-index:1;display:block;width:max-content;margin:0 0 18px auto;text-align:right;font-size:15px;font-weight:700;color:#1e4f84 !important;text-decoration:none;border-bottom:1px solid #1e4f84;padding-bottom:6px}
 .grp-tolist small{font-size:13px;font-weight:500}
-.grp-panel{position:relative;z-index:1;background:#1e4f84;border-radius:14px;padding:44px 56px}
-.grp-filter{display:grid;grid-template-columns:200px 1fr;align-items:center;gap:24px}
-.grp-filter h2{margin:0;color:#fff;font-size:20px;font-weight:700}
-.grp-btns{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.grp-btns button{font:inherit;font-size:15px;font-weight:700;color:#1e4f84;background:#fff;border:0;border-radius:6px;min-height:58px;padding:8px 10px;cursor:pointer;line-height:1.4}
-.grp-btns button.on{background:#e8a33a;color:#fff}
-.grp-x{height:1px;background:rgba(255,255,255,.35);margin:30px 0}
-.grp-go{display:block;width:100%;margin-top:14px;font:inherit;font-size:17px;font-weight:700;letter-spacing:.2em;color:#fff;background:#e8a33a;border:0;border-radius:6px;height:62px;cursor:pointer}
+.grp-bar{position:relative;z-index:1;display:flex;align-items:center;gap:28px;background:#fff;border-radius:999px;box-shadow:0 8px 32px rgba(30,79,132,.12);padding:20px 24px 20px 44px}
+.grp-bar-t{font-weight:700;font-size:16px;white-space:nowrap;color:#222}
+.grp-radios{display:flex;gap:24px}
+.grp-radios label{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:#222;cursor:pointer;white-space:nowrap}
+.grp-radios input{appearance:none;-webkit-appearance:none;width:26px;height:26px;border:2.5px solid #1e4f84;border-radius:50%;margin:0;position:relative;flex:none;cursor:pointer}
+.grp-radios input:checked::after{content:"";position:absolute;inset:5px;border-radius:50%;background:#1e4f84}
+.grp-select{flex:1;min-width:180px;height:56px;border:1.5px solid #d7dde8;border-radius:999px;padding:0 44px 0 24px;font:inherit;font-size:15px;color:#555;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231E4F84' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right 22px center;appearance:none;-webkit-appearance:none}
+.grp-sep{width:1px;height:48px;background:#d7dde8;flex:none}
+.grp-go{display:flex;align-items:center;justify-content:space-between;min-width:220px;height:60px;padding:0 28px 0 36px;border:0;border-radius:999px;background:#1e4f84;color:#fff;font-family:Montserrat,sans-serif;font-size:16px;font-weight:700;letter-spacing:.1em;cursor:pointer}
+.grp-go span{font-size:18px}
 .grp-hit{text-align:center;font-size:14px;color:#1e4f84;font-weight:700;min-height:1.5em;margin:12px 0 0}
 .grp-index{background:#fbf3e6;padding:70px 5% 80px}
 .grp-index>h2{text-align:center;font-size:26px;font-weight:700;margin:0 0 36px;color:#222}
@@ -134,8 +136,8 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 @media (max-width:768px){
  .grp-kv{height:420px;text-align:center}.grp-kv h1{font-size:28px}.grp-kv-sub{font-size:15px}.grp-kv-lead{font-size:15px}
  .grp-search{padding:70px 0 40px}.grp-watermark{font-size:72px}
- .grp-panel{padding:26px 18px}.grp-filter{grid-template-columns:1fr;gap:14px}.grp-filter h2{text-align:center;font-size:18px}
- .grp-btns{grid-template-columns:1fr 1fr}.grp-btns button{font-size:14px;min-height:54px}
+ .grp-bar{flex-direction:column;align-items:stretch;gap:18px;border-radius:28px;padding:28px 22px 24px}.grp-bar-t{text-align:center;font-size:17px}
+ .grp-radios{justify-content:center;flex-wrap:wrap;gap:14px 24px}.grp-select{flex:none}.grp-sep{width:100%;height:1px}.grp-go{width:100%;min-width:0}
  .grp-index{padding:50px 5% 56px}.grp-index-row{grid-template-columns:1fr;gap:10px}.grp-index-row ul{grid-template-columns:1fr}
  .grp-domain-h h2{font-size:22px}.grp-domain-h p{font-size:13px}.grp-domain-h br{display:none}
  .grp-company{padding:0 18px 32px}.grp-company-h{font-size:17px}
@@ -260,12 +262,13 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 <section class="grp-search">
   <p class="grp-watermark" aria-hidden="true">Group companies</p>
   <a class="grp-tolist" href="#grp-index">グループ企業一覧を見る<br><small>（2026年10月現在）</small></a>
-  <div class="grp-panel">
-    <div class="grp-filter" data-key="field"><h2>事業フィールド</h2><div class="grp-btns"><button type="button" class="on" data-v="all">すべて</button><button type="button" data-v="civil">建設コンサルタント事業領域</button><button type="button" data-v="other">その他事業領域</button></div></div>
-    <div class="grp-x" aria-hidden="true"></div>
-    <div class="grp-filter" data-key="area"><h2>所在地</h2><div class="grp-btns"><button type="button" class="on" data-v="all">すべて</button><button type="button" class="" data-v="tokyo">東京</button><button type="button" class="" data-v="chiba">千葉</button></div></div>
-  </div>
-  <button type="button" class="grp-go">探す</button>
+  <form class="grp-bar" onsubmit="return false">
+    <span class="grp-bar-t">グループ企業を探す</span>
+    <div class="grp-radios" role="radiogroup" aria-label="事業フィールド"><label><input type="radio" name="grp-field" value="all" checked> すべて</label><label><input type="radio" name="grp-field" value="civil"> 建設コンサルタント</label><label><input type="radio" name="grp-field" value="other"> その他</label></div>
+    <select class="grp-select" aria-label="所在地を選択する"><option value="all">所在地を選択する</option><option value="tokyo">東京</option><option value="chiba">千葉</option></select>
+    <span class="grp-sep" aria-hidden="true"></span>
+    <button type="submit" class="grp-go">SEARCH <span aria-hidden="true">⌕</span></button>
+  </form>
   <p class="grp-hit" aria-live="polite"></p>
 </section>
 <section class="grp-index" id="grp-index">
@@ -421,15 +424,12 @@ var cf7msm_posted_data = [];
 </footer>
 <script>
 (function(){
-  var st={field:"all",area:"all"};
-  document.querySelectorAll(".grp-filter").forEach(function(f){
-    f.querySelectorAll("button").forEach(function(b){b.addEventListener("click",function(){
-      f.querySelectorAll("button").forEach(function(x){x.classList.remove("on")});b.classList.add("on");st[f.dataset.key]=b.dataset.v;});});
-  });
-  document.querySelector(".grp-go").addEventListener("click",function(){
+  document.querySelector(".grp-bar").addEventListener("submit",function(){
+    var f=(document.querySelector('input[name="grp-field"]:checked')||{}).value||"all";
+    var a=document.querySelector(".grp-select").value||"all";
     var n=0;
     document.querySelectorAll(".grp-company").forEach(function(c){
-      var ok=(st.field==="all"||c.dataset.field===st.field)&&(st.area==="all"||c.dataset.area===st.area);
+      var ok=(f==="all"||c.dataset.field===f)&&(a==="all"||c.dataset.area===a);
       c.classList.toggle("hide",!ok); if(ok) n++;});
     document.querySelectorAll(".grp-domain").forEach(function(d){d.classList.toggle("hide",!d.querySelector(".grp-company:not(.hide)"));});
     document.querySelector(".grp-hit").textContent=n?("該当 "+n+" 社"):"該当する会社がありません";
