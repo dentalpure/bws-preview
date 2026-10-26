@@ -46,7 +46,8 @@
 @media screen and (max-width:768px){
   .home .news .wrapper{gap:2.4rem}
   .home .news .wrapper .left{display:flex;align-items:flex-end;justify-content:space-between;gap:1.6rem}
-  .home .news .wrapper .left .with-subtitle{margin-bottom:0}
+  .home .news .wrapper .left .with-subtitle{margin-bottom:0;display:block;flex:1 1 auto;white-space:nowrap}
+  .home .news .wrapper .left .with-subtitle::before{display:block;text-align:left}
   .home .news .wrapper .left .button-wrapper{flex:none}
   .home .news .wrapper .left .rounded-button{width:auto;min-width:0;height:4rem;padding:0 4.4rem 0 1.8rem;font-size:1.3rem}
   .home .news .wrapper .left .rounded-button.arrow::after{right:1.2rem;width:1.8rem;height:1.8rem}
