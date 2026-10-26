@@ -91,6 +91,7 @@
 .home .philo__item--3{right:1.5%;top:50.5%}
 .home .about__text{grid-area:text}
 .home main section.about .wrapper .about__text .lead.philosophy-bridge{margin:0 0 4rem;text-align:left}
+.home main section.about .wrapper .about__text .lead.philosophy-bridge br{display:none}
 .home main section.about .wrapper .about__text .button-wrapper{justify-content:flex-start}
 @media screen and (max-width:768px){
   .home main section.about .wrapper{grid-template-columns:1fr;grid-template-areas:"head" "philo" "text";gap:3.2rem}
