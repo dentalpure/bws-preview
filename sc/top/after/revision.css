@@ -53,6 +53,61 @@
   .home .news .wrapper .left .rounded-button.arrow::after{right:1.2rem;width:1.8rem;height:1.8rem}
 }
 
+/* 10/26 HERO の下を2つに：メッセージ（紺の帯・h1・導入文・円形の写真） */
+.home .message{position:relative;overflow:hidden;background:linear-gradient(135deg,#1e4f84 0%,#2d6aa6 100%);color:#fff}
+.home .message .wrapper{position:relative;z-index:2}
+.home .message__circle{position:absolute;z-index:1;right:-14rem;top:50%;width:60rem;height:60rem;border-radius:50%;background-size:cover;background-position:center;transform:translateY(-50%);box-shadow:0 0 0 1.2rem rgba(255,255,255,.08)}
+.home .message__mark{position:absolute;z-index:1;left:38%;top:12%;font-family:"Montserrat",sans-serif;font-size:11rem;font-weight:600;white-space:nowrap;color:rgba(255,255,255,.07);transform:rotate(-24deg);transform-origin:left top;pointer-events:none}
+.home .message__h1{margin:0 0 4.8rem;font-size:4rem;font-weight:700;line-height:1.6;letter-spacing:.2rem;color:#fff}
+.home .message__body{max-width:60rem}
+.home .message__body p{margin:0 0 3.2rem;font-size:1.8rem;font-weight:500;line-height:2.2;letter-spacing:.1rem}
+.home .message__body p:last-child{margin-bottom:0;font-weight:700;text-decoration:underline;text-decoration-thickness:.1rem;text-underline-offset:.8rem}
+@media screen and (max-width:768px){
+  .home .message__circle{width:30rem;height:30rem;right:-13rem;top:58%;opacity:.55}
+  .home .message__mark{font-size:6rem;left:30%;top:18%}
+  .home .message__h1{margin-bottom:3.2rem;font-size:2.6rem;line-height:1.55}
+  .home .message__body p{margin-bottom:2.4rem;font-size:1.5rem;line-height:2.1;letter-spacing:.05rem}
+  .home .message__body p:last-child{text-underline-offset:.6rem}
+}
+
+/* 10/26 About Us：企業理念を「中心の円＋3つの心構え」の図で */
+.home main section.about{background:#f7f9ff}
+.home main section.about .wrapper{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"head head" "philo text";gap:4.8rem 8rem;align-items:center}
+.home .about__head{grid-area:head;border-bottom:1px solid #d9e2ef;padding-bottom:2.4rem}
+.home .about__en{margin:0;font-family:"Montserrat",sans-serif;font-size:5.6rem;font-weight:600;line-height:1.2;color:#1e4f84}
+.home .about__h2{display:flex;align-items:center;gap:1.4rem;margin:1.2rem 0 0;font-size:2rem;font-weight:700;letter-spacing:.2rem;color:#222}
+.home .about__dia{width:2rem;height:2rem;background:#3fa9f5;transform:rotate(45deg);flex:none}
+.home .philo{grid-area:philo;position:relative;width:100%;max-width:52rem;aspect-ratio:1/1;margin:0 auto}
+.home .philo__lines{position:absolute;inset:0;width:100%;height:100%}
+.home .philo__lines line{stroke:#3fa9f5;stroke-width:.35}
+.home .philo__core{position:absolute;left:50%;top:50%;width:56%;aspect-ratio:1/1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 50% 40%,#ffffff 0%,#e3eefa 70%,#cfe0f3 100%);box-shadow:0 1.2rem 3.6rem rgba(30,79,132,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.home .philo__core span{font-family:"Montserrat",sans-serif;font-size:1.2rem;font-weight:600;letter-spacing:.3rem;color:#3fa9f5;margin-bottom:.8rem}
+.home .philo__core p{margin:0;font-size:2.4rem;font-weight:700;line-height:1.55;color:#1e4f84}
+.home .philo__item{position:absolute;width:31%;aspect-ratio:1/1;border-radius:50%;background:#fff;box-shadow:0 .8rem 2.4rem rgba(30,79,132,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;padding:1.6rem;text-align:center}
+.home .philo__item img{height:2.4rem;width:auto}
+.home .philo__item p{margin:0;font-size:1.3rem;font-weight:700;line-height:1.55;color:#1e4f84}
+.home .philo__item--1{left:34.5%;top:0}
+.home .philo__item--2{left:1.5%;top:60.5%}
+.home .philo__item--3{right:1.5%;top:50.5%}
+.home .about__text{grid-area:text}
+.home main section.about .wrapper .about__text .lead.philosophy-bridge{margin:0 0 4rem;text-align:left}
+.home main section.about .wrapper .about__text .button-wrapper{justify-content:flex-start}
+@media screen and (max-width:768px){
+  .home main section.about .wrapper{grid-template-columns:1fr;grid-template-areas:"head" "philo" "text";gap:3.2rem}
+  .home .about__en{font-size:3.6rem}
+  .home .about__h2{font-size:1.6rem;gap:1.2rem}
+  .home .about__dia{width:1.6rem;height:1.6rem}
+  .home .philo{max-width:34rem}
+  .home .philo__core p{font-size:1.6rem}
+  .home .philo__core span{font-size:1rem;margin-bottom:.4rem}
+  .home .philo__item{width:33%;padding:.8rem;gap:.3rem}
+  .home .philo__item img{height:1.6rem}
+  .home .philo__item p{font-size:1rem;line-height:1.45;letter-spacing:0}
+  .home .philo__item--1{left:33.5%}
+  .home main section.about .wrapper .about__text .lead.philosophy-bridge{margin-bottom:2.8rem}
+  .home main section.about .wrapper .about__text .button-wrapper{justify-content:center}
+}
+
 /* T2 理念→事業の橋渡しの一文（既存 .lead と同じ見た目。下余白のみ調整） */
 .home main section.about .wrapper .lead.philosophy-bridge{margin-top:-2rem;margin-bottom:6rem}
 @media screen and (max-width:768px){
