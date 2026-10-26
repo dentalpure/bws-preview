@@ -56,7 +56,11 @@
   const sec=document.querySelector('.biz2'), cards=[...document.querySelectorAll('#bzStack .bz')];
   if(!sec||!cards.length) return;
   const upd=()=>{
-    if(matchMedia('(max-width:820px)').matches){cards.forEach(c=>{c.style.setProperty('--y',0);c.querySelector('.bz__in').style.setProperty('--s',1)});return}
+    if(matchMedia('(max-width:820px)').matches){
+      cards.forEach((c,i)=>{const nx=cards[i+1];let s=1;
+        if(nx){const t=nx.getBoundingClientRect().top;const d=Math.min(Math.max(t/innerHeight,0),1);s=1-0.03*(1-d)}
+        c.style.setProperty('--y',0);c.querySelector('.bz__in').style.setProperty('--s',s)});
+      return}
     const r=sec.getBoundingClientRect(); const span=sec.offsetHeight-innerHeight;
     const p=Math.min(Math.max(-r.top/span,0),1)*(cards.length-1);   // 0〜N-1 の進み
     cards.forEach((c,i)=>{
