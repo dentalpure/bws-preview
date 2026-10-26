@@ -129,6 +129,8 @@
 @media screen and (max-width:768px){
   .home main section.about.about--b .wrapper{grid-template-areas:"head" "left" "text"}
   .home .about--b .about__head .with-subtitle{font-size:2.8rem}
+  .home .about--b .philo__core p{font-size:1.4rem;line-height:1.5}
+  .home .about--b .philo__core span{font-size:.9rem;letter-spacing:.2rem}
   .home .about--b .about__label{justify-content:center;font-size:1.4rem;margin-bottom:1.6rem}
   .home .about--b .about__lead{font-size:1.4rem;line-height:2}
   .home .about--b .about__catch{font-size:2rem;margin-bottom:2.4rem}
