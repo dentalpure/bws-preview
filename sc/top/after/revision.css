@@ -2,15 +2,14 @@
    組み込み時はテーマ 3w_2026 の assets/css/front-page.css の末尾に追記する（自作テーマのため親テーマを直接編集。着手前にバックアップ）。 */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-/* 追加（山田提案 10/24）スマートフォンの最初の画面：動画を画面の約7割の高さにし、見出しと文を動画の上に重ねる（PCと同じ見せ方）。
-   高さは画面いっぱい（10/26 山田判断。72%案から戻した）。
+/* 追加 スマートフォンの最初の画面：動画を画面いっぱいにし、見出しと文を動画の上に重ねる（PCと同じ見せ方）。
    現状は動画（高さ30rem）の下に濃い青の帯で見出しを出している。PCの表示は変えない */
 @media screen and (max-width:768px){
-  .home .fv{height:100vh;height:100svh;min-height:56rem}  /* 10/26 山田「やっぱり全画面に」72%→100% */
+  .home .fv{height:100vh;height:100svh;min-height:56rem}
   .home .fv .bg{position:absolute;top:0;left:0;width:100%;height:100%}
   .home .fv .bg::after{background:linear-gradient(180deg,rgba(30,79,132,.35) 0%,rgba(30,79,132,.5) 45%,rgba(30,79,132,.82) 100%)}
   .home .fv .wrapper{background:transparent;height:100%;justify-content:flex-end;padding:2rem 2rem 8rem}
-  .home .fv .wrapper p.lead{font-size:2.6rem;line-height:1.5;margin-bottom:1.6rem;text-shadow:0 2px 12px rgba(10,30,60,.35)}  /* 10/26 山田「大きすぎる」3.2→2.6rem */
+  .home .fv .wrapper p.lead{font-size:2.6rem;line-height:1.5;margin-bottom:1.6rem;text-shadow:0 2px 12px rgba(10,30,60,.35)}
   .home .fv .wrapper p.sub{text-shadow:0 1px 8px rgba(10,30,60,.4)}
 }
 
@@ -88,7 +87,7 @@
 .home .key-numbers small{display:block;margin-top:.8rem;font-size:1.2rem;line-height:1.6;color:#555}
 .home .key-numbers .note{margin-top:2.4rem;font-size:1.2rem;color:#777;text-align:right}
 @media screen and (max-width:768px){
-  /* スマートフォン：上段3つ・下段2つの小さな表にまとめる（10/26 山田「大きすぎる。小さくまとめて」） */
+  /* スマートフォン：上段3つ・下段2つの小さな表にまとめる */
   .home .key-numbers .wrapper{padding:2.8rem 1.6rem 2.4rem}
   .home .key-numbers ul{display:grid;grid-template-columns:repeat(6,1fr);gap:0;background:#fff;border:1px solid #d9deea;border-radius:1rem;overflow:hidden}
   .home .key-numbers li{grid-column:span 2;border-left:0;border-top:1px solid #d9deea;padding:1.2rem .6rem;text-align:center;min-width:0}
@@ -111,14 +110,14 @@
 .home main section.consultant-service .wrapper .right .services.pillar ul{gap:2rem}
 .home main section.consultant-service .wrapper .right .services.pillar .service-desc{margin-top:.8rem;padding:0 .4rem;font-size:1.3rem;line-height:1.7;color:#333}
 .home main section.consultant-service .wrapper .right .pillar-note{margin-top:3.2rem;font-size:1.2rem;color:#777}
-/* スマートフォンではボタン下の1行説明を出さない（10/26 山田「文字数が多く見えて体力が要る」）。PCでは表示 */
+/* スマートフォンではボタン下の1行説明を出さない（文字量を抑える）。PCでは表示 */
 @media screen and (max-width:768px){.home main section.consultant-service .wrapper .right .services.pillar .service-desc{display:none}.home main section.consultant-service .wrapper .right .services.pillar ul{gap:1.2rem}}
 @media screen and (max-width:768px){
   .home main section.consultant-service .wrapper .right .services.pillar + .services.pillar{margin-top:4rem}
   .home main section.consultant-service .wrapper .right .services.pillar h3{font-size:2rem}
 }
 
-/* 追加 スマートフォンの文章量を抑える（10/24 山田指摘「文章が長すぎて離脱しそう」）
+/* 追加 スマートフォンの文章量を抑える
    PC／スマホで出し分ける部品。テーマの .pc-only/.sp-only に依存しない */
 .bws-sp{display:none}
 @media screen and (max-width:768px){
@@ -134,7 +133,7 @@
   .home main section.about .wrapper .lead{font-size:1.4rem;line-height:1.9;margin-bottom:3.6rem}
   .home main section.about .wrapper .lead.about-lead{word-break:normal;text-wrap:wrap}
   .home main section.about .wrapper .lead.philosophy-bridge{margin-top:-1rem;margin-bottom:3.2rem}
-  /* 3つの心構え：スマートフォンでも横に3つ並べる（10/26 山田「スクロールが多い割に情報が少ない」） */
+  /* 3つの心構え：スマートフォンでも横に3つ並べる（スクロール量を減らす） */
   .home main section.about .wrapper ol{grid-template-columns:repeat(3,1fr);gap:.8rem;margin-bottom:4rem}
   .home main section.about .wrapper ol > li{padding:1.4rem .4rem 1.6rem;border-radius:1.2rem}
   .home main section.about .wrapper ol > li .number{height:3.6rem}
