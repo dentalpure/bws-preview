@@ -73,10 +73,9 @@
 /* 10/26 About Us：企業理念を「中心の円＋3つの心構え」の図で */
 .home main section.about{background:#f7f9ff}
 .home main section.about .wrapper{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"head head" "philo text";gap:4.8rem 8rem;align-items:center}
-.home .about__head{grid-area:head;border-bottom:1px solid #d9e2ef;padding-bottom:2.4rem}
-.home .about__en{margin:0;font-family:"Montserrat",sans-serif;font-size:5.6rem;font-weight:600;line-height:1.2;color:#1e4f84}
-.home .about__h2{display:flex;align-items:center;gap:1.4rem;margin:1.2rem 0 0;font-size:2rem;font-weight:700;letter-spacing:.2rem;color:#222}
-.home .about__dia{width:2rem;height:2rem;background:#3fa9f5;transform:rotate(45deg);flex:none}
+.home .about__head{grid-area:head}
+.home main section.about .wrapper .about__head .with-subtitle{display:block;margin:0;text-align:left;white-space:nowrap}
+.home main section.about .wrapper .about__head .with-subtitle::before{display:block;margin-bottom:.8rem;text-align:left}
 .home .philo{grid-area:philo;position:relative;width:100%;max-width:52rem;aspect-ratio:1/1;margin:0 auto}
 .home .philo__lines{position:absolute;inset:0;width:100%;height:100%}
 .home .philo__lines line{stroke:#3fa9f5;stroke-width:.35}
@@ -95,9 +94,7 @@
 .home main section.about .wrapper .about__text .button-wrapper{justify-content:flex-start}
 @media screen and (max-width:768px){
   .home main section.about .wrapper{grid-template-columns:1fr;grid-template-areas:"head" "philo" "text";gap:3.2rem}
-  .home .about__en{font-size:3.6rem}
-  .home .about__h2{font-size:1.6rem;gap:1.2rem}
-  .home .about__dia{width:1.6rem;height:1.6rem}
+  .home main section.about .wrapper .about__head .with-subtitle{font-size:3rem;letter-spacing:.3rem;white-space:normal}
   .home .philo{max-width:34rem}
   .home .philo__core p{font-size:1.6rem}
   .home .philo__core span{font-size:1rem;margin-bottom:.4rem}
