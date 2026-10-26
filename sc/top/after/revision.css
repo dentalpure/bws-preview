@@ -34,15 +34,22 @@
   .home main section.about .wrapper .lead.about-lead .nw{white-space:nowrap}
 }
 
-/* T1 大見出し（h1）＋冒頭文：最初の画面の直後の帯 */
-.home .intro-headline{background:#fff;border-bottom:1px solid #e6ebf3}
-.home .intro-headline .wrapper{padding:5.6rem 12rem 4.8rem;text-align:center}
-.home .intro-headline h1{font-size:2.8rem;font-weight:700;line-height:1.7;letter-spacing:.1rem;color:#1e4f84}
-.home .intro-headline p{margin-top:1.6rem;font-size:1.6rem;line-height:2;color:#222}
+
+/* T1 大見出し（h1）：ABOUT US の見出しの直後。理念の導入文と1つにまとめる */
+.home main section.about .wrapper .about-h1{margin:-2.4rem 0 2.4rem;text-align:center;font-size:2.4rem;font-weight:700;line-height:1.6;letter-spacing:.1rem;color:#1e4f84}
 @media screen and (max-width:768px){
-  .home .intro-headline .wrapper{padding:3.2rem 1.6rem;text-align:left}
-  .home .intro-headline h1{font-size:2rem;line-height:1.7}
-  .home .intro-headline p{font-size:1.4rem}
+  .home main section.about .wrapper .about-h1{margin:-.8rem 0 1.2rem;text-align:left;font-size:1.8rem;line-height:1.5}
+}
+
+/* お知らせ：説明文を外し、スマートフォンでは見出しの右に小さな「もっと見る」 */
+.home .news .wrapper .left p{display:none}
+@media screen and (max-width:768px){
+  .home .news .wrapper{gap:2.4rem}
+  .home .news .wrapper .left{display:flex;align-items:flex-end;justify-content:space-between;gap:1.6rem}
+  .home .news .wrapper .left .with-subtitle{margin-bottom:0}
+  .home .news .wrapper .left .button-wrapper{flex:none}
+  .home .news .wrapper .left .rounded-button{width:auto;min-width:0;height:4rem;padding:0 4.4rem 0 1.8rem;font-size:1.3rem}
+  .home .news .wrapper .left .rounded-button.arrow::after{right:1.2rem;width:1.8rem;height:1.8rem}
 }
 
 /* T2 理念→事業の橋渡しの一文（既存 .lead と同じ見た目。下余白のみ調整） */
@@ -123,10 +130,6 @@
 @media screen and (max-width:768px){
   .bws-pc{display:none}
   .bws-sp{display:inline}
-  /* 大見出しの帯：見出しを短くした分、文字を少し大きく・行間は詰める */
-  .home .intro-headline .wrapper{padding:3.2rem 1.6rem 2.8rem}
-  .home .intro-headline h1{font-size:2.2rem;line-height:1.5}
-  .home .intro-headline p{margin-top:1.2rem;font-size:1.4rem;line-height:1.9}
   /* ABOUT US：見出し・導入文・余白を詰める。段落間の空行は出さない */
   .home main section.about .wrapper{padding-top:4.8rem}
   .home main section.about .wrapper .with-subtitle{font-size:2.4rem;line-height:1.5;letter-spacing:.1rem;margin-bottom:2.8rem}
