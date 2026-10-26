@@ -54,7 +54,7 @@
 }
 
 /* 10/26 HERO の下を2つに：メッセージ（紺の帯・h1・導入文・円形の写真） */
-.home .message{position:relative;overflow:hidden;background:#eef0f3;color:#222}
+.home .message{position:relative;overflow:hidden;background:#f7f9ff;color:#222}  /* About Us と同じ背景色 */
 .home .message .wrapper{position:relative;z-index:2}
 .home .message__circle{position:absolute;z-index:1;right:-10rem;top:50%;width:64rem;height:64rem;border-radius:50%;display:flex;align-items:center;justify-content:center;transform:translateY(-50%);perspective:120rem;
   background:radial-gradient(circle at 34% 28%,#ffffff 0%,#f6f9fd 38%,#e3ecf6 72%,#cbdcee 100%);
