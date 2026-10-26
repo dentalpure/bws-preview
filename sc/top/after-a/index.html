@@ -180,7 +180,7 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 
 <main>
   <div class="opening-animation"></div>
-  <script>if(/[?&]cap=/.test(location.search)){var o=document.querySelector(".opening-animation");o&&o.parentNode.removeChild(o);var h=location.search.match(/[?&]hide=([^&]+)/);if(h){document.querySelectorAll(decodeURIComponent(h[1])).forEach(function(e){e.style.display="none";});}}</script>
+  <script>if(/[?&]cap=/.test(location.search)){var o=document.querySelector(".opening-animation");o&&o.parentNode.removeChild(o);var h=location.search.match(/[?&]hide=([^&]+)/);if(h){var st=document.createElement("style");st.textContent=decodeURIComponent(h[1])+"{display:none!important}";document.head.appendChild(st);}}</script>
   <header class="fv">
     <div class="bg">
       <video src="../site/wp-content/themes/3w_2026/assets/video/fv.mp4" muted loop playsinline></video>
