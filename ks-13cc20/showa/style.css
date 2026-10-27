@@ -466,3 +466,46 @@ img.gen{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .biz2__btn{margin-top:14px}
   .biz2__stack{margin-top:28px}
 }
+
+@media (max-width:820px){
+  .venn{aspect-ratio:auto;width:100%;display:flex;flex-direction:column;gap:10px}
+  .venn__c{position:static;width:100%;aspect-ratio:auto;border-radius:14px;border:1px dashed #9aa3b0;flex-direction:row;justify-content:flex-start;align-items:center;text-align:left;gap:16px;padding:14px 16px;background:rgba(255,255,255,.5)}
+  .venn__gfx{flex:none}
+  .venn__gfx--rings{width:84px;height:60px;transform:none;margin:0}
+  .venn__gfx--rings i:nth-child(1){left:6px;width:20px;height:60px}
+  .venn__gfx--rings i:nth-child(2){left:24px;width:16px;height:48px}
+  .venn__gfx--rings i:nth-child(3){left:39px;width:13px;height:37px}
+  .venn__gfx--rings i:nth-child(4){left:52px;width:10px;height:26px}
+  .venn__c--1 .venn__gfx--rings{margin-top:0}
+  .venn__gfx--orb{width:44px;height:44px;margin:0 20px}
+  .venn__gfx--cube{width:26px;height:26px;margin:0 29px}
+  .venn__t{flex:1}
+  .venn__t small{font-size:11px;margin-bottom:3px}
+  .venn__t strong{font-size:15px;border-bottom:0;padding-bottom:0}
+  .venn__t strong br{display:none}
+  .tsp__in{gap:40px}
+  .tsp__btn{margin-top:28px}
+
+  .pj__card::before{background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.15) 35%,rgba(0,0,0,.68) 100%)}
+  .pj__item.is-active .pj__card{height:320px}
+  .pj__card>.gen-note{top:10px;right:10px;bottom:auto}
+  .pj__cat{background:rgba(0,0,0,.35)}
+  .pj__name{font-size:21px;white-space:normal!important}
+
+  .biz2__lead{display:none}
+  .biz2__nav{margin-top:14px}
+  .bz__in{grid-template-rows:44% 1fr}
+  .bz{padding:100px 0 24px}
+
+  .str__st br{display:none}
+  .scard h3 br{display:none}
+  .scard h3{font-size:20px;padding:24px 22px 0}
+  .scard p:not(.scard__num){font-size:13.5px;padding:10px 22px 0}
+  .scard__img{height:46vw;margin-top:20px}
+
+  .set{height:1300px}
+  .set__sticky{min-height:0;max-height:none;height:100svh}
+  .set__in{padding:84px 0 40px;justify-content:flex-start;gap:28px}
+  .set__img{aspect-ratio:16/10}
+  .set__txt p{font-size:14.5px;line-height:1.75}
+}
