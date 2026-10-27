@@ -59,15 +59,18 @@
   if(!sec||!cards.length) return;
   const nav=[...document.querySelectorAll('#bzNav a')];
   const light=i=>nav.forEach((a,k)=>a.classList.toggle('is-on',k===i));
+  const stack=document.getElementById('bzStack');
+  const slideW=()=>cards[0].getBoundingClientRect().width+12;   // 携帯：1枚の幅＋gap
   nav.forEach(a=>a.addEventListener('click',ev=>{ev.preventDefault();const i=+a.dataset.i;
-    if(matchMedia('(max-width:820px)').matches){cards[i].scrollIntoView({behavior:'smooth',block:'start'});return}
+    if(matchMedia('(max-width:820px)').matches){light(i);stack.scrollTo({left:i*slideW(),behavior:'smooth'});return}
     const span=sec.offsetHeight-innerHeight; scrollTo({top:sec.offsetTop+span*(i/(cards.length-1))+1,behavior:'smooth'})}));
   const upd=()=>{
     if(matchMedia('(max-width:820px)').matches){
-      let on=0; cards.forEach((c,i)=>{if(c.getBoundingClientRect().top<=innerHeight*0.5) on=i}); light(on);
-      cards.forEach((c,i)=>{const nx=cards[i+1];let s=1;
-        if(nx){const t=nx.getBoundingClientRect().top;const d=Math.min(Math.max(t/innerHeight,0),1);s=1-0.03*(1-d)}
-        c.style.setProperty('--y',0);c.querySelector('.bz__in').style.setProperty('--s',s)});
+      light(Math.min(cards.length-1,Math.max(0,Math.round(stack.scrollLeft/slideW()))));
+      const on=nav.find(a=>a.classList.contains('is-on')), ul=document.getElementById('bzNav');   // 点灯したピルが隠れていたら横に送る
+      if(on&&ul){const d=on.getBoundingClientRect(), u=ul.getBoundingClientRect();
+        if(d.left<u.left+16||d.right>u.right-16) ul.scrollTo({left:ul.scrollLeft+d.left-u.left-24,behavior:'smooth'})}
+      cards.forEach(c=>{c.style.setProperty('--y',0);c.querySelector('.bz__in').style.setProperty('--s',1)});
       return}
     const r=sec.getBoundingClientRect(); const span=sec.offsetHeight-innerHeight;
     const p=Math.min(Math.max(-r.top/span,0),1)*(cards.length-1);   // 0〜N-1 の進み
@@ -81,4 +84,5 @@
     });
   };
   addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
+  ['scroll','scrollend','touchend'].forEach(ev=>stack.addEventListener(ev,()=>{if(matchMedia('(max-width:820px)').matches)upd()},{passive:true}));
 })();
