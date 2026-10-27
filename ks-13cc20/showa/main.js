@@ -27,11 +27,13 @@
   $$('a',sp).forEach(a=>a.addEventListener('click',()=>{sp.classList.remove('is-open');btn.setAttribute('aria-expanded',false)}));
 
   const items=$$('#mvList .mv__item'), thums=$$('#mvThum li'), bar=$('#mvBar');
+  if(bar){ // 旧2カラムMVがあるときだけ（2026-10-27 全幅ヒーローに置換後は何もしない）
   let cur=0, t0=performance.now(); const DUR=6000;
   const go=i=>{cur=i;items.forEach((e,k)=>e.classList.toggle('is-active',k===i));thums.forEach((e,k)=>e.classList.toggle('is-active',k===i));t0=performance.now()};
   items.forEach((e,i)=>e.addEventListener('click',ev=>{if(ev.target.closest('a'))return;go(i)}));
   const tick=now=>{const p=Math.min((now-t0)/DUR,1);bar.style.width=(p*100)+'%';if(p>=1&&!reduce)go((cur+1)%items.length);requestAnimationFrame(tick)};
   requestAnimationFrame(tick);
+  }
 
   const list=$('#puList'), cards=$$('.pu',list), dots=$('#puDots');
   const pages=()=>{const vw=list.parentElement.clientWidth, w=cards[0].getBoundingClientRect().width+20;return Math.max(1,cards.length-Math.floor(vw/w)+1)};
