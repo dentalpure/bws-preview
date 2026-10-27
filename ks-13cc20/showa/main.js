@@ -57,14 +57,21 @@
 (()=>{
   const sec=document.querySelector('.biz2'), cards=[...document.querySelectorAll('#bzStack .bz')];
   if(!sec||!cards.length) return;
+  const nav=[...document.querySelectorAll('#bzNav a')];
+  const light=i=>nav.forEach((a,k)=>a.classList.toggle('is-on',k===i));
+  nav.forEach(a=>a.addEventListener('click',ev=>{ev.preventDefault();const i=+a.dataset.i;
+    if(matchMedia('(max-width:820px)').matches){cards[i].scrollIntoView({behavior:'smooth',block:'start'});return}
+    const span=sec.offsetHeight-innerHeight; scrollTo({top:sec.offsetTop+span*(i/(cards.length-1))+1,behavior:'smooth'})}));
   const upd=()=>{
     if(matchMedia('(max-width:820px)').matches){
+      let on=0; cards.forEach((c,i)=>{if(c.getBoundingClientRect().top<=innerHeight*0.5) on=i}); light(on);
       cards.forEach((c,i)=>{const nx=cards[i+1];let s=1;
         if(nx){const t=nx.getBoundingClientRect().top;const d=Math.min(Math.max(t/innerHeight,0),1);s=1-0.03*(1-d)}
         c.style.setProperty('--y',0);c.querySelector('.bz__in').style.setProperty('--s',s)});
       return}
     const r=sec.getBoundingClientRect(); const span=sec.offsetHeight-innerHeight;
     const p=Math.min(Math.max(-r.top/span,0),1)*(cards.length-1);   // 0〜N-1 の進み
+    light(Math.round(p));
     cards.forEach((c,i)=>{
       const d=i-p;                                   // 正：まだ下にある / 負：すでに上に積まれた
       const y=d>0?Math.min(d,1)*110:0;               // 下から入ってくる
