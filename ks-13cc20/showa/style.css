@@ -562,3 +562,22 @@ img.gen{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .biz2__btn{margin:18px 0 0;font-size:15px;padding:14px 14px 14px 26px}
   .biz2__after{height:56px}
 }
+
+.en-h{font-weight:700;font-size:clamp(36px,3.6vw,52px);line-height:1.05;letter-spacing:0;color:#2a3344}
+.str__center .en-h{font-weight:700;font-size:clamp(32px,3vw,44px);letter-spacing:0;color:#9aa3b0}
+.pickup__head,.news__head{font-weight:700;font-size:32px;letter-spacing:0;color:#2a3344}
+.num,.cat,.svc__sub,.pj__cat,.scard__num,.pu__img.g small,.pj__year,.date{font-weight:500;letter-spacing:.14em}
+.num,.cat,.svc__sub{font-size:12px}
+.tsp__lab{font-family:var(--en);font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#6b7686}
+.tsp__h{font-weight:700;font-size:clamp(30px,3.2vw,50px);line-height:1.35;letter-spacing:.02em}
+.tsp__card-h{font-weight:700}
+.pu__img.g b{font-weight:700}
+.pj__name,.pu__ttl,.pj__ttl{font-weight:700}
+.str__st{font-weight:700}
+.scard h3{font-weight:700}
+.ft__label,.ft__totop{font-weight:700;letter-spacing:0}
+.ft__tel{font-weight:700}
+.ft__map a{font-weight:500}
+.set__top .en-h{color:#fff}
+.hero__en{letter-spacing:0}
+.spnav a{font-weight:700}
