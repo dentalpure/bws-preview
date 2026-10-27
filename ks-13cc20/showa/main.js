@@ -62,15 +62,15 @@
   const stack=document.getElementById('bzStack');
   const slideW=()=>cards[0].getBoundingClientRect().width+12;   // 携帯：1枚の幅＋gap
   nav.forEach(a=>a.addEventListener('click',ev=>{ev.preventDefault();const i=+a.dataset.i;
-    if(matchMedia('(max-width:820px)').matches){light(i);stack.scrollTo({left:i*slideW(),behavior:'smooth'});return}
     const span=sec.offsetHeight-innerHeight; scrollTo({top:sec.offsetTop+span*(i/(cards.length-1))+1,behavior:'smooth'})}));
   const upd=()=>{
     if(matchMedia('(max-width:820px)').matches){
-      light(Math.min(cards.length-1,Math.max(0,Math.round(stack.scrollLeft/slideW()))));
-      const on=nav.find(a=>a.classList.contains('is-on')), ul=document.getElementById('bzNav');   // 点灯したピルが隠れていたら横に送る
+      const r=sec.getBoundingClientRect(); const span=sec.offsetHeight-innerHeight;
+      const i=Math.round(Math.min(Math.max(-r.top/span,0),1)*(cards.length-1));
+      cards.forEach((c,k)=>c.classList.toggle('is-cur',k===i)); light(i);
+      const on=nav[i], ul=document.getElementById('bzNav');
       if(on&&ul){const d=on.getBoundingClientRect(), u=ul.getBoundingClientRect();
         if(d.left<u.left+16||d.right>u.right-16) ul.scrollTo({left:ul.scrollLeft+d.left-u.left-24,behavior:'smooth'})}
-      cards.forEach(c=>{c.style.setProperty('--y',0);c.querySelector('.bz__in').style.setProperty('--s',1)});
       return}
     const r=sec.getBoundingClientRect(); const span=sec.offsetHeight-innerHeight;
     const p=Math.min(Math.max(-r.top/span,0),1)*(cards.length-1);   // 0〜N-1 の進み
