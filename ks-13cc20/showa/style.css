@@ -922,3 +922,5 @@ img.gen{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .str__st{max-width:760px}
 .str__center{max-width:none;margin-left:0;margin-right:0}
 .ft2__t{white-space:nowrap}
+.str__center,.str__center .shd{text-align:left;align-items:flex-start}
+.str__center .shd--c{align-items:flex-start}
