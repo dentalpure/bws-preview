@@ -50,8 +50,10 @@
   open(0); if(!reduce) setInterval(()=>{if(!$('#pj').matches(':hover'))open((pc+1)%pj.length)},5500);
 
   const set=$('.set'), rec=$('.set__panel--recruit');
+  if(set&&rec){ // 旧 Company/Recruit 固定2面があるときだけ（2026-10-27 Recruit パネルに置換後は無い）
   const wipe=()=>{const r=set.getBoundingClientRect(), span=set.offsetHeight-innerHeight;const p=Math.min(Math.max((-r.top-span*.25)/(span*.5),0),1);rec.style.clipPath=`inset(${(1-p)*100}% 0 0 0)`};
   addEventListener('scroll',wipe,{passive:true}); addEventListener('resize',wipe); wipe();
+  }
 })();
 
 (()=>{
