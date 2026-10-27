@@ -581,3 +581,12 @@ img.gen{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .set__top .en-h{color:#fff}
 .hero__en{letter-spacing:0}
 .spnav a{font-weight:700}
+
+.venn__c{border:1.5px dashed #4a5a74}
+.venn__img{width:clamp(130px,12.5vw,200px);height:auto;mix-blend-mode:multiply}
+.venn__c--1 .venn__img{margin-top:-10px}
+@media (max-width:820px){
+  .venn__c{border-width:1.5px}
+  .venn__img{width:84px;flex:none}
+  .venn__c--1 .venn__img{margin-top:0}
+}
