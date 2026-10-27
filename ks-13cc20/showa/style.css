@@ -917,3 +917,7 @@ img.gen{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 }
 .ft2 .shd{margin-bottom:26px}
 .rc .shd{margin-bottom:0}
+.str__center{text-align:left;align-items:flex-start;max-width:1188px;margin-left:auto;margin-right:auto;padding:0 var(--gutter)}
+.str__st br{display:none}
+.str__st{max-width:760px}
+.str__center{max-width:none;margin-left:0;margin-right:0}
