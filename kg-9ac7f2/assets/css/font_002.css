@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+/* @import url('https://cache.first-hp.jp/NotoSansJP-Bold.otf'); */
+/* @font-face {
+	font-family: 'Noto Sans JP';
+	src: url('/assets/webfonts/NotoSansJP-Bold.otf') format('opentype');
+  font-display: swap;
+} */
+
+h1,h2,h3,h4,h5,h6,.uk-h1,.uk-h2,.uk-h3,.uk-h4,.uk-h5,.uk-h6 {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+h1 .uk-text-bolder,h2 .uk-text-bolder,h3 .uk-text-bolder,h4 .uk-text-bolder,h5 .uk-text-bolder,h6 .uk-text-bolder,.uk-h1 .uk-text-bolder,.uk-h2 .uk-text-bolder,.uk-h3 .uk-text-bolder,.uk-h4 .uk-text-bolder,.uk-h5 .uk-text-bolder,.uk-h6 .uk-text-bolder {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.hl-title {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  font-weight: 700 !important;
+}

@@ -1,0 +1,214 @@
+@charset "UTF-8";
+/* ヘッダー */
+header h2 {
+  margin: 0;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+header h2 span {
+  font-weight: bold;
+}
+
+header h2 a {
+  font-weight: bold;
+}
+
+header .inner {
+  width: 1000px;
+  display: flex;
+  margin: auto;
+}
+
+header .links {
+  display: none;
+}
+
+header .gnav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .gnav li {
+  display: block;
+}
+
+header .other li {
+  display: none;
+}
+
+header .btncon {
+  display: none;
+}
+
+header .btnopen {
+  display: none;
+}
+
+header .btnclose {
+  display: none;
+}
+
+header .btns {
+  display: none;
+}
+
+header .boxbtn {
+  display: none;
+}
+
+header img {
+  vertical-align: middle;
+}
+
+header a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+header.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+header.header-type {
+  padding: 10px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+header.header-type .inner {
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.header-type h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+header.header-type h2 span.img-logo {
+  height: 0;
+}
+
+header.header-type h2 span.img-logo img {
+  height: 40px;
+}
+
+header.header-type .nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header.header-type .gnav {
+  font-size: 14px;
+  padding-right: 5px;
+  margin: 0;
+}
+
+header.header-type .gnav li {
+  padding-left: 10px;
+}
+
+header.header-type .gnav li::after {
+  content: "/";
+  color: var(--light-gray);
+  margin-left: 10px;
+}
+
+header.header-type .gnav li:last-child::after {
+  content: none;
+}
+
+header.header-type .gnav li a {
+  position: relative;
+}
+
+header.header-type .gnav li a::after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: var(--main-color);
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: .3s;
+}
+
+header.header-type .gnav li a:hover::after {
+  transform: scale(1, 1);
+}
+
+header.header-type .other {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding-left: 0;
+}
+
+header.header-type .other li {
+  display: none;
+  padding-left: 15px;
+}
+
+header.header-type .other li.con {
+  display: block;
+  font-size: 14px;
+}
+
+header.header-type .other li.con a {
+  display: block;
+  width: 184px;
+  line-height: 34px;
+  background: var(--main-color);
+  color: var(--white);
+  font-size: 14px;
+  border-radius: 17px;
+  text-align: center;
+}
+
+header.header-type .other li.con a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+header.header-type .other li.con a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0e0";
+  color: var(--white);
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+header.header-type .other li.phone {
+  display: block;
+  font-size: 24px;
+}
+
+header.header-type .other li.phone i {
+  font-size: 16px;
+  margin-right: 5px;
+  vertical-align: 2px;
+}
+
+header.header-type .other li.phone span {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    margin-top: 0px !important;
+  }
+}

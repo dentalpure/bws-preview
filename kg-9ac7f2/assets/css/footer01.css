@@ -1,0 +1,169 @@
+@charset "UTF-8";
+/* フッター */
+footer a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+footer .pagetop {
+  display: block;
+}
+
+footer .inner {
+  width: 1000px;
+  margin: auto;
+}
+
+@media screen and (max-width: 960px) {
+  footer .inner {
+    width: 100%;
+  }
+}
+
+footer dd {
+  margin-left: 0;
+}
+
+footer .gnav {
+  display: none;
+}
+
+footer .snav {
+  display: none;
+}
+
+footer .sns {
+  display: none;
+}
+
+footer p.copy {
+  text-align: center;
+  font-size: 12px;
+}
+
+footer.footer-type .pagetop {
+  text-align: center;
+  line-height: 60px;
+  background: var(--main-color);
+  color: var(--white);
+  font-size: 16px;
+}
+
+footer.footer-type .pagetop span::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f062";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+footer.footer-type .inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+  padding-bottom: 67px;
+}
+
+@media screen and (max-width: 960px) {
+  footer.footer-type .inner {
+    box-sizing: border-box;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer.footer-type .inner .left, footer.footer-type .inner .right {
+    width: 100%;
+  }
+}
+
+footer.footer-type h2 {
+  font-size: 50px;
+  padding-bottom: 5px;
+}
+
+footer.footer-type h2 img {
+  height: 80px;
+}
+
+footer.footer-type h2 a {
+  font-weight: bold;
+}
+
+footer.footer-type h2 span {
+  font-weight: bold;
+}
+
+footer.footer-type dl {
+  margin: 0;
+}
+
+footer.footer-type dl dt {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+footer.footer-type dl dd {
+  font-size: 14px;
+  line-height: 2.1em;
+}
+
+footer.footer-type .gnav {
+  display: block;
+  width: 400px;
+  padding-left: 0;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 960px) {
+  footer.footer-type .gnav {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+footer.footer-type .gnav li {
+  display: inline-block;
+  line-height: 2.6em;
+  font-size: 13px;
+}
+
+footer.footer-type .gnav li::after {
+  content: "/";
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+footer.footer-type .gnav li:last-child::after {
+  content: none;
+}
+
+footer.footer-type .sns {
+  display: block;
+  text-align: right;
+  margin: 0;
+  padding-left: 0;
+}
+
+@media screen and (max-width: 960px) {
+  footer.footer-type .sns {
+    text-align: center;
+    margin-left: -40px;
+  }
+}
+
+footer.footer-type .sns li {
+  display: inline-block;
+  font-size: 30px;
+  padding-left: 40px;
+}
+
+footer.footer-type .sns li a {
+  color: var(--main-color);
+}
+
+footer.footer-type p.copy {
+  background: var(--main-color);
+  color: var(--white);
+  line-height: 30px;
+  margin: 0;
+}

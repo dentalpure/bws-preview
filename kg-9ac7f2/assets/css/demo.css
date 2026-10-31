@@ -1,0 +1,41 @@
+.demo-logo{display:inline-flex !important;align-items:center;gap:6px;color:#4b2413;line-height:1;white-space:nowrap}
+.demo-logo img{width:26px !important;height:26px !important;max-width:none}
+.demo-logo small{font-family:"Yuji Syuku",serif;font-size:10px;letter-spacing:.04em;writing-mode:horizontal-tb}
+.demo-logo b{font-family:"Yuji Syuku",serif;font-weight:400;font-size:23px;letter-spacing:.05em}
+footer .demo-logo{margin-bottom:6px}
+body{padding-bottom:32px}
+.demo-band{position:fixed;left:0;right:0;bottom:0;z-index:2000;background:rgba(60,32,20,.92);color:#fff;font-size:12px;line-height:1.4;padding:7px 12px;text-align:center}
+.demo-toast{position:fixed;left:50%;bottom:52px;transform:translateX(-50%);z-index:2001;background:#fff;color:#333;border:1px solid var(--main-color);border-radius:6px;padding:10px 16px;font-size:13px;box-shadow:0 4px 14px rgba(0,0,0,.18);opacity:0;pointer-events:none;transition:opacity .2s;max-width:calc(100vw - 32px)}
+.demo-toast.show{opacity:1}
+@media(max-width:640px){.demo-band{font-size:10.5px;padding:6px 8px}}
+@media(min-width:960px){
+header.header-type .gnav{padding:0 5px 0 12px}
+header.header-type .gnav li{padding-left:.7rem;white-space:nowrap}
+header.header-type .gnav li a{font-size:12.5px}
+header.header-type .other li.phone{white-space:nowrap;font-size:15px}
+}
+@media(min-width:960px) and (max-width:1239px){
+header.header-type .inner{width:calc(100% - 24px)}
+header.header-type .gnav{padding:0 2px 0 4px}
+header.header-type .gnav li{padding-left:.4rem}
+header.header-type .gnav li::after{display:none}
+header.header-type .gnav li a{font-size:10.5px}
+header.header-type .other li.phone{font-size:12px}
+header.header-type .other li.phone span{display:none}
+header.header-type .other li.con a{font-size:11px;padding:.3rem .6rem;line-height:1.8rem}
+.demo-logo b{font-size:19px}
+.demo-logo small{font-size:9px}
+.demo-logo img{width:22px !important;height:22px !important}
+}
+@media(min-width:960px){
+header.header-type .gnav li a{font-size:12px}
+header.header-type .other li.con a{width:118px;font-size:12.5px}
+}
+@media(min-width:960px) and (max-width:1239px){
+header.header-type .gnav li a{font-size:10.5px}
+header.header-type .other li.phone{padding-left:8px}
+header.header-type .other li.con{padding-left:8px}
+header.header-type .other li.con a{width:92px;font-size:10.5px}
+}
+.demo-logo,.demo-logo b,.demo-logo small{color:#4b2413 !important}
+@media(max-width:959px){body{padding-bottom:50px}}
