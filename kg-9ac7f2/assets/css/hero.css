@@ -1,0 +1,75 @@
+.km-hero,.km-hub,.km-fixcontact{font-family:"Zen Maru Gothic","Noto Sans JP",sans-serif}
+.km-hero{position:relative;padding:40px 0 0 5.56vw;background:linear-gradient(180deg,#fff 0%,#f1f7fd 100%)}
+.km-hero__slider{position:relative;height:clamp(440px,48.6vw,700px)}
+.km-hero__slider::before{content:"";position:absolute;left:-40px;bottom:-40px;width:42%;height:62%;border-radius:16px;background:linear-gradient(160deg,#cfe1f8 0%,#9dbdf0 100%)}
+.km-hero__slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1.1s ease,visibility 0s linear 1.1s;border-radius:16px 0 0 16px;overflow:hidden}
+.km-hero__slide.is-active{opacity:1;visibility:visible;transition:opacity 1.1s ease;z-index:1}
+.km-hero__slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.km-hero__slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,38,66,.68) 0%,rgba(13,38,66,.42) 34%,rgba(13,38,66,0) 62%)}
+.km-hero__slide.-light::after{background:linear-gradient(90deg,rgba(255,255,255,.9) 0%,rgba(255,255,255,.62) 32%,rgba(255,255,255,0) 58%)}
+.km-hero__content{position:absolute;z-index:2;left:5.56vw;top:12%;max-width:44%;color:#fff}
+.km-hero__slide.-light .km-hero__content{color:#10243a}
+.km-hero__title{margin:0 0 20px;color:inherit !important;font-family:"Zen Maru Gothic","Noto Sans JP",sans-serif !important;font-weight:500 !important;font-size:clamp(30px,3.4vw,50px);line-height:1.36;letter-spacing:.04em}
+.km-hero__lead{margin:0 0 20px;color:inherit;font-size:clamp(15px,1.55vw,22px);line-height:1.75;letter-spacing:.03em}
+.km-hero__link{display:inline-flex;align-items:center;gap:8px;color:inherit !important;font-size:clamp(14px,1.2vw,18px);text-decoration:none !important}
+.km-hero__link i{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border:1px solid currentColor;border-radius:50%;font-style:normal;font-size:12px;line-height:1}
+.km-hero__link:hover{opacity:.75}
+.km-hero__ctrl{position:absolute;z-index:3;right:5.56vw;bottom:112px;display:flex;align-items:center;gap:12px}
+.km-hero__dot{width:10px;height:10px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer}
+.km-hero__dot.is-active{background:#fff}
+.km-hero__pause{width:24px;height:24px;padding:0;border:0;background:none;color:#fff;font-size:14px;line-height:1;cursor:pointer}
+.km-hub{position:relative;z-index:3;margin-top:-88px;padding-left:8.9vw}
+.km-hub__inner{padding:32px 0 32px 40px;background:#fff;border-radius:16px 0 0 0}
+.km-hub__box{display:flex;max-width:1104px;padding:40px;background:linear-gradient(90deg,#eff6ff 0%,#fff 100%);border-radius:16px 0 0 16px}
+.km-hub__reserve{flex:0 0 150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:149px;border-radius:12px;background:linear-gradient(160deg,#3d8bf0 0%,#123f8f 100%);color:#fff !important;font-size:17px;font-weight:500;text-decoration:none !important}
+.km-hub__reserve svg{width:34px;height:34px}
+.km-hub__reserve:hover{opacity:.88}
+.km-hub__search{flex:1;min-width:0;padding-left:40px}
+.km-hub__title{margin:0 0 12px;color:#2c69ba !important;font-family:"Zen Maru Gothic","Noto Sans JP",sans-serif !important;font-weight:500 !important;font-size:20px;line-height:1.25}
+.km-hub__row{display:flex;gap:16px}
+.km-hub__keyword{position:relative;flex:1;min-width:0;margin:0}
+.km-hub__keyword input{box-sizing:border-box;width:100%;height:58px;padding:0 52px 0 16px;border:1px solid #9fb2c6;border-radius:8px;background:#fff;color:#10243a;font:inherit;font-size:16px}
+.km-hub__keyword button{position:absolute;top:0;right:0;width:52px;height:58px;padding:0;border:0;background:none;color:#2c69ba;cursor:pointer}
+.km-hub__keyword svg{width:24px;height:24px;vertical-align:middle}
+.km-hub__area{flex:0 0 240px;height:58px;padding:0 16px;border:1px solid #10243a;border-radius:8px;background:#fff;color:#10243a;font:inherit;font-size:16px;cursor:pointer}
+.km-hub__tags{display:flex;flex-wrap:wrap;gap:16px;margin-top:16px}
+.km-hub__tags a{padding:6px 24px;border:1px solid #2c69ba;border-radius:999px;background:#fff;color:#2c69ba !important;font-size:17px;line-height:1.4;text-decoration:none !important}
+.km-hub__tags a:hover{background:#eff6ff}
+.km-fixcontact{position:fixed;z-index:1500;right:0;bottom:64px;display:flex;align-items:center;gap:12px;width:256px;padding:14px 16px 14px 20px;box-sizing:border-box;border-radius:8px 0 0 8px;background:linear-gradient(120deg,#3d8bf0 0%,#123f8f 100%);color:#fff !important;font-size:16px;line-height:1.5;text-decoration:none !important;box-shadow:0 6px 16px rgba(16,42,72,.22)}
+.km-fixcontact i{flex:0 0 30px;display:flex;align-items:center;justify-content:center;height:30px;border:1px solid #fff;border-radius:50%;font-style:normal;font-size:14px}
+.km-fixcontact:hover{opacity:.9}
+@media(max-width:1239px){
+.km-hub__inner{padding:24px 0 24px 24px}
+.km-hub__box{padding:24px}
+.km-hub__reserve{flex-basis:120px;min-height:130px}
+.km-hub__search{padding-left:24px}
+.km-hub__area{flex-basis:190px}
+.km-hub__tags a{font-size:15px;padding:5px 16px}
+}
+@media(max-width:959px){
+.km-hero{padding:16px 0 0 16px}
+.km-hero__slider{height:470px}
+.km-hero__slider::before{left:-16px;bottom:-16px;width:60%;height:40%}
+.km-hero__slide img{object-position:72% center}
+.km-hero__slide::after{background:linear-gradient(180deg,rgba(13,38,66,.72) 0%,rgba(13,38,66,.42) 42%,rgba(13,38,66,0) 68%)}
+.km-hero__slide.-light::after{background:linear-gradient(180deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.64) 42%,rgba(255,255,255,0) 68%)}
+.km-hero__content{left:20px;right:16px;top:24px;max-width:none}
+.km-hero__title{font-size:26px;margin-bottom:10px}
+.km-hero__lead{font-size:14px;margin-bottom:10px}
+.km-hero__ctrl{right:16px;bottom:56px}
+.km-hub{margin-top:-40px;padding-left:16px}
+.km-hub__inner{padding:16px 0 16px 16px}
+.km-hub__box{flex-direction:column;gap:16px;padding:16px}
+.km-hub__reserve{flex:none;flex-direction:row;min-height:60px}
+.km-hub__reserve svg{width:26px;height:26px}
+.km-hub__search{padding-left:0}
+.km-hub__row{flex-direction:column;gap:10px}
+.km-hub__area{flex:none;width:100%}
+.km-hub__tags{gap:8px}
+.km-hub__tags a{font-size:13px;padding:5px 12px}
+.km-fixcontact{display:none}
+}
+@media(prefers-reduced-motion:reduce){.km-hero__slide{transition:none}}
+.km-fixcontact{font-size:14.5px}
+.km-fixcontact span{white-space:nowrap}
+.km-hub__box{box-sizing:border-box}

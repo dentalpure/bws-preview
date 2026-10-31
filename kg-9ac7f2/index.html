@@ -17,8 +17,9 @@
 <link rel="stylesheet" href="assets/css/footer01.css">
 <link rel="stylesheet" href="assets/css/site.min.css">
 <link rel="stylesheet" href="assets/css/sitedata.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="assets/css/demo.css">
+<link rel="stylesheet" href="assets/css/hero.css">
 <script src="assets/js/uikit.min.js"></script>
 <script src="assets/js/uikit-icons.min.js"></script>
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -97,9 +98,26 @@
 			</div>
 		</header>
 	</div>
-		<div class="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle uk-dark" style="background-image: url(assets/img/pagedata125_552_image_moto.png);">
-		<h1 style="color:#ffffff !important;">住宅型有料老人ホーム</h1>
-	</div>
+		<section class="km-hero" aria-label="メインビジュアル">
+<div class="km-hero__slider">
+<div class="km-hero__slide is-active"><img src="assets/img/gen/hero_1.jpg" alt="庭で笑い合う入居者とスタッフ" fetchpriority="high"><div class="km-hero__content"><h1 class="km-hero__title">自分らしい毎日を、<br>鹿児島のこの場所で。</h1><p class="km-hero__lead">住宅型有料老人ホーム 錦花苑・霧風苑。<br>お一人おひとりの暮らしに寄り添います。</p><a class="km-hero__link" href="#anc-1" uk-scroll>施設を見る <i>›</i></a></div></div>
+<div class="km-hero__slide"><img src="assets/img/gen/hero_2.jpg" alt="入居者と笑顔で話すスタッフ" loading="lazy"><div class="km-hero__content"><p class="km-hero__title">笑顔が咲く毎日を、<br>ともにつくる。</p><p class="km-hero__lead">できることを大切に、対話を重ねながら<br>安心して過ごせる暮らしを整えます。</p><a class="km-hero__link" href="#anc-1" uk-scroll>私たちの特徴 <i>›</i></a></div></div>
+<div class="km-hero__slide -light"><img src="assets/img/gen/hero_3.jpg" alt="入居者とご家族の話を聞くスタッフ" loading="lazy"><div class="km-hero__content"><p class="km-hero__title">ご家族の想いにも、<br>耳を傾けます。</p><p class="km-hero__lead">入居前のご相談からご入居後まで、<br>担当者がていねいにお話を伺います。</p><a class="km-hero__link" href="#anc-3" uk-scroll>入居までの流れ <i>›</i></a></div></div>
+<div class="km-hero__ctrl"><button type="button" class="km-hero__dot is-active" aria-label="1枚目"></button><button type="button" class="km-hero__dot" aria-label="2枚目"></button><button type="button" class="km-hero__dot" aria-label="3枚目"></button><button type="button" class="km-hero__pause" aria-label="スライドを停止">❙❙</button></div>
+</div>
+</section>
+<div class="km-hub"><div class="km-hub__inner"><div class="km-hub__box">
+<a class="km-hub__reserve" href="#contact" uk-scroll><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="22" height="20" rx="2"/><path d="M3 12h22M9 3v5M19 3v5M8 17h3M14 17h3M8 22h3"/><circle cx="24" cy="24" r="5.5" fill="#123f8f"/><path d="M21.6 24l1.7 1.7 3-3.2"/></svg>見学予約</a>
+<div class="km-hub__search">
+<h2 class="km-hub__title">施設を探す</h2>
+<div class="km-hub__row">
+<form class="km-hub__keyword"><input type="text" placeholder="キーワードを入力してください" aria-label="キーワード"><button type="submit" aria-label="検索"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l5 5"/></svg></button></form>
+<select class="km-hub__area" aria-label="地域から探す"><option value="">地域から探す</option><option value="anc-1">鹿児島市（錦花苑）</option><option value="anc-2">霧島市（霧風苑）</option></select>
+</div>
+<div class="km-hub__tags"><a href="#anc-3" uk-scroll>入居を急いでいる</a><a href="#contact" uk-scroll>オンライン入居相談</a><a href="#" data-demo>お試し宿泊</a></div>
+</div>
+</div></div></div>
+<a class="km-fixcontact" href="#contact" uk-scroll><span>お問い合わせ・資料請求・<br>見学予約はこちら</span><i>↓</i></a>
 	<nav class="nav-bread">
 		<ul class="uk-breadcrumb uk-container">
 			<li><a href="#gotop" uk-scroll>HOME</a></li>
@@ -107,16 +125,16 @@
 		</ul>
 	</nav>
 	<main class="page">
-		<div id="editor" class="bre-editor"><div class="bg-default"> <div class="uk-container bre-field-container"><div class="column-type-1 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/storage125_1761726683_717.jpg"></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1700039432_609.svg">
+		<div id="editor" class="bre-editor"><div class="bg-default"> <div class="uk-container bre-field-container"><div class="column-type-1 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/intro_table.jpg"></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1700039432_609.svg">
 <p class="para-1">鹿児島の地で、生活支援・相談、健康管理などのサービスを提供しています。ご利用者様が自立した生活を送れるようサポートいたします。</p></div> </div></div> </div>
 <div class="padding_30"></div>
 <div class="bg-light-gray"> <div class="uk-container bre-field-container"><div class="padding_20"></div>
 <h2 class="h2ttl-14 headline_type_014 uk-text-center"><span class="uk-text-bolder">施設情報</span><span class="smaller">Information</span></h2>
 <p class="para-1-center uk-text-center">株式会社南つつじは現在「住宅型有料老人ホーム 錦花苑」「住宅型有料老人ホーム 霧風苑」の2施設を運営しています。</p>
 <div class="padding_20"></div>
-<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/kinkaen_exterior.jpg">
-<button type="button" class="link-8-1 uk-align-center uk-button btn_type_001"><span class="uk-margin-auto"><a href="#anc-1">錦花苑（きんかえん）</a></span><i class="fas fa-angle-down"></i></button></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/kirikaze_exterior.jpg">
-<button type="button" class="link-8-1 uk-align-center uk-button btn_type_001"><span class="uk-margin-auto"><a href="#anc-2">霧風苑（きりかぜえん）</a></span><i class="fas fa-angle-down"></i></button></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1757665181_856.jpg">
+<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/kinkaen_exterior.jpg">
+<button type="button" class="link-8-1 uk-align-center uk-button btn_type_001"><span class="uk-margin-auto"><a href="#anc-1">錦花苑（きんかえん）</a></span><i class="fas fa-angle-down"></i></button></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/kirikaze_exterior.jpg">
+<button type="button" class="link-8-1 uk-align-center uk-button btn_type_001"><span class="uk-margin-auto"><a href="#anc-2">霧風苑（きりかぜえん）</a></span><i class="fas fa-angle-down"></i></button></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/flow_corridor.jpg">
 <button type="button" class="link-22-1 uk-align-center uk-button btn_type_003"><span class="uk-margin-auto"><a href="#anc-3">入居までの流れ</a></span><i class="fas fa-angle-down"></i></button></div> </div>
 <div class="padding_60"></div>
 <div id="anc-1" class="anc-1"></div></div> </div>
@@ -125,7 +143,7 @@
 <p class="para-1-center uk-text-center">私たちが大切にしているのは、 地域と共生しながら自分らしく暮らせること。
 <br>桜島を望むこの場所で、色とりどりに咲く花のように、 お一人お一人が生き生きと過ごせる場所をご提供します。</p>
 <h3 class="h3ttl-1 headline_type_001">アクセス</h3>
-<div class="column-type-1 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/kinkaen_exterior.jpg"></div> <div class="bre-field-container"><div> <table class="table-9-box uk-table uk-table-divider bre-field-container"><tbody><tr> <th class="uk-width-small uk-text-left uk-text-top uk-text-bold">所在地</th> <td class="uk-table-expand">〒890-0000<br>鹿児島県鹿児島市錦見台2丁目9番5号</td> </tr>
+<div class="column-type-1 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/kinkaen_exterior.jpg"></div> <div class="bre-field-container"><div> <table class="table-9-box uk-table uk-table-divider bre-field-container"><tbody><tr> <th class="uk-width-small uk-text-left uk-text-top uk-text-bold">所在地</th> <td class="uk-table-expand">〒890-0000<br>鹿児島県鹿児島市錦見台2丁目9番5号</td> </tr>
 <tr> <th class="uk-width-small uk-text-left uk-text-top uk-text-bold">受付時間</th> <td class="uk-table-expand">平日 9:00～17:00</td> </tr>
 <tr> <th class="uk-width-small uk-text-left uk-text-top uk-text-bold">TEL</th> <td class="uk-table-expand">099-000-0011</td> </tr>
 <tr> <th class="uk-width-small uk-text-left uk-text-top uk-text-bold">FAX</th> <td class="uk-table-expand">099-000-0012</td> </tr>
@@ -135,27 +153,27 @@
 <div class="googleMap"><iframe src="https://www.google.com/maps?q=%E9%B9%BF%E5%85%90%E5%B3%B6%E7%9C%8C%E9%B9%BF%E5%85%90%E5%B3%B6%E5%B8%82&z=12&output=embed" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 <div class="padding_20"></div>
 <h3 class="h3ttl-1 headline_type_001">私たちの特徴</h3>
-<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_528.jpg">
+<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/feat_trust.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">安心と信頼の充実した施設</h4>
-<p class="para-1">錦花苑では、入居者様が安心して暮らせることを大切にしています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_111.jpg">
+<p class="para-1">錦花苑では、入居者様が安心して暮らせることを大切にしています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/feat_community.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">地域との連携</h4>
-<p class="para-1">錦花苑では、地域と連携し、地域とのつながりを大切にしています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1757666428_759.jpg">
+<p class="para-1">錦花苑では、地域と連携し、地域とのつながりを大切にしています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/feat_project.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">きばいやんせプロジェクト</h4>
 <p class="para-1">入居者様の自立支援を目指し、ADLの保持と安全で安心できる生活支援のため、出来ることを増やし役割があることで生きる目的を確認して頂く参加型プロジェクトです。</p></div> </div>
-<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_483.jpg">
+<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/feat_recreation.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">レクリエーション</h4>
-<p class="para-1">入居者様が楽しめる様々なレクリエーションをご用意しています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_833.jpg">
+<p class="para-1">入居者様が楽しめる様々なレクリエーションをご用意しています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/feat_esthe.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">無料エステ・有料サービス</h4>
-<p class="para-1">介護エステ（無料）やヘアカットサービス（有料）もご提供しています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_995.jpg">
+<p class="para-1">介護エステ（無料）やヘアカットサービス（有料）もご提供しています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/feat_event.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">季節ごとの様々な催し物</h4>
 <p class="para-1">錦花苑では年間を通して季節感を大切にしたいという思いから、六月灯やお花見など季節の行事を行っています。外部の方も招いて様々な催し物を企画しています。</p></div> </div>
-<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/storage125_1761726382_398.jpg">
+<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/feat_footbath.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">水なし足湯『足温浴』</h4>
 <p class="para-1">靴下を履いたまま入れる・水なし足湯『足温浴』を導入しています。温熱効果で身体が温まると好評です。温泉どころ鹿児島らしい、ぽかぽかのひとときをお楽しみください。</p></div> <div class="bre-field-container"></div> <div class="bre-field-container"></div> </div>
@@ -168,16 +186,16 @@
 <div class="faq-3-box"> <ul uk-accordion="" class="faq_type_003 bre-field-container uk-accordion"><li> <a class="faq-3-toi uk-accordion-title" href="#">入居条件はありますか？</a> <div class="uk-accordion-content"> <p class="faq-3-kotae"></p><ol><li>要介護(1～5)認定を受けている方</li><li>自立支援、障がい手帳をお持ちの方</li><li>集団での生活に順応できる方</li><li>身元引受人を立てられる方</li><li>感染症法に定められた感染症に罹患されていない方</li><li>その他、ご相談ください。</li></ol><p></p> </div> </li>
 <li> <a class="faq-3-toi uk-accordion-title" href="#">住民票は、施設の住所地に移動させないといけませんか？</a> <div class="uk-accordion-content"> <p class="faq-3-kotae">当苑は住所地特例施設に指定されており、そのままでも構いませんが、移すこともできます。</p> </div> </li>
 <li> <a class="faq-3-toi uk-accordion-title" href="#">担当のケアマネージャーは変更しないといけませんか？</a> <div class="uk-accordion-content"> <p class="faq-3-kotae">ケアマネージャーには担当エリアがありますので、一度ご相談ください。</p> </div> </li></ul> </div></div> </div>
-<div> <div class="slider-1-ul uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider="autoplay: true"> <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m bre-field-container"><li class="slider-1-li smpl uk-light" style="list-style:none;"> <img src="assets/img/storage125_1714033098_805.jpg"> <div class="uk-position-center uk-panel bre-field-container"></div> </li>
-<li class="slider-1-li smpl uk-light" style="list-style:none;"> <img src="assets/img/storage125_1714033098_812.jpg"> <div class="uk-position-center uk-panel bre-field-container"></div> </li>
-<li class="slider-1-li smpl uk-light" style="list-style:none;"> <img src="assets/img/storage125_1714033098_981.jpg"> <div class="uk-position-center uk-panel bre-field-container"></div> </li>
-<li class="slider-1-li smpl uk-light" style="list-style:none;"> <img src="assets/img/storage125_1714033098_226.jpg"> <div class="uk-position-center uk-panel bre-field-container"></div> </li>
-<li class="slider-1-li smpl uk-light" style="list-style:none;"> <img src="assets/img/storage125_1714033098_628.jpg"> <div class="uk-position-center uk-panel bre-field-container"></div> </li></ul> <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous="" uk-slider-item="previous"></a> <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next="" uk-slider-item="next"></a> </div> <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul> </div>
+<div> <div class="slider-1-ul uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider="autoplay: true"> <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m bre-field-container"><li class="slider-1-li smpl uk-light" style="list-style:none;"> <img src="assets/img/gen/slide_care.jpg"> <div class="uk-position-center uk-panel bre-field-container"></div> </li>
+<li class="slider-1-li smpl uk-light" style="list-style:none;"> <img src="assets/img/gen/slide_game.jpg"> <div class="uk-position-center uk-panel bre-field-container"></div> </li>
+<li class="slider-1-li smpl uk-light" style="list-style:none;"> <img src="assets/img/gen/slide_room.jpg"> <div class="uk-position-center uk-panel bre-field-container"></div> </li>
+<li class="slider-1-li smpl uk-light" style="list-style:none;"> <img src="assets/img/gen/slide_craft.jpg"> <div class="uk-position-center uk-panel bre-field-container"></div> </li>
+<li class="slider-1-li smpl uk-light" style="list-style:none;"> <img src="assets/img/gen/slide_exercise.jpg"> <div class="uk-position-center uk-panel bre-field-container"></div> </li></ul> <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous="" uk-slider-item="previous"></a> <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next="" uk-slider-item="next"></a> </div> <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul> </div>
 <div class="bg-light-gray"> <div class="uk-container bre-field-container bre-field-selected"><div id="anc-2" class="anc-2"></div>
 <div class="padding_20"></div>
 <h2 class="h2ttl-14 headline_type_014 uk-text-center"><span class="uk-text-bolder">住宅型有料老人ホーム 霧風苑</span><span class="smaller">Kirikaze</span></h2>
 <p class="para-1-center uk-text-center">霧島連山のふもと、霧風苑で笑顔花咲く暮らしをすごせるような心地の良い場所をご提供します。</p>
-<div class="column-type-1 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/kirikaze_exterior.jpg"></div> <div class="bre-field-container"><div> <table class="table-9-box uk-table uk-table-divider bre-field-container"><tbody><tr> <th class="uk-width-small uk-text-left uk-text-top uk-text-bold">所在地</th> <td class="uk-table-expand">〒899-5100<br>鹿児島県霧島市隼人町風見8番地の6</td> </tr>
+<div class="column-type-1 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/kirikaze_exterior.jpg"></div> <div class="bre-field-container"><div> <table class="table-9-box uk-table uk-table-divider bre-field-container"><tbody><tr> <th class="uk-width-small uk-text-left uk-text-top uk-text-bold">所在地</th> <td class="uk-table-expand">〒899-5100<br>鹿児島県霧島市隼人町風見8番地の6</td> </tr>
 <tr> <th class="uk-width-small uk-text-left uk-text-top uk-text-bold">受付時間</th> <td class="uk-table-expand">平日 9:00～17:00</td> </tr>
 <tr> <th class="uk-width-small uk-text-left uk-text-top uk-text-bold">TEL</th> <td class="uk-table-expand">0995-00-0021</td> </tr>
 <tr> <th class="uk-width-small uk-text-left uk-text-top uk-text-bold">FAX</th> <td class="uk-table-expand">0995-00-0022</td> </tr>
@@ -187,23 +205,23 @@
 <div class="googleMap"><iframe src="https://www.google.com/maps?q=%E9%B9%BF%E5%85%90%E5%B3%B6%E7%9C%8C%E9%9C%A7%E5%B3%B6%E5%B8%82&z=12&output=embed" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 <div class="padding_20"></div>
 <h3 class="h3ttl-1 headline_type_001">私たちの特徴</h3>
-<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/monitor_blurred.jpg">
+<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/feat_monitor.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">見守りシステム</h4>
-<p class="para-1">24時間365日、転倒防止や見守りシステムなどを導入しています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739509_673.jpg">
+<p class="para-1">24時間365日、転倒防止や見守りシステムなどを導入しています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/feat_meal.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">栄養バランスに配慮した多彩なメニュー</h4>
-<p class="para-1">バランスのとれたメニューを自社で調理提供しています。鹿児島の旬の食材を使い、季節に合わせたお食事を用意しています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739509_278.jpg">
+<p class="para-1">バランスのとれたメニューを自社で調理提供しています。鹿児島の旬の食材を使い、季節に合わせたお食事を用意しています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/feat_safety.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">安全に配慮した設備</h4>
 <p class="para-1">共有スペースにはモニターを設置しており、入居者様の安全に配慮しています。</p></div> </div>
-<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_483.jpg">
+<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/feat_recreation.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">希望制サービス</h4>
-<p class="para-1">希望される方には、レクリエーションや介護エステなどもご提供しています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1757666343_469.jpg">
+<p class="para-1">希望される方には、レクリエーションや介護エステなどもご提供しています。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/feat_snack.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">きばいやんせプロジェクト</h4>
-<p class="para-1">入居者様の自立支援を目指し、ADLの保持と安全で安心できる生活支援のため、出来ることを増やし役割があることで生きる目的を確認して頂く参加型プロジェクトです。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_995.jpg">
+<p class="para-1">入居者様の自立支援を目指し、ADLの保持と安全で安心できる生活支援のため、出来ることを増やし役割があることで生きる目的を確認して頂く参加型プロジェクトです。</p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/feat_event.jpg">
 <div class="padding_20"></div>
 <h4 class="h4ttl-0">季節ごとの様々な催し物</h4>
 <p class="para-1">年間を通して季節感を大切にしたいという思いから、六月灯や秋祭りなど季節の行事を行っています。外部の方も招いて様々な催し物を企画しています。</p></div> </div>
@@ -213,24 +231,24 @@
 <h3 class="h3ttl-1 headline_type_001">施設紹介</h3>
 <h4 class="h4ttl-5 headline_type_005">共有スペース</h4>
 <p class="para-1">館内全体はクラシカルな木目調で整えられており、とても落ち着いた雰囲気です。<br>陽光差し込むレクリエーションルームや、ゆったりした浴室など共有スペースではリラックスしてお過ごし頂けるようになっております。</p>
-<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_909.jpg">
-<p class="para-1"><b>広々としたレクリエーションルーム</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_754.jpg">
-<p class="para-1"><b>相談室</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_208.jpg">
+<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/room_recreation.jpg">
+<p class="para-1"><b>広々としたレクリエーションルーム</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/room_consult.jpg">
+<p class="para-1"><b>相談室</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/room_station.jpg">
 <p class="para-1"><b>ケアステーション</b></p></div> </div>
-<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/entrance_wall.jpg">
-<p class="para-1"><b>共有スペース入り口</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_896.jpg">
-<p class="para-1"><b>木目調の落ち着いた雰囲気</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1757495356_220.jpg">
+<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/room_entrance.jpg">
+<p class="para-1"><b>共有スペース入り口</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/room_hallway.jpg">
+<p class="para-1"><b>木目調の落ち着いた雰囲気</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/room_bath.jpg">
 <p class="para-1"><b>浴室もゆったり</b></p></div> </div>
 <div class="padding_30"></div>
 <div class="padding_30"></div>
 <h4 class="h4ttl-5 headline_type_005">居室スペース</h4>
 <p class="para-1">全室個室60室〈洗浄便座付トイレ、洗面、クローゼット、エアコン完備〉システム導入で24時間365日、転倒防止などの健康管理をしております。</p>
-<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_816.jpg">
-<p class="para-1"><b>花の名前がついた居室</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_305.jpg">
-<p class="para-1"><b>クローゼットや洗面も完備</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_911.jpg">
+<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/room_door.jpg">
+<p class="para-1"><b>花の名前がついた居室</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/room_closet.jpg">
+<p class="para-1"><b>クローゼットや洗面も完備</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/room_toilet.jpg">
 <p class="para-1"><b>広々トイレ</b></p></div> </div>
-<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_797.jpg">
-<p class="para-1"><b>ナースコール付き</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/storage125_1769739510_264.jpg">
+<div class="column-type-2 uk-child-width-expand@s" uk-grid=""> <div class="bre-field-container uk-first-column"><img class="image-1 uk-align-center" src="assets/img/gen/room_nursecall.jpg">
+<p class="para-1"><b>ナースコール付き</b></p></div> <div class="bre-field-container"><img class="image-1 uk-align-center" src="assets/img/gen/room_view.jpg">
 <p class="para-1"><b>明るく眺めの良い室内</b></p></div> <div class="bre-field-container"></div> </div>
 <div class="padding_30"></div>
 <h3 class="h3ttl-1 headline_type_001">よくある質問</h3>
@@ -283,9 +301,10 @@
 		</div>
 	</div>
 	<p class="copy">Copyright &copy; 株式会社南つつじ. All rights reserved.</p>
-</footer><div class="demo-band">社内検討用デモ｜社名・施設名・住所・電話番号はすべて架空です。写真は参考サイトの仮素材です。</div>
+</footer><div class="demo-band">社内検討用デモ｜社名・施設名・住所・電話番号はすべて架空です。写真はAI生成の仮画像です。</div>
 <script src="assets/js/jquery-2.1.1.min.js"></script>
 <script src="assets/js/header.js"></script>
 <script src="assets/js/demo.js"></script>
+<script src="assets/js/hero.js"></script>
 </body>
 </html>
